@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 const Header = () => {
-  const [ isOpenMenu , setIsOpenMenu ] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
   const toggleDropdownHandler = (event) => {
     event.preventDefault();
     let element = document.getElementById("hiddenClass");
@@ -18,30 +18,36 @@ const Header = () => {
               portfolio
             </span>
           </a>
-          <div className="dropdown relative">
+          <div className="relative">
             <button
-              className="text-gray-500 w-10 h-10 relative rounded-lg focus:outline-none bg-slate-500"
+              type="button"
+              className="md:hidden text-gray-500 w-10 h-10 relative rounded-lg focus:outline-none bg-slate-500"
               onClick={toggleDropdownHandler}
             >
               <div className="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 m-auto">
                 <span
                   aria-hidden="true"
-                  className={`block relative h-0.5 w-5 bg-slate-200 transform transition duration-500 ease-in-out ${isOpenMenu ? 'opacity-0' : "-translate-y-1.5"}`}
-                  
+                  className={`block relative h-0.5 w-5 bg-slate-200 transform transition duration-500 ease-in-out ${
+                    isOpenMenu ? "opacity-0" : "-translate-y-1.5"
+                  }`}
                 ></span>
                 <span
                   aria-hidden="true"
-                  className={`block relative  h-0.5 w-5 bg-slate-200 transform transition duration-500 ease-in-out ${isOpenMenu ? 'opacity-1' : ''}`}
+                  className={`block relative  h-0.5 w-5 bg-slate-200 transform transition duration-500 ease-in-out ${
+                    isOpenMenu ? "opacity-1" : ""
+                  }`}
                 ></span>
                 <span
                   aria-hidden="true"
-                  className={`block relative  h-0.5 w-5 bg-slate-200 transform  transition duration-500 ease-in-out ${isOpenMenu ? 'opacity-0' : 'translate-y-1.5'}`}
+                  className={`block relative  h-0.5 w-5 bg-slate-200 transform  transition duration-500 ease-in-out ${
+                    isOpenMenu ? "opacity-0" : "translate-y-1.5"
+                  }`}
                 ></span>
               </div>
             </button>
             <ul
               id="hiddenClass"
-              className=" min-w-max absolute right-0 text-base z-50 float-right py-2 list-none text-left rounded shadow-lg mt-1 hidden m-0 bg-clip-padding border-none bg-gray-800" 
+              className=" min-w-max absolute right-0 text-base z-50 float-right py-2 list-none text-left rounded shadow-lg mt-1 hidden m-0 bg-clip-padding border-none bg-gray-800"
               aria-labelledby="dropdownMenuButton"
             >
               <li>
@@ -67,7 +73,7 @@ const Header = () => {
                 >
                   Something else here
                 </a>
-              </li>                
+              </li>
             </ul>
           </div>
           <div className="hidden w-full md:block md:w-auto" id="mobile-menu">

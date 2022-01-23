@@ -1,12 +1,16 @@
-import React from 'react'
-import Header from './Header/Header'
+import React from "react";
+import Navigation from "./Header/Navigation";
+import Header from "./Header/Header";
+import AboutContent from "./AboutContent";
 
 const Layout = (props) => {
-    return (
-        <>
-            <Header></Header>
-        </>
-    )
-}
+  return (
+    <>
+      <Navigation></Navigation>
+      <Header></Header>
+      <AboutContent></AboutContent>
+    </>
+  );
+};
 
-export default Layout
+export default Layout;

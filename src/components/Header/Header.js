@@ -1,4 +1,7 @@
+import { isContentEditable } from "@testing-library/user-event/dist/utils";
 import React, { useState } from "react";
+import content from "../../content";
+
 const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const toggleDropdownHandler = (event) => {
@@ -14,8 +17,8 @@ const Header = () => {
       <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <a href="#" className="flex">
-            <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white">
-              portfolio
+            <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white font-dosis">
+              {content.nav.logo}
             </span>
           </a>
           <div className="relative">

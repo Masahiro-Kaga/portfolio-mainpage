@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily:{
+      dosis:["Dosis"]
+    }
   },
   plugins: [
     require('daisyui')

@@ -1,13 +1,9 @@
-import { Fragment } from "react";
 import Layout from "./components/Layout";
 
 
-function App() {
+function App(props) {
   return (
-    <Fragment>
-      <Layout></Layout>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </Fragment>
+      <Layout>{props.children}</Layout>
   );
 }
 

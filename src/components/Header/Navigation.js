@@ -3,27 +3,43 @@ import content from "../../content";
 
 const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  
+
   const toggleDropdownHandler = (event) => {
-    const element = document.getElementById("hiddenClass");
     event.preventDefault();
-    element.classList.toggle("hidden");
     setIsOpenMenu(!isOpenMenu);
   };
 
-  const scrolledWindow = ()=>{
+  const scrolledWindow = () => {
     const element = document.getElementById("navbar");
-    if(window.scrollY > 500){
+    if (window.scrollY > 500) {
       element.classList.add("bg-gray-800");
     } else {
       element.classList.remove("bg-gray-800");
     }
-  }
-  window.addEventListener('scroll',scrolledWindow);
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (
+        (!event.target.closest("#dropdownButton") &&
+        !event.target.closest("#dropdownMenuButton") &&
+        !isOpenMenu) || event.target.closest("#dropdownMenuButton li")
+      ) {
+        setIsOpenMenu(false);
+      }
+    });
+  }, []);
+
+  window.addEventListener("scroll", scrolledWindow);
 
   return (
     <div style={{ background: "#white" }}>
-      <nav className="px-10 sm:px-20 py-5 fixed top-0 left-0 w-full transition-colors duration-1000" id="navbar">
+      <nav
+        className="px-10 sm:px-20 py-5 fixed top-0 left-0 w-full transition-colors duration-1000"
+        id="navbar"
+      >
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <a href="#" className="flex">
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white font-dosis">
@@ -34,8 +50,9 @@ const Navigation = () => {
           <div className="relative">
             <button
               type="button"
-              className="md:hidden text-gray-500 w-10 h-10 relative rounded-lg focus:outline-none bg-gray-800 border-2" 
+              className="md:hidden text-gray-500 w-10 h-10 relative rounded-lg focus:outline-none bg-gray-800 border-2"
               onClick={toggleDropdownHandler}
+              id="dropdownButton"
             >
               <div className="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 m-auto">
                 <span
@@ -59,9 +76,11 @@ const Navigation = () => {
               </div>
             </button>
             <ul
-              id="hiddenClass"
-              className="min-w-max absolute right-0 text-base z-50 float-right py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none bg-gray-800"
+              className={`md:hidden min-w-max absolute left-0 text-base z-50 py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none bg-gray-800 ${
+                !isOpenMenu ? "translate-x-52" : "transition-x-0"
+              } ease-in-out duration-300`}
               aria-labelledby="dropdownMenuButton"
+              id="dropdownMenuButton"
             >
               <li>
                 <a
@@ -79,7 +98,6 @@ const Navigation = () => {
                   Contact
                 </a>
               </li>
-              
             </ul>
           </div>
           <div className="hidden w-full md:block md:w-auto" id="mobile-menu">

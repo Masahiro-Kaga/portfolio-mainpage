@@ -1,18 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import content from "../../content";
 
 const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+  
   const toggleDropdownHandler = (event) => {
+    const element = document.getElementById("hiddenClass");
     event.preventDefault();
-    let element = document.getElementById("hiddenClass");
     element.classList.toggle("hidden");
     setIsOpenMenu(!isOpenMenu);
   };
 
+  const scrolledWindow = ()=>{
+    const element = document.getElementById("navbar");
+    if(window.scrollY > 500){
+      element.classList.add("bg-gray-800");
+    } else {
+      element.classList.remove("bg-gray-800");
+    }
+  }
+  window.addEventListener('scroll',scrolledWindow);
+
   return (
     <div style={{ background: "#white" }}>
-      <nav className="px-10 sm:px-20 py-5 fixed top-0 left-0 w-full">
+      <nav className="px-10 sm:px-20 py-5 fixed top-0 left-0 w-full transition-colors duration-1000" id="navbar">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <a href="#" className="flex">
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white font-dosis">

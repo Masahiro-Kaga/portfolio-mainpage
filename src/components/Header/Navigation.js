@@ -37,7 +37,7 @@ const Navigation = () => {
   return (
     <div style={{ background: "#white" }}>
       <nav
-        className="px-10 sm:px-20 py-5 fixed top-0 left-0 w-full transition-colors duration-1000"
+        className="px-10 sm:px-20 py-5 fixed top-0 left-0 w-full transition-colors duration-1000 z-50"
         id="navbar"
       >
         <div className="container flex flex-wrap justify-between items-center mx-auto">
@@ -104,7 +104,7 @@ const Navigation = () => {
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               {content.nav.links.map((link, index) => {
                 return (
-                  <li>
+                  <li key={index}>
                     <a
                       href="#"
                       className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl"

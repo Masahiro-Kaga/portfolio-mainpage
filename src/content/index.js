@@ -56,5 +56,3 @@ export default {
     ]
   },
 };
-
-// src={content.stack.tech[0].img}

@@ -105,7 +105,7 @@ const SkillSet = () => {
         <h2 className="text-4xl font-bold text-center font-dosis bg">
           My Skillset
         </h2>
-        <p className="mt-7 text-md sm:text-lg text-center text-gray-600 tracking-tight mx-3 md:mx-32 leading-6">
+        <p className="my-11 text-md sm:text-lg text-center text-gray-600 tracking-tight mx-3 md:mx-32 leading-6">
           I have compiled a list of skills that I have acquired through my
           studies at school, self-learning, and work experience. I have been
           working on improving my skills in a wide range of areas, from

@@ -3,7 +3,7 @@ import Layout from "./components/Layout";
 
 function App(props) {
   return (
-      <Layout>{props.children}</Layout>
+      <Layout></Layout>
   );
 }
 

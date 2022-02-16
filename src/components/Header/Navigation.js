@@ -20,7 +20,7 @@ const Navigation = () => {
 
   useEffect(() => {
     document.addEventListener("click", (event) => {
-      event.preventDefault();
+      // event.preventDefault();
       event.stopPropagation();
       if (
         (!event.target.closest("#dropdownButton") &&

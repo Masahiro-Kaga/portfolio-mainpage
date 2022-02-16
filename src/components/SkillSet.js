@@ -15,9 +15,7 @@ const SkillSet = () => {
       iconBg = "items-center bg-[gold]";
       animation = "";
     } else if (images.level >= 75 && images.level < 100) {
-      // iconBg = "items-end bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]";
-            iconBg = "items-center bg-[gold]";
-
+      iconBg = "items-end bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]";
       animation = "animate-bounce";
     }
     return (
@@ -41,9 +39,7 @@ const SkillSet = () => {
       iconBg = "items-center bg-[gold]";
       animation = "";
     } else if (images.level >= 75 && images.level < 100) {
-      // iconBg = "items-end bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]";
-            iconBg = "items-center bg-[gold]";
-
+      iconBg = "items-end bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]";
       animation = "animate-bounce";
     }
     return (
@@ -67,9 +63,7 @@ const SkillSet = () => {
       iconBg = "items-center bg-[gold]";
       animation = "";
     } else if (images.level >= 75 && images.level < 100) {
-      // iconBg = "items-end bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]";
-            iconBg = "items-center bg-[gold]";
-
+      iconBg = "items-end bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]";
       animation = "animate-bounce";
     }
     return (
@@ -93,9 +87,7 @@ const SkillSet = () => {
       iconBg = "items-center bg-[gold]";
       animation = "";
     } else if (images.level >= 75 && images.level < 100) {
-      // iconBg = "items-end bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]";
-            iconBg = "items-center bg-[gold]";
-
+      iconBg = "items-end bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]";
       animation = "animate-bounce";
     }
     return (

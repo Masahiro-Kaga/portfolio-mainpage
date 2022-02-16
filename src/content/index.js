@@ -13,8 +13,8 @@ export default {
   },
   stack: {
     title: "Stack",
-    fireIcon1:{ img: process.env.PUBLIC_URL + "/img/background_fire1.gif", alt: "backgroundFire" },
-    fireIcon2:{ img: process.env.PUBLIC_URL + "/img/background_fire2.gif", alt: "backgroundFire" },
+    // fireIcon1:{ img: process.env.PUBLIC_URL + "/img/background_fire1.gif", alt: "backgroundFire" },
+    // fireIcon2:{ img: process.env.PUBLIC_URL + "/img/background_fire2.gif", alt: "backgroundFire" },
     tech_frontend:[
       { level:75, img: process.env.PUBLIC_URL + "/img/stackicons/react.svg", alt: "React" },
       { level:75, img: process.env.PUBLIC_URL + "/img/stackicons/nextjs.svg", alt: "Nextjs" },

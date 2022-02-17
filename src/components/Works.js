@@ -110,12 +110,12 @@ const Works = () => {
               <div className="p-5">
                 <a href="#">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Santa get back to deer!
+                    Diary app
                   </h5>
                 </a>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  I made shooting game Before Christmas in 2019. Dev tool is
-                  only Vanila Javascript. Let's play it!
+                  This app is for taking Diary every day!
+                  Hopefully I would like to note what happen today.
                 </p>
                 <div className="relative flex flex-row justify-between">
                   <div>
@@ -152,21 +152,22 @@ const Works = () => {
 
           <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
             <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <img className="rounded-t-lg" src="img/work/work1.jpg" alt="" />
+              <img className="rounded-t-lg" src="img/work/work4.jpg" alt="" />
               <div className="p-5">
                 <a href="#">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Santa get back to deer!
+                    Main Portfolio Page
                   </h5>
                 </a>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  I made shooting game Before Christmas in 2019. Dev tool is
-                  only Vanila Javascript. Let's play it!
+                  I finally made my portfolio page which you are on now!
+                  I would like you to know about me ᐛ
+                  Thanks!
                 </p>
                 <div className="relative flex flex-row justify-between">
                   <div>
                     <a
-                      href="https://masahiro-kaga.github.io/portfolio_SantaShooting/"
+                      href="https://masa-portfoliotemptest.herokuapp.com/"
                       target="_blank"
                       className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
@@ -185,7 +186,7 @@ const Works = () => {
                       </svg>
                     </a>
                   </div>
-                  <a href="https://github.com/Masahiro-Kaga/portfolio_SantaShooting" target="_blank">
+                  <a href="https://github.com/Masahiro-Kaga/portfolio" target="_blank">
                     <div className="bg-white rounded-lg w-10 h-10">
                       <img src="img/github-icon.svg" alt="" />
                     </div>

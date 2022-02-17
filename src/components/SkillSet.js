@@ -15,7 +15,7 @@ const SkillSet = () => {
       iconBg = "items-center bg-[gold]";
       animation = "";
     } else if (images.level >= 75 && images.level < 100) {
-      iconBg = "items-end bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]";
+      iconBg = "items-end bg-[url('../public/img/background_fire2.gif')]";
       animation = "animate-bounce";
     }
     return (
@@ -23,8 +23,8 @@ const SkillSet = () => {
         <div className={`bg-cover h-full w-full flex justify-center ${iconBg}`}>
           <img src={images.img} alt="" className={`w-12 h-12 ${animation}`} />
         </div>
-      </div>
-    );
+      </div> 
+    ); 
   });
   const backEndTech = content.stack.tech_backend.map((images, index) => {
     let iconBg;
@@ -39,7 +39,7 @@ const SkillSet = () => {
       iconBg = "items-center bg-[gold]";
       animation = "";
     } else if (images.level >= 75 && images.level < 100) {
-      iconBg = "items-end bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]";
+      iconBg = "items-end bg-[url('../public/img/background_fire2.gif')]";
       animation = "animate-bounce";
     }
     return (
@@ -63,7 +63,7 @@ const SkillSet = () => {
       iconBg = "items-center bg-[gold]";
       animation = "";
     } else if (images.level >= 75 && images.level < 100) {
-      iconBg = "items-end bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]";
+      iconBg = "items-end bg-[url('../public/img/background_fire2.gif')]";
       animation = "animate-bounce";
     }
     return (
@@ -87,7 +87,7 @@ const SkillSet = () => {
       iconBg = "items-center bg-[gold]";
       animation = "";
     } else if (images.level >= 75 && images.level < 100) {
-      iconBg = "items-end bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]";
+      iconBg = "items-end bg-[url('../public/img/background_fire2.gif')]";
       animation = "animate-bounce";
     }
     return (
@@ -160,26 +160,7 @@ const SkillSet = () => {
         </div>
       </div>
 
-      {/* <div className="relative h-16 w-16">
-        <div className="absolute w-full h-full border-2 border-black rounded-lg"></div>
-        <div className="absolute h-full w-full flex justify-center items-end bg-cover bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/img/background_fire2.gif')]">
-          <img
-            src={content.stack.tech_frontend[3].img}
-            alt=""
-            className={`w-12 h-12 animate-bounce`}
-          />
-        </div>
-      </div>
-      <div className="relative h-16 w-16">
-        <div className="absolute w-full h-full border-2 border-black rounded-lg"></div>
-        <div className="absolute w-full h-full flex justify-center items-center">
-          <img
-            src={content.stack.tech_frontend[3].img}
-            alt=""
-            className={`w-12 h-12`}
-          />
-        </div>
-      </div> */}
+
     </section>
   );
 };

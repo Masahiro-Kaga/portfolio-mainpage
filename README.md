@@ -68,3 +68,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+      {/* <div className="relative h-16 w-16">
+        <div className="absolute w-full h-full border-2 border-black rounded-lg"></div>
+        <div className="absolute h-full w-full flex justify-center items-end bg-cover bg-[url('/Users/kagamasahiro/Documents/icloud_general/portfolio/public/background_fire2.gif')]">
+          <img
+            src={content.stack.tech_frontend[3].img}
+            alt=""
+            className={`w-12 h-12 animate-bounce`}
+          />
+        </div>
+      </div>
+      <div className="relative h-16 w-16">
+        <div className="absolute w-full h-full border-2 border-black rounded-lg"></div>
+        <div className="absolute w-full h-full flex justify-center items-center">
+          <img
+            src={content.stack.tech_frontend[3].img}
+            alt=""
+            className={`w-12 h-12`}
+          />
+        </div>
+      </div> */}

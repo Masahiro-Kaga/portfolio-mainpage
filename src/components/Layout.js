@@ -12,6 +12,9 @@ const Layout = (props) => {
   return (
     <>
       <Navigation></Navigation>
+      <figure>
+        <img src="https://note-app-masamern.herokuapp.com/mini.png" alt="wakeking" />
+      </figure>
       <Header></Header>
       <AboutContent></AboutContent>
       <AboutMe></AboutMe>

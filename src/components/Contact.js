@@ -11,7 +11,7 @@ const Contact = () => {
         <div className="flex flex-col justify-between">
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
-              Lets talk about everything Yay!
+              Lets talk about everything Yayyyy!
             </h2>
           </div>
           <div className="mt-8 text-center"></div>
@@ -39,7 +39,15 @@ const Contact = () => {
               required
             ></input>
           </div>
-          
+          <div className="mt-8">
+            <span className="uppercase text-sm text-gray-600 font-bold">
+              Message
+            </span>
+            <textarea className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:shadow-outline"
+              placeholder=""
+              name="comment"
+              required></textarea>
+          </div>
           <div className="mt-8">
             <button type="submit" className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:shadow-outline">
               Send Message

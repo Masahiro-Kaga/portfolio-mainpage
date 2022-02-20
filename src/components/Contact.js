@@ -1,8 +1,13 @@
 import React from "react";
 
 const Contact = () => {
+
+  const successModalHandler = (e) => {
+    e.preventDefault();
+    console.log(123);
+  }
   return (
-    <form name="contact-form" method="POST" data-netlify="true" className="bg-gray-800 text-gray-100 px-8 py-12">
+    <form onSubmit={successModalHandler} name="contact-form" method="POST" data-netlify="true" className="bg-gray-800 text-gray-100 px-8 py-12">
       <input type="hidden" name="form-name" value="contact-form"></input>
       <div className="text-center w-full">
       <p className="font-dosis font-bold text-4xl">Contact Me</p>

@@ -2,7 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="bg-gray-800 text-gray-100 px-8 py-12">
+    <form name="contact-form" method="POST" data-netlify="true" className="bg-gray-800 text-gray-100 px-8 py-12">
+      <input type="hidden" name="form-name" value="contact-form"></input>
       <div className="text-center w-full">
       <p className="font-dosis font-bold text-4xl">Contact Me</p>
       </div>
@@ -18,12 +19,14 @@ const Contact = () => {
         <div className="">
           <div>
             <span className="uppercase text-sm text-gray-600 font-bold">
-              Full Name
+              Name
             </span>
             <input
               className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:shadow-outline"
               type="text"
               placeholder=""
+              name="name"
+              required
             ></input>
           </div>
           <div className="mt-8">
@@ -31,13 +34,19 @@ const Contact = () => {
             <input
               className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:shadow-outline"
               type="text"
+              placeholder=""
+              name="email"
+              required
             ></input>
           </div>
           <div className="mt-8">
             <span className="uppercase text-sm text-gray-600 font-bold">
               Message
             </span>
-            <textarea className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:shadow-outline"></textarea>
+            <textarea className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:shadow-outline"
+              placeholder=""
+              name="comment"
+              required></textarea>
           </div>
           <div className="mt-8">
             <button className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:shadow-outline">
@@ -46,7 +55,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </form>
   );
 };
 

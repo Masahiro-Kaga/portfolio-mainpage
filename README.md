@@ -90,5 +90,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
         </div>
       </div> */}
 
-
-          
+<!-- <form name="contact-form" netlify netlify-honeypot="bot-field" action="/" hidden>
+      <input
+      type="text"
+      placeholder=""
+      name="name"
+      ></input>
+      <input
+      type="text"
+      placeholder=""
+      name="email"
+      ></input>
+      <textarea
+      placeholder=""
+      name="comment"
+      ></textarea>
+    </form> -->

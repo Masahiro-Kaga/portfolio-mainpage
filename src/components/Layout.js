@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AboutContent from "./AboutContent";
 import AboutMe from "./AboutMe";
 import Contact from "./Contact";
@@ -11,12 +11,16 @@ import Works from "./Works";
 
 const Layout = (props) => {
   
+  const [ clearLocalStorage , setClearLocalStorage ] = useState(false);
+
   const closeModalHandler = () => {
-    localStorage.clear()
+    localStorage.clear();
+    setClearLocalStorage(true);
   };
   return (
     <>
-    {localStorage.getItem("sent") && <SuccessModal onClose={closeModalHandler}></SuccessModal>}
+    {/* {localStorage.getItem("sent") && <SuccessModal onClose={closeModalHandler}></SuccessModal>} */}
+    {!clearLocalStorage && <SuccessModal onClose={closeModalHandler}></SuccessModal>}
       <Navigation></Navigation>
       <figure>
         <img src="https://note-app-masamern.herokuapp.com/mini.png" alt="wakeking" />

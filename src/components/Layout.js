@@ -19,8 +19,8 @@ const Layout = (props) => {
   };
   return (
     <>
-    {/* {localStorage.getItem("sent") && <SuccessModal onClose={closeModalHandler}></SuccessModal>} */}
-    {!clearLocalStorage && <SuccessModal onClose={closeModalHandler}></SuccessModal>}
+    {localStorage.getItem("sent") && <SuccessModal onClose={closeModalHandler}></SuccessModal>}
+    {/* {!clearLocalStorage && <SuccessModal onClose={closeModalHandler}></SuccessModal>} */}
       <Navigation></Navigation>
       <figure>
         <img src="https://note-app-masamern.herokuapp.com/mini.png" alt="wakeking" />

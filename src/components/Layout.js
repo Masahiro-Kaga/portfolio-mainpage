@@ -15,7 +15,7 @@ const Layout = (props) => {
 
   const closeModalHandler = () => {
     localStorage.clear();
-    setClearLocalStorage(true);
+    setClearLocalStorage(false);
   };
   return (
     <>

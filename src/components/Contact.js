@@ -7,10 +7,12 @@ const Contact = () => {
 
   const showModalHandler = (e) => {
     setModalIsShown(true);
+    localStorage.setItem("sent",true)
   };
 
   const hideModalHandler = () => {
     setModalIsShown(false);
+    localStorage.clear("sent")
   };
 
   return (

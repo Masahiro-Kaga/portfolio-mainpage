@@ -6,7 +6,6 @@ const Contact = () => {
   const [modalIsShown, setModalIsShown] = useState(false);
 
   const showModalHandler = (e) => {
-    e.preventDefault();
     setModalIsShown(true);
   };
 

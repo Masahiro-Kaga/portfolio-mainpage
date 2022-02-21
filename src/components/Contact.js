@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import SuccessModal from "./UI/SuccessModal";
 
 const Contact = () => {
 
-  const successModalHandler = (e) => {
+  const [modalIsShown, setModalIsShown] = useState(false);
+
+  const showModalHandler = (e) => {
     e.preventDefault();
-    console.log(123);
-  }
+    setModalIsShown(true);
+  };
+
+  const hideModalHandler = () => {
+    setModalIsShown(false);
+  };
+
   return (
-    <form onSubmit={successModalHandler} name="contact-form" method="POST" data-netlify="true" className="bg-gray-800 text-gray-100 px-8 py-12">
+    <>
+    {modalIsShown && <SuccessModal onClose={hideModalHandler}></SuccessModal>}
+    <form onSubmit={showModalHandler} name="contact-form" method="POST" data-netlify="true" className="bg-gray-800 text-gray-100 px-8 py-12">
       <input type="hidden" name="form-name" value="contact-form"></input>
       <div className="text-center w-full">
       <p className="font-dosis font-bold text-4xl">Contact Me</p>
@@ -61,6 +71,8 @@ const Contact = () => {
         </div>
       </div>
     </form>
+    </>
+
   );
 };
 

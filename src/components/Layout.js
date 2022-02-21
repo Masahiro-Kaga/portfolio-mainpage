@@ -11,7 +11,7 @@ import Works from "./Works";
 
 const Layout = (props) => {
   
-  const [ clearLocalStorage , setClearLocalStorage ] = useState(false);
+  const [ clearLocalStorage , setClearLocalStorage ] = useState(true);
 
   const closeModalHandler = () => {
     localStorage.clear();

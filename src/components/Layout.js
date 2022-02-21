@@ -22,7 +22,7 @@ const Layout = (props) => {
 
   const closeModalHandler = () => {
     localStorage.clear();
-    setClearLocalStorage(false);
+    setSentComment(false);
   };
 
   return (

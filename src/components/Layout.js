@@ -17,11 +17,12 @@ const Layout = (props) => {
     if(localStorage.getItem("sent")){
       setSentComment(true);
     }
-
+    setTimeout(localStorage.clear(),3000);
+    
   },[])
 
   const closeModalHandler = () => {
-    localStorage.clear();
+    
     setSentComment(false);
   };
 

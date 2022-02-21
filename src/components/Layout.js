@@ -9,7 +9,7 @@ import SkillSet from "./SkillSet";
 import SuccessModal from "./UI/SuccessModal";
 import Works from "./Works";
 
-const Layout = (props) => {
+const Layout = () => {
   
   const [ sentComment , setSentComment ] = useState(false);
 
@@ -18,7 +18,6 @@ const Layout = (props) => {
       setSentComment(true);
     }
     localStorage.clear();
-
   },[])
 
   const closeModalHandler = () => {
@@ -31,7 +30,7 @@ const Layout = (props) => {
     {/* {localStorage.getItem("sent") && <SuccessModal onClose={closeModalHandler}></SuccessModal>} */}
     {sentComment && <SuccessModal onClose={closeModalHandler}></SuccessModal>}
       <Navigation></Navigation>
-      <figure>
+      <figure className="hidden">
         <img src="https://note-app-masamern.herokuapp.com/mini.png" alt="wakeking" />
       </figure>
       <Header></Header>

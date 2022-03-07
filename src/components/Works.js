@@ -28,7 +28,7 @@ const Works = () => {
                 <div className="relative flex flex-row justify-between">
                   <div>
                     <a
-                      href="https://masahiro-kaga.github.io/portfolio_SantaShooting/"
+                      href="https://masahiro-kaga.github.io/portfolio-santa-shooting/"
                       target="_blank"
                       className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
@@ -281,7 +281,7 @@ const Works = () => {
                       </svg>
                     </a>
                   </div>
-                  <a href="https://github.com/Masahiro-Kaga/csp1-kaga/settings/pages" target="_blank">
+                  <a href="https://masahiro-kaga.github.io/portfolio-mainpage-proto/" target="_blank">
                     <div className="bg-white rounded-lg w-10 h-10">
                       <img src="img/github-icon.svg" alt="" />
                     </div>

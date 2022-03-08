@@ -1,0 +1,10 @@
+li > .active{
+    color:gray;
+    background-color:white;
+    /* animation: a1 2s linear 2s infinite alternate; */
+}
+
+/* @keyframes a1 {
+    0% {background-color: #4a93cb;}
+    100% {background-color: #a1cef1;}
+} */

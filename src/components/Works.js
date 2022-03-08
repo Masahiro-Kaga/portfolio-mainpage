@@ -2,7 +2,7 @@ import React from "react";
 
 const Works = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="works">
       <div className="container max-w-6xl mx-auto">
         <p className="font-dosis font-bold text-4xl text-center my-20">Works</p>
         <p className="mt-2 text-lg text-center text-gray-600">

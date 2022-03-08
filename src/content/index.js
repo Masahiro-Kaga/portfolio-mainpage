@@ -9,7 +9,7 @@ const allData = {
   header: {
     img: "img/background_image.jpg",
     text: ["Masahiro Kaga"],
-    typical: ["No Code , No Life 💻", 3000, "No Code , No Vibe 🎸", 3000],
+    typical: ["No Code , No Life 💻", 3000, " No Code , No Vibe 🎸", 3000],
   },
   stack: {
     title: "Stack",

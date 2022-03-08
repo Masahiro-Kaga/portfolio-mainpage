@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { animateScroll, Link } from "react-scroll";
 import content from "../../content";
+import "./Navigation.css";
 
 const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -24,8 +26,9 @@ const Navigation = () => {
       event.stopPropagation();
       if (
         (!event.target.closest("#dropdownButton") &&
-        !event.target.closest("#dropdownMenuButton") &&
-        !isOpenMenu) || event.target.closest("#dropdownMenuButton li")
+          !event.target.closest("#dropdownMenuButton") &&
+          !isOpenMenu) ||
+        event.target.closest("#dropdownMenuButton li")
       ) {
         setIsOpenMenu(false);
       }
@@ -41,12 +44,12 @@ const Navigation = () => {
         id="navbar"
       >
         <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="#" className="flex">
+          <button onClick={animateScroll.scrollToTop} className="flex">
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white font-dosis">
               {content.nav.logo}
             </span>
             <span className="h-2 w-2 bg-sky-500 inline-block rounded-full self-end"></span>
-          </a>
+          </button>
           <div className="relative">
             <button
               type="button"
@@ -83,26 +86,91 @@ const Navigation = () => {
               id="dropdownMenuButton"
             >
               <li>
-                <a
-                  className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 active:bg-blue-600"
-                  href="#"
+                <Link
+                  className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 active:bg-blue-600 cursor-pointer"
+                  activeClass="active"
+                  to="skills"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Skillset
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 active:bg-blue-600 cursor-pointer"
+                  activeClass="active"
+                  to="works"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
                 >
                   Work
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700"
-                  href="#"
+                <Link
+                  className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 cursor-pointer"
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           <div className="hidden w-full md:block md:w-auto" id="mobile-menu">
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-              {content.nav.links.map((link, index) => {
+              <li>
+                <Link
+                  className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
+                  activeClass="active"
+                  to="skills"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Skillset
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
+                  activeClass="active"
+                  to="works"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Work
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Contact
+                </Link>
+              </li>
+
+              {/* {content.nav.links.map((link, index) => {
                 return (
                   <li key={index}>
                     <a
@@ -113,7 +181,7 @@ const Navigation = () => {
                     </a>
                   </li>
                 );
-              })}
+              })} */}
             </ul>
           </div>
         </div>

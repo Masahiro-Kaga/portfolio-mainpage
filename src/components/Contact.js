@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <>
-    <form onSubmit={showModalHandler} name="contact-form" method="POST" data-netlify="true" className="bg-gray-800 text-gray-100 px-8 py-12">
+    <form onSubmit={showModalHandler} name="contact-form" method="POST" data-netlify="true" className="bg-gray-800 text-gray-100 px-8 py-12" id="contact">
       <input type="hidden" name="form-name" value="contact-form"></input>
       <div className="text-center w-full">
       <p className="font-dosis font-bold text-4xl">Contact Me</p>

@@ -100,7 +100,7 @@ const SkillSet = () => {
   });
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="skills">
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center font-dosis bg">
           My Skillset

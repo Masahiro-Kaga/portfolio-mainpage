@@ -45,7 +45,7 @@ const Navigation = () => {
       >
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <button onClick={animateScroll.scrollToTop} className="flex">
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white font-dosis">
+            <span className="self-center text-xl font-semibold whitespace-nowrap text-white font-dosis">
               {content.nav.logo}
             </span>
             <span className="h-2 w-2 bg-sky-500 inline-block rounded-full self-end"></span>

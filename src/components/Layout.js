@@ -39,7 +39,7 @@ const Layout = () => {
       <SkillSet></SkillSet>
       <Works></Works>
       <Contact></Contact>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   );
 };

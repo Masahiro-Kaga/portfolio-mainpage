@@ -103,7 +103,7 @@ const Contact = () => {
               >
                 <div>
                   <img
-                    src={`${process.env.PUBLIC_URL}/img/sns/facebook_anime.gif`}
+                    src={`${process.env.PUBLIC_URL}/img/sns/facebook_anime3.gif`}
                     alt="Link to facebook page"
                   />
                 </div>
@@ -114,7 +114,7 @@ const Contact = () => {
               >
                 <div>
                   <img
-                    src={`${process.env.PUBLIC_URL}/img/sns/instagram_anime.gif`}
+                    src={`${process.env.PUBLIC_URL}/img/sns/instagram_anime3.gif`}
                     alt="Link to facebook page"
                   />
                 </div>

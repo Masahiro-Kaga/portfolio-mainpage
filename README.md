@@ -1,10 +1,11 @@
-<h1 style="text-align: center;">
+<h1 align="center">
 Portfolio - Portfolio Main Page
 </h1>
 
 ## Purpose
 
-&emsp;To showcase my skill sets and get in touch with Web Developers.
+&emsp;To showcase my skill sets and get in touch with Web Developers.  
+&emsp;Welcome a lot of message from you through the contact form.
 
 <br>
 

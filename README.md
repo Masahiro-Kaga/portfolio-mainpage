@@ -42,12 +42,6 @@ Portfolio - Portfolio Main Page
 
 <br>
 
-## Proud of
-
-&emsp;A couple of animations.
-
-<br>
-
 ## Demo  
 
 <br>
@@ -68,9 +62,20 @@ Portfolio - Portfolio Main Page
 
 <br>
 
+## Proud of
+
+&emsp;A couple of animations.
+
+<br>
+
 ## Usage
 
-&emsp;npm start to launch web page on your local environment.
+&emsp; On the terminal,
+
+```
+npm start
+``` 
+&emsp; to launch web page on your local environment.
 
 <br>
 

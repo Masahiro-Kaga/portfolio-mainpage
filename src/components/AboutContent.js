@@ -1,5 +1,4 @@
 import React from 'react';
-import content from '../content/index.js';
 
 const AboutContent = () => {
   return <div>

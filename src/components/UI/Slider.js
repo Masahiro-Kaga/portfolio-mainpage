@@ -7,7 +7,7 @@ const featuredProducts = [
   "/img/myPhoto/mypic4.JPEG",
   "/img/myPhoto/mypic5.JPEG",
   "/img/myPhoto/mypic6.JPEG",
-  "/img/myPhoto/mypic7.JPEG",
+  // "/img/myPhoto/mypic7.JPEG",
   "/img/myPhoto/mypic8.JPEG",
 ];
 

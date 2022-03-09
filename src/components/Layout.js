@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AboutContent from "./AboutContent";
 import AboutMe from "./AboutMe";
 import Contact from "./Contact";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import Header from "./Header/Header";
 import Navigation from "./Header/Navigation";
 import SkillSet from "./SkillSet";

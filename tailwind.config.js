@@ -25,5 +25,5 @@ module.exports = {
       dosis: ["Dosis"],
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [],
 };

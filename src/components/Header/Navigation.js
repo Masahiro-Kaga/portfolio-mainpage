@@ -33,7 +33,8 @@ const Navigation = () => {
         setIsOpenMenu(false);
       }
     });
-  }, []);
+    console.log(123)
+  }, [isOpenMenu]);
 
   window.addEventListener("scroll", scrolledWindow);
 

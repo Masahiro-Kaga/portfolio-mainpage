@@ -26,11 +26,7 @@ const Header = () => {
 export default Header;
 
 // import { LazyLoadImage } from "react-lazy-load-image-component";
+// <LazyLoadImage src={content.header.img}/>
+// <LazyLoadImage src={`${process.env.PUBLIC_URL}/img/background_image.jpg`}>
+// </LazyLoadImage>
 
-{
-  /* <LazyLoadImage src={content.header.img}/> */
-}
-{
-  /* <LazyLoadImage src={`${process.env.PUBLIC_URL}/img/background_image.jpg`}>
-</LazyLoadImage> */
-}

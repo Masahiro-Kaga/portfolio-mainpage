@@ -138,7 +138,7 @@ const Contact = () => {
                   />
                 </div>
               </a>
-              <a href="https://twitter.com/masa08736964" target="blank">
+              <a href="https://discord.gg/MEtUuWDA" target="blank">
                 <div>
                   <img
                     src={`${process.env.PUBLIC_URL}/img/sns/discord_anime.gif`}
@@ -153,6 +153,7 @@ const Contact = () => {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83327.35775811192!2d-123.19394348746846!3d49.257826320072006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2z44OW44Oq44OG44Kj44OD44K344Ol44Kz44Ot44Oz44OT44Ki5beeIOODkOODs-OCr-ODvOODkOODvA!5e0!3m2!1sja!2sca!4v1646765379711!5m2!1sja!2sca"
               className="flex-grow rounded-lg"
+              title="Google map for where I live"
               width="100%"
               height="100%"
               style={{ border: 0 }}

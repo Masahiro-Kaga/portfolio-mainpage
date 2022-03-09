@@ -1,6 +1,22 @@
 <h1 align="center">
 Portfolio - Portfolio Main Page
 </h1>
+<h3 align="center">
+🔥Be a Professioinal Fullstack Web Developer🔥
+</h3>
+
+<!-- <img src="https://img.shields.io/badge/License-MIT-yellow.svg"></img> -->
+
+<!-- <img>[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)</img>
+<img>![visitor badge](https://visitor-badge.glitch.me/badge?page_id=MasahiroKaga.visitor-badge&left_text=MyPageVisitors)</img> -->
+
+<p align="right"> 
+<img src="https://shields-io-visitor-counter.herokuapp.com/badge?page=MasahiroKaga.shields-io-visitor-counter&color=1D70B8&logo=GitHub&logoColor=FFFFFF&style=flat-square"></img>
+<img src="http://img.shields.io/badge/license-MIT-blue.svg"></img>
+
+</p>
+
+<br>
 
 ## Purpose
 

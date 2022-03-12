@@ -35,6 +35,7 @@ Portfolio - Portfolio Main Page
 
 - Static web app using React.js.
 - Styled with Tailwind CSS.
+- Set CI/CD on deploy environment.
 - Put links of my 6 portfolios.
 - User comment was sent via Netlify and I can check message on Netlify platform.
 - Applied react-typical animation.
@@ -65,6 +66,7 @@ Portfolio - Portfolio Main Page
 ## Proud of
 
 &emsp;A couple of animations.
+&emsp;Understand CI/CD.
 
 <br>
 

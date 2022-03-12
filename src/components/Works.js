@@ -55,7 +55,7 @@ const Works = () => {
                     rel="noreferrer"
                   >
                     <div className="bg-white rounded-lg w-10 h-10 ">
-                      <img src="img/github-icon.svg" alt="" />
+                      <img src="img/github-icon.svg" alt="Github code page" />
                     </div>
                   </a>
                 </div>
@@ -109,7 +109,7 @@ const Works = () => {
                     rel="noreferrer"
                   >
                     <div className="bg-white rounded-lg w-10 h-10">
-                      <img src="img/github-icon.svg" alt="" />
+                      <img src="img/github-icon.svg" alt="Github code page" />
                     </div>
                   </a>
                 </div>
@@ -161,9 +161,10 @@ const Works = () => {
                     href="https://github.com/Masahiro-Kaga/portfolio-blog-app"
                     target="_blank"
                     rel="noreferrer"
+                    color="white"
                   >
                     <div className="bg-white rounded-lg w-10 h-10">
-                      <img src="img/github-icon.svg" alt="" />
+                      <img src="img/github-icon.svg" alt="Github code page" />
                     </div>
                   </a>
                 </div>
@@ -185,7 +186,8 @@ const Works = () => {
                   ECommerce website
                 </h5>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Key features :<br></br>MERN, FetchAPI, MUI, CI/CD, Authentication
+                  Key features :<br></br>MERN, FetchAPI, MUI, CI/CD,
+                  Authentication
                 </p>
                 <div className="relative flex flex-row justify-between">
                   <div>
@@ -210,15 +212,32 @@ const Works = () => {
                       </svg>
                     </a>
                   </div>
-                  <a
-                    href="https://github.com/Masahiro-Kaga/portfolio-ECwebsite"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="bg-white rounded-lg w-10 h-10">
-                      <img src="img/github-icon.svg" alt="" />
-                    </div>
-                  </a>
+                  <div className="flex">
+                    <a
+                      href="https://github.com/Masahiro-Kaga/portfolio-ECwebsite-clientside"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div className="bg-white rounded-lg w-auto h-8 flex mr-1">
+                      <p className="text-[3px] text-center self-center ml-1">
+                          Client<br></br>Side
+                        </p>
+                        <img src="img/github-icon.svg" alt="Github code page" />
+                      </div>
+                    </a>
+                    <a
+                      href="https://github.com/Masahiro-Kaga/portfolio-ECwebsite-serverside"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div className="bg-white rounded-lg w-auto h-8 flex ml-1">
+                        <p className="text-[3px] text-center self-center ml-1">
+                          Server<br></br>Side
+                        </p>
+                        <img src="img/github-icon.svg" alt="Github code page" />
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -269,7 +288,7 @@ const Works = () => {
                     rel="noreferrer"
                   >
                     <div className="bg-white rounded-lg w-10 h-10">
-                      <img src="img/github-icon.svg" alt="" />
+                      <img src="img/github-icon.svg" alt="Github code page" />
                     </div>
                   </a>
                 </div>
@@ -284,7 +303,7 @@ const Works = () => {
               <img
                 className="rounded-t-lg"
                 src="img/work/gif/proto_portfolio.gif"
-                alt=""
+                alt="Portfolio proto"
               />
               <div className="p-5">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -317,12 +336,12 @@ const Works = () => {
                     </a>
                   </div>
                   <a
-                    href="https://masahiro-kaga.github.io/portfolio-mainpage-proto/"
+                    href="https://github.com/Masahiro-Kaga/portfolio-mainpage-proto"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <div className="bg-white rounded-lg w-10 h-10">
-                      <img src="img/github-icon.svg" alt="" />
+                      <img src="img/github-icon.svg" alt="Github code page" />
                     </div>
                   </a>
                 </div>

@@ -30,9 +30,6 @@ const Layout = () => {
     {/* {localStorage.getItem("sent") && <SuccessModal onClose={closeModalHandler}></SuccessModal>} */}
     {sentComment && <SuccessModal onClose={closeModalHandler}></SuccessModal>}
       <Navigation></Navigation>
-      <figure className="hidden">
-        <img src="https://note-app-masamern.herokuapp.com/mini.png" alt="wakeking" />
-      </figure>
       <Header></Header>
       <AboutContent></AboutContent>
       <AboutMe></AboutMe>

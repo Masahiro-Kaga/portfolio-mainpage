@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Works = () => {
+  const [loadedDaiaryImage, setLoadedDaiaryImage] = useState(false);
+  const [loadedECImage, setLoadedECImage] = useState(false);
+  console.log(`Load status: DairyApp[${loadedDaiaryImage}] , ECWebapp[${loadedECImage}]`);
+
   return (
     <section className="py-32 bg-white" id="works">
       <div className="container max-w-6xl mx-auto">
@@ -88,7 +92,10 @@ const Works = () => {
                       rel="noreferrer"
                       className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Go to Page
+                      {loadedDaiaryImage ? "Go to Page" : "Loading"}
+                      <figure className="hidden">
+                        <img src="https://note-app-masamern.herokuapp.com/diarylogo_navbar.png" alt="wakeking up heroku" onLoad={()=>setLoadedDaiaryImage(true)}/>
+                      </figure>
                       <svg
                         className="ml-2 -mr-1 w-4 h-4"
                         fill="currentColor"
@@ -197,7 +204,10 @@ const Works = () => {
                       rel="noreferrer"
                       className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Go to Page
+                      {loadedECImage ? "Go to Page" : "Loading"}
+                      <figure className="hidden">
+                        <img src="https://masaecwebsite.netlify.app/images/logo_illust.png" alt="wakeking up heroku" onLoad={()=>setLoadedECImage(true)}/>
+                      </figure>
                       <svg
                         className="ml-2 -mr-1 w-4 h-4"
                         fill="currentColor"
@@ -219,7 +229,7 @@ const Works = () => {
                       rel="noreferrer"
                     >
                       <div className="bg-white rounded-lg w-auto h-8 flex mr-1">
-                      <p className="text-[3px] text-center self-center ml-1">
+                        <p className="text-[13px] text-center self-center ml-1 leading-3">
                           Client<br></br>Side
                         </p>
                         <img src="img/github-icon.svg" alt="Github code page" />
@@ -231,7 +241,7 @@ const Works = () => {
                       rel="noreferrer"
                     >
                       <div className="bg-white rounded-lg w-auto h-8 flex ml-1">
-                        <p className="text-[3px] text-center self-center ml-1">
+                        <p className="text-[13px] text-center self-center ml-1 leading-3">
                           Server<br></br>Side
                         </p>
                         <img src="img/github-icon.svg" alt="Github code page" />

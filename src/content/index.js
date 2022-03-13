@@ -49,7 +49,7 @@ const allData = {
     ],
     tech_media:[
       { level:75, img: process.env.PUBLIC_URL + "/img/stackicons/Adobe_Photoshop_CC.svg",alt: "Photoshop"},
-      { level:50, img: process.env.PUBLIC_URL + "/img/stackicons/Adobe_Premiere_Pro_CC.svg",alt: "Premiere Pro" },
+      { level:50, img: process.env.PUBLIC_URL + "/img/stackicons/Adobe_Premiere_Pro_CC.svg",alt: "Premiere" },
       { level:50, img: process.env.PUBLIC_URL + "/img/stackicons/Adobe_Audition_CC.svg",alt: "Audition"},
       { level:50, img: process.env.PUBLIC_URL + "/img/stackicons/wordpress-icon.svg",alt: "Wordpress"},
       { level:50, img: process.env.PUBLIC_URL + "/img/stackicons/blender.svg", alt: "Blender" },

@@ -10,7 +10,7 @@ const Works = () => {
       <div className="container max-w-6xl mx-auto">
         <p className="font-dosis font-bold text-4xl text-center my-20">Works</p>
         <p className="mt-2 text-lg text-center text-gray-600">
-          Please check out our list of awesome work below.
+          Please check out my list of awesome works below.
         </p>
         <div className="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
           {/* Portfolio 1------------------------------------------------------------- */}

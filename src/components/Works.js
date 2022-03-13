@@ -252,7 +252,6 @@ const Works = () => {
               </div>
             </div>
           </div>
-          <img src="https://masaecwebsite.netlify.app/images/product_icon.png" alt="wakeking up heroku"/>
 
           {/* Portfolio 5------------------------------------------------------------- */}
 

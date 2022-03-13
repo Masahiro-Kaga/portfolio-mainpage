@@ -206,7 +206,7 @@ const Works = () => {
                     >
                       {loadedECImage ? "Go to Page" : "Loading"}
                       <figure className="hidden">
-                        <img src="https://masaecwebsite.netlify.app/images/logo_illust.png" alt="wakeking up heroku" onLoad={()=>setLoadedECImage(true)}/>
+                        <img src="https://masaecwebsite.netlify.app/images/product_icon.png" alt="wakeking up heroku" onLoad={()=>setLoadedECImage(true)}/>
                       </figure>
                       <svg
                         className="ml-2 -mr-1 w-4 h-4"
@@ -252,6 +252,7 @@ const Works = () => {
               </div>
             </div>
           </div>
+          <img src="https://masaecwebsite.netlify.app/images/product_icon.png" alt="wakeking up heroku"/>
 
           {/* Portfolio 5------------------------------------------------------------- */}
 

@@ -15,19 +15,19 @@ const Works = () => {
         <div className="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
           {/* Portfolio 1------------------------------------------------------------- */}
 
-          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex-grow">
+          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
+            <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
               <img
                 className="rounded-t-lg"
                 src="img/work/gif/shootinggame.gif"
                 alt="javascript shooting game"
               />
-              <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <div className="p-5 bg-gray-800 rounded-b-xl">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
                   Shooting game
                 </h5>
 
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <p className="mb-3 font-normal text-gray-400">
                   Key features :<br></br>VanilaJS, Canvas
                 </p>
                 <div className="flex flex-row justify-between">
@@ -69,18 +69,18 @@ const Works = () => {
 
           {/* Portfolio 2------------------------------------------------------------- */}
 
-          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex-grow">
+          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
+            <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
               <img
                 className="rounded-t-lg"
                 src="img/work/jpg/diaryapp.jpg"
                 alt="Diary app with React MERN stack"
               />
-              <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <div className="p-5 bg-gray-800 rounded-b-xl">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
                   Diary app
                 </h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <p className="mb-3 font-normal text-gray-400">
                   Key features :<br></br>MERN, Redux, Axios, Cloudinary
                   {/* ,Authentication */}
                 </p>
@@ -126,19 +126,19 @@ const Works = () => {
 
           {/* Portfolio 3------------------------------------------------------------- */}
 
-          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex-grow">
+          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
+            <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
               <img
                 className="rounded-t-lg"
                 src="img/work/gif/blogapp.gif"
                 alt="Blog App with Next.js"
               />
-              <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <div className="p-5 bg-gray-800 rounded-b-xl">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
                   Blog App
                 </h5>
 
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <p className="mb-3 font-normal text-gray-400">
                   Key features :<br></br>NextJS ,EmotionCSS
                 </p>
                 <div className="relative flex flex-row justify-between">
@@ -181,18 +181,18 @@ const Works = () => {
 
           {/* Portfolio 4------------------------------------------------------------- */}
 
-          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex-grow">
+          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
+            <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
               <img
                 className="rounded-t-lg"
                 src="img/work/gif/ecommerce.gif"
                 alt="Ecommerce website with MERN stack"
               />
-              <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <div className="p-5 bg-gray-800 rounded-b-xl">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
                   ECommerce website
                 </h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <p className="mb-3 font-normal text-gray-400">
                   Key features :<br></br>MERN, FetchAPI, MUI, CI/CD,
                   Authentication
                 </p>
@@ -255,18 +255,18 @@ const Works = () => {
 
           {/* Portfolio 5------------------------------------------------------------- */}
 
-          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex-grow">
+          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
+            <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
               <img
                 className="rounded-t-lg"
                 src="img/work/gif/mainpage.gif"
                 alt="Portfolio main page"
               />
-              <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <div className="p-5 bg-gray-800 rounded-b-xl">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
                   Main Portfolio Page
                 </h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <p className="mb-3 font-normal text-gray-400">
                   Key features :<br></br>React, TailwindCSS, Netlify Form
                 </p>
                 <div className="relative flex flex-row justify-between">
@@ -308,18 +308,18 @@ const Works = () => {
 
           {/* Portfolio 6------------------------------------------------------------- */}
 
-          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex-grow">
+          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
+            <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
               <img
                 className="rounded-t-lg"
                 src="img/work/gif/proto_portfolio.gif"
                 alt="Portfolio proto"
               />
-              <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <div className="p-5 bg-gray-800 rounded-b-xl">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
                   [Proto]Portfolio toppage
                 </h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <p className="mb-3 font-normal text-gray-400">
                   Key features :<br></br>Bootstrap, VanilaJS
                 </p>
                 <div className="relative flex flex-row justify-between">

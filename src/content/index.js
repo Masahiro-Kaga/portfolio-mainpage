@@ -28,9 +28,9 @@ const allData = {
       { level:25, img: process.env.PUBLIC_URL + "/img/stackicons/bootstrap.svg", alt: "Bootstrap" },
     ],
     tech_backend:[
-      { level:50, img: process.env.PUBLIC_URL + "/img/stackicons/nodejs.svg", alt: "Nodejs" },
-      { level:75, img: process.env.PUBLIC_URL + "/img/stackicons/java.svg", alt: "Java" },
-      { level:75, img: process.env.PUBLIC_URL + "/img/stackicons/linux-tux.svg", alt: "Linux" },
+      { level:75, img: process.env.PUBLIC_URL + "/img/stackicons/nodejs.svg", alt: "Nodejs" },
+      { level:50, img: process.env.PUBLIC_URL + "/img/stackicons/java.svg", alt: "Java" },
+      { level:50, img: process.env.PUBLIC_URL + "/img/stackicons/linux-tux.svg", alt: "Linux" },
       { level:50, img: process.env.PUBLIC_URL + "/img/stackicons/mongodb.svg", alt: "Mongodb" },
       { level:25, img: process.env.PUBLIC_URL + "/img/stackicons/mysql.svg", alt: "Mysql" },
       { level:25, img: process.env.PUBLIC_URL + "/img/stackicons/express.svg", alt: "Express" },
@@ -44,8 +44,8 @@ const allData = {
       { level:25, img: process.env.PUBLIC_URL + "/img/stackicons/aws-ec2.svg",alt: "AWS-EC2"},
       { level:0, img: process.env.PUBLIC_URL + "/img/stackicons/firebase.svg",alt: "Firebase"},
       { level:50, img: process.env.PUBLIC_URL + "/img/stackicons/postman-icon.svg",alt: "Postman"},
-      { level:50, img: process.env.PUBLIC_URL + "/img/stackicons/sublimetext-icon.svg",alt: "Sublimetext"},
-      { level:75, img: process.env.PUBLIC_URL + "/img/stackicons/visual-studio-code.svg",alt: "VScode"},
+      { level:25, img: process.env.PUBLIC_URL + "/img/stackicons/sublimetext-icon.svg",alt: "Sublimetext"},
+      { level:50, img: process.env.PUBLIC_URL + "/img/stackicons/visual-studio-code.svg",alt: "VScode"},
     ],
     tech_media:[
       { level:75, img: process.env.PUBLIC_URL + "/img/stackicons/Adobe_Photoshop_CC.svg",alt: "Photoshop"},

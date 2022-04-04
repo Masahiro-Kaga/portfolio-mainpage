@@ -3,17 +3,51 @@ import React, { useState } from "react";
 const Works = () => {
   const [loadedDaiaryImage, setLoadedDaiaryImage] = useState(false);
   const [loadedECImage, setLoadedECImage] = useState(false);
-  console.log(`Load status: DairyApp[${loadedDaiaryImage}] , ECWebapp[${loadedECImage}]`);
+  console.log(
+    `Load status: DairyApp[${loadedDaiaryImage}] , ECWebapp[${loadedECImage}]`
+  );
 
   return (
     <section className="py-32 bg-white" id="works">
       <div className="container max-w-6xl mx-auto">
         <p className="font-dosis font-bold text-4xl text-center my-20">Works</p>
-        <p className="mt-2 text-lg text-center text-gray-600">
-          Please check out my list of awesome works below.
+        <p className="my-5 text-lg text-center text-gray-600">
+          Please check out my awesome works.
         </p>
-        <div className="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
+        <div className="border-2 rounded-lg mx-10">
+          <p className="mt-2 text-lg text-center text-gray-600 italic font-bold">
+            NOTE:THERE ARE TWO BUTTONS in each boxes.
+          </p>
+          <div className="mt-2 text-lg text-center text-gray-600">
+            <p>You can go to portpholio pages with clicking</p>
+            <div
+              href="https://portfolio-blog-app.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Go to Page
+              <svg
+                className="ml-2 -mr-1 w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <p className="mt-2">Also check Github pages with clicking</p>
+            <div className="my-2 bg-white rounded-lg w-10 h-10 mx-auto animate-pulse">
+              <img src="img/github-icon.svg" alt="Github code page" />
+            </div>
+          </div>
+        </div>
 
+        <div className="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
           {/* Portfolio 3------------------------------------------------------------- */}
 
           <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
@@ -60,7 +94,7 @@ const Works = () => {
                     rel="noreferrer"
                     color="white"
                   >
-                    <div className="bg-white rounded-lg w-10 h-10">
+                    <div className="bg-white rounded-lg w-10 h-10 animate-pulse animate-pulse">
                       <img src="img/github-icon.svg" alt="Github code page" />
                     </div>
                   </a>
@@ -96,7 +130,11 @@ const Works = () => {
                     >
                       {loadedDaiaryImage ? "Go to Page" : "Loading"}
                       <figure className="hidden">
-                        <img src="https://note-app-masamern.herokuapp.com/diarylogo_navbar.png" alt="wakeking up heroku" onLoad={()=>setLoadedDaiaryImage(true)}/>
+                        <img
+                          src="https://note-app-masamern.herokuapp.com/diarylogo_navbar.png"
+                          alt="wakeking up heroku"
+                          onLoad={() => setLoadedDaiaryImage(true)}
+                        />
                       </figure>
                       <svg
                         className="ml-2 -mr-1 w-4 h-4"
@@ -117,7 +155,7 @@ const Works = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="bg-white rounded-lg w-10 h-10">
+                    <div className="bg-white rounded-lg w-10 h-10 animate-pulse">
                       <img src="img/github-icon.svg" alt="Github code page" />
                     </div>
                   </a>
@@ -125,7 +163,7 @@ const Works = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Portfolio 1------------------------------------------------------------- */}
 
           <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
@@ -171,7 +209,7 @@ const Works = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="bg-white rounded-lg w-10 h-10 ">
+                    <div className="bg-white rounded-lg w-10 h-10  animate-pulse">
                       <img src="img/github-icon.svg" alt="Github code page" />
                     </div>
                   </a>
@@ -207,7 +245,11 @@ const Works = () => {
                     >
                       {loadedECImage ? "Go to Page" : "Loading"}
                       <figure className="hidden">
-                        <img src="https://masaecwebsite.netlify.app/images/product_icon.png" alt="wakeking up heroku" onLoad={()=>setLoadedECImage(true)}/>
+                        <img
+                          src="https://masaecwebsite.netlify.app/images/product_icon.png"
+                          alt="wakeking up heroku"
+                          onLoad={() => setLoadedECImage(true)}
+                        />
                       </figure>
                       <svg
                         className="ml-2 -mr-1 w-4 h-4"
@@ -229,7 +271,7 @@ const Works = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <div className="bg-white rounded-lg w-auto h-8 flex mr-1">
+                      <div className="bg-white rounded-lg w-auto h-8 flex mr-1 animate-pulse">
                         <p className="text-[13px] text-center self-center ml-1 leading-3">
                           Client<br></br>Side
                         </p>
@@ -241,7 +283,7 @@ const Works = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <div className="bg-white rounded-lg w-auto h-8 flex ml-1">
+                      <div className="bg-white rounded-lg w-auto h-8 flex ml-1 animate-pulse">
                         <p className="text-[13px] text-center self-center ml-1 leading-3">
                           Server<br></br>Side
                         </p>
@@ -298,7 +340,7 @@ const Works = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="bg-white rounded-lg w-10 h-10">
+                    <div className="bg-white rounded-lg w-10 h-10 animate-pulse">
                       <img src="img/github-icon.svg" alt="Github code page" />
                     </div>
                   </a>
@@ -351,7 +393,7 @@ const Works = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="bg-white rounded-lg w-10 h-10">
+                    <div className="bg-white rounded-lg w-10 h-10 animate-pulse">
                       <img src="img/github-icon.svg" alt="Github code page" />
                     </div>
                   </a>

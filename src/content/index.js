@@ -8,7 +8,8 @@ const allData = {
   },
   header: {
     img: "img/background_image.jpg",
-    text: ["Masahiro Kaga"],
+    type: "Full Stack Developer",
+    name: "Masahiro Kaga",
     typical: ["No Code , No Life 💻", 3000, " No Code , No Vibe 🎸", 3000],
   },
   stack: {

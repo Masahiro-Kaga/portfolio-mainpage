@@ -19,7 +19,7 @@ const AboutMe = () => {
                 Hometown : Hokkaido,Japan
               </p>
               <p className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Education : Langara College
+                Education : Langara College, CS
               </p>
               <p className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Hobby : Snowboard

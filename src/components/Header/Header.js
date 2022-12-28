@@ -17,7 +17,8 @@ const Header = () => {
           wrapper="div"
         />
         <br />
-        <h1 className=" text-white text-3xl">{content.header.text[0]}</h1>
+        <h1 className="text-white text-2xl">{content.header.type}</h1>
+        <h1 className="text-white text-5xl">{content.header.name}</h1>
       </div>
     </div>
   );

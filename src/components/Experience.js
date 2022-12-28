@@ -47,7 +47,7 @@ const SkillSet = () => {
         <div class="flex justify-between items-center text-lg mt-20">
           <div class="ml-10 mr-10">
             <h1 class="text-7xl mt-2">Bittreo</h1>
-            <div class="font-light my-2">Apr, 2022 - Current</div>
+            <div class="font-light my-2">Apr, 2022 - Current : Full Stack Developer</div>
             <p class="my-12 text-xl max-w-4xl w-full text-gray-600">
               Bittreo is a Vancouver based over-the-counter buy and sell
               cryptocurrency platform. The platform is solely used by the
@@ -209,7 +209,7 @@ const SkillSet = () => {
         <div class="flex justify-between items-center text-lg mt-20">
           <div class="ml-10 mr-10">
             <h1 class="text-7xl mt-2">Massive Sapporo</h1>
-            <div class="font-light my-2">June, 2018 - May,2019</div>
+            <div class="font-light my-2">June, 2018 - May,2019 : Web Developer</div>
             <p class="my-12 text-xl max-w-4xl w-full text-gray-600">
               Massive Sapporo is the company that manages inbound and real
               estate business in Japan. Especially, they operates Vacation

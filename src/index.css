@@ -11,6 +11,27 @@
   }
 } */
 
+.slick-prev, .slick-next {
+  &:before {
+    font-family: 'FontAwesome';
+    text-shadow: 1px 2px 2px #777;
+    font-size: 30px;
+  }
+}
+.slick-prev {
+  left: 10px;  
+  z-index: 10;  
+  &:before {
+    content: '\f053'; 
+  }
+}
+.slick-next {
+  right: 10px;  
+  &:before {
+    content: '\f054';  
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
 @tailwind base;
 @tailwind components;

@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Works = () => {
-  const [loadedDaiaryImage, setLoadedDaiaryImage] = useState(false);
-  const [loadedECImage, setLoadedECImage] = useState(false);
-  console.log(
-    `Load status: DairyApp[${loadedDaiaryImage}] , ECWebapp[${loadedECImage}]`
-  );
-
+const Projects = () => {
   return (
-    <section className="py-32 bg-white" id="works">
+    <section className="py-32 bg-gray-200" id="project">
       <div className="container max-w-6xl mx-auto">
-        <p className="font-dosis font-bold text-4xl text-center my-20">Works</p>
+        <p className="font-dosis font-bold text-4xl text-center py-20">Projects</p>
         <p className="my-5 text-lg text-center text-gray-600">
-          Please check out my awesome works.
+          Please check out my individual works.
         </p>
         <div className="border-2 rounded-lg mx-10">
           <p className="mt-2 text-lg text-center text-gray-600 italic font-bold">
@@ -128,14 +122,7 @@ const Works = () => {
                       rel="noreferrer"
                       className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      {loadedDaiaryImage ? "Go to Page" : "Loading"}
-                      <figure className="hidden">
-                        <img
-                          src="https://note-app-masamern.herokuapp.com/diarylogo_navbar.png"
-                          alt="wakeking up heroku"
-                          onLoad={() => setLoadedDaiaryImage(true)}
-                        />
-                      </figure>
+                      Go to Page
                       <svg
                         className="ml-2 -mr-1 w-4 h-4"
                         fill="currentColor"
@@ -238,20 +225,13 @@ const Works = () => {
                 <div className="relative flex flex-row justify-between">
                   <div>
                     <a
-                      href="https://masaecwebsite.netlify.app/viewActiveProducts"
+                      href="https://masaecwebsite.netlify.app"
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      {loadedECImage ? "Go to Page" : "Loading"}
-                      <figure className="hidden">
-                        <img
-                          src="https://masaecwebsite.netlify.app/images/product_icon.png"
-                          alt="wakeking up heroku"
-                          onLoad={() => setLoadedECImage(true)}
-                        />
-                      </figure>
-                      <svg
+                    Go to Page
+                     <svg
                         className="ml-2 -mr-1 w-4 h-4"
                         fill="currentColor"
                         viewBox="0 0 20 20"
@@ -407,4 +387,4 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default Projects;

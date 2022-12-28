@@ -164,12 +164,12 @@ const SkillSet = () => {
   });
 
   return (
-    <section className="py-20 bg-gray-200" id="skills">
+    <section className="py-32 bg-white" id="skills">
       <div className="container max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center font-dosis bg">
-          My Skillset
+        <h2 className="text-4xl py-20 font-bold text-center font-dosis bg">
+          My Skillset [As a Jr.Dev]
         </h2>
-        <p className="my-11 text-md sm:text-lg text-center text-gray-600 tracking-tight mx-3 md:mx-32 leading-6">
+        {/* <p className="my-11 text-md sm:text-lg text-center text-gray-600 tracking-tight mx-3 md:mx-32 leading-6">
           I have compiled a list of skills that I have acquired through my
           studies at school, self-learning, and work experience. I have been
           working on improving my skills in a wide range of areas, from
@@ -178,7 +178,7 @@ const SkillSet = () => {
           that my overall understanding is limited and my expertise is low. In
           the future, I would like to increase my involvement in back-end
           development and gradually improve my expertise.
-        </p>
+        </p> */}
 
         <div className="my-40 flex flex-col lg:flex-row flex-wrap justify-center items-center ">
           <div className="flex items-center mx-3">

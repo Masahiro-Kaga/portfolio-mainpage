@@ -12,16 +12,16 @@ const Contact = () => {
         name="contact-form"
         method="POST"
         data-netlify="true"
-        className="bg-gray-800 text-gray-100 px-8 mt-32 py-24"
+        className="bg-gray-800 text-gray-100 px-8 py-32"
         id="contact"
       >
         <input type="hidden" name="form-name" value="contact-form"></input>
         <div className="text-center w-full flex flex-col justify-center items-center">
-          <p className="font-dosis font-bold text-4xl py-10">Contact Me</p>
+          <p className="font-dosis font-bold text-4xl py-20">Contact Me</p>
           <br />
-          <p className="sm:w-[50vw] mx-3 tracking-tight text-center">
-            I would like to contribute you and your company with my skills by
-            all means.<br></br> Feel free to say hi to me, then I will reply in
+          <p className="sm:w-[50vw] mx-3 tracking-tight text-xl text-center">
+            {/* I would like to contribute you and your company with my skills by all means.<br /> */}
+            Feel free to say hi to me, then I will reply in
             a day.😄✋
           </p>
         </div>
@@ -130,7 +130,7 @@ const Contact = () => {
                   />
                 </div>
               </a>
-              <a href="https://twitter.com/masa08736964" target="blank">
+              <a href="https://twitter.com/kaga_masahiro" target="blank">
                 <div>
                   <img
                     src={`${process.env.PUBLIC_URL}/img/sns/twitter_anime.gif`}

@@ -89,6 +89,20 @@ const Navigation = () => {
                 <Link
                   className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 active:bg-blue-600 cursor-pointer"
                   activeClass="active"
+                  to="experiences"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Experience
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 active:bg-blue-600 cursor-pointer"
+                  activeClass="active"
                   to="skills"
                   spy={true}
                   smooth={true}
@@ -103,13 +117,13 @@ const Navigation = () => {
                 <Link
                   className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 active:bg-blue-600 cursor-pointer"
                   activeClass="active"
-                  to="works"
+                  to="project"
                   spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
                 >
-                  Work
+                  Project
                 </Link>
               </li>
               <li>
@@ -133,6 +147,20 @@ const Navigation = () => {
                 <Link
                   className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
                   activeClass="active"
+                  to="experiences"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Experience
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
+                  activeClass="active"
                   to="skills"
                   spy={true}
                   smooth={true}
@@ -147,13 +175,13 @@ const Navigation = () => {
                 <Link
                   className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
                   activeClass="active"
-                  to="works"
+                  to="project"
                   spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
                 >
-                  Work
+                  Project
                 </Link>
               </li>
               <li>

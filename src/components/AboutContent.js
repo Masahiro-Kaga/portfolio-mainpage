@@ -6,9 +6,7 @@ const AboutContent = () => {
       
       <p className="font-dosis font-bold text-4xl">About this site</p>
       <br/>
-      <p className='sm:w-[50vw] mx-3 tracking-tight text-center'>Thank you for your visit. Here is Masa's portfolio site. I showcase my masterpieces and my skill sets with my effort.I would like you to know more about me, this is what I really do.Please be my guest and take your time.</p>
-      <br/>
-      <p className='md:w-[50vw] mx-3 tracking-tight text-center'>Would you like to have some tea?</p>
+      <p className='sm:w-[50vw] mx-3 tracking-tight text-xl text-center text-gray-700'>Thank you for your visit. Here is Masa's portfolio website. I showcase my masterpieces and my skill sets.I would like you to know more about me. Please be my guest and take your time.</p>
       
     </div>
   </div>;

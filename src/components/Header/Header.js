@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div
       style={{ backgroundImage: `url("img/background_image.jpg")` }}
-      className="min-h-screen w-full bg-center bg-cover bg-fixed"
+      className="h-screen w-full bg-center bg-cover bg-no-repeat"
     >
       <div className="flex flex-col min-h-screen w-full justify-center items-center">
         <Typical

@@ -22,7 +22,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      dosis: ["Dosis"],
+      dosis: ['Dosis', 'Arial', 'sans-serif'],
       bebas: ['"Bebas Neue"', 'cursive']
     },
   },

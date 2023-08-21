@@ -40,7 +40,7 @@ const Navigation = () => {
   return (
     <div style={{ background: "#white" }}>
       <nav
-        className="px-10 sm:px-20 py-5 fixed top-0 left-0 w-full transition-colors duration-1000 z-50"
+        className="px-14 sm:px-20 py-5 fixed top-0 left-0 w-full transition-colors duration-1000 z-50"
         id="navbar"
       >
         <div className="container flex flex-wrap justify-between items-center mx-auto">
@@ -50,6 +50,7 @@ const Navigation = () => {
             </span>
             <span className="h-2 w-2 bg-sky-500 inline-block rounded-full self-end"></span>
           </button>
+          {/* For the mobile display  */}
           <div className="relative">
             <button
               type="button"
@@ -141,7 +142,8 @@ const Navigation = () => {
               </li>
             </ul>
           </div>
-          <div className="hidden w-full md:block md:w-auto" id="mobile-menu">
+          {/* For the desktop display  */}
+          <div className="hidden w-full md:block md:w-auto">
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
                 <Link

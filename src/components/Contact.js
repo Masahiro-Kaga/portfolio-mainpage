@@ -133,7 +133,7 @@ const Contact = () => {
               <a href="https://twitter.com/kaga_masahiro" target="blank">
                 <div>
                   <img
-                    src={`${process.env.PUBLIC_URL}/img/sns/twitter_anime.gif`}
+                    src={`${process.env.PUBLIC_URL}/img/sns/x_anime.gif`}
                     alt=""
                   />
                 </div>

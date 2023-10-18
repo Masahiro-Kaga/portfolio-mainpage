@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { animateScroll, Link } from "react-scroll";
-import content from "../../content";
+import content from "../../utility";
 import "./Navigation.css";
 
 const Navigation = () => {

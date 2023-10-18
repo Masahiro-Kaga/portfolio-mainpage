@@ -4,7 +4,9 @@ const Projects = () => {
   return (
     <section className="py-32 bg-gray-200" id="project">
       <div className="container max-w-6xl mx-auto">
-        <p className="font-dosis font-bold text-4xl text-center py-20">Projects</p>
+        <p className="font-dosis font-bold text-4xl text-center py-20">
+          Projects
+        </p>
         <p className="my-5 text-lg text-center text-gray-600">
           Please check out my individual works.
         </p>
@@ -42,27 +44,28 @@ const Projects = () => {
         </div>
 
         <div className="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
-          {/* Portfolio 3------------------------------------------------------------- */}
 
-          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
+          {/* Portfolio 7------------------------------------------------------------- */}
+
+          <div className="relative flex flex-col items-center justify-between col-span-12 space-y-4 my-10 overflow-hidden rounded-xl">
             <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
               <img
                 className="rounded-t-lg"
-                src="img/work/gif/blogapp.gif"
-                alt="Blog App with Next.js"
+                src="img/work/jpg/diaryapp.jpg"
+                alt="Diary app with React MERN stack"
               />
               <div className="p-5 bg-gray-800 rounded-b-xl">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
-                  Blog App
+                  Diary app
                 </h5>
-
                 <p className="mb-3 font-normal text-gray-400">
-                  Key features :<br></br>NextJS ,EmotionCSS
+                  Key features :<br></br>MERN, Redux, Axios, Cloudinary
+                  {/* ,Authentication */}
                 </p>
                 <div className="relative flex flex-row justify-between">
                   <div>
                     <a
-                      href="https://portfolio-blog-app.vercel.app/"
+                      href="https://note-app-masamern.herokuapp.com/"
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -83,12 +86,11 @@ const Projects = () => {
                     </a>
                   </div>
                   <a
-                    href="https://github.com/Masahiro-Kaga/portfolio-blog-app"
+                    href="https://github.com/Masahiro-Kaga/practiceFour"
                     target="_blank"
                     rel="noreferrer"
-                    color="white"
                   >
-                    <div className="bg-white rounded-lg w-10 h-10 animate-pulse animate-pulse">
+                    <div className="bg-white rounded-lg w-10 h-10 animate-pulse">
                       <img src="img/github-icon.svg" alt="Github code page" />
                     </div>
                   </a>
@@ -96,6 +98,9 @@ const Projects = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
 
           {/* Portfolio 2------------------------------------------------------------- */}
 
@@ -205,6 +210,61 @@ const Projects = () => {
             </div>
           </div>
 
+          {/* Portfolio 3------------------------------------------------------------- */}
+
+          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
+            <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
+              <img
+                className="rounded-t-lg"
+                src="img/work/gif/blogapp.gif"
+                alt="Blog App with Next.js"
+              />
+              <div className="p-5 bg-gray-800 rounded-b-xl">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
+                  Blog App
+                </h5>
+
+                <p className="mb-3 font-normal text-gray-400">
+                  Key features :<br></br>NextJS ,EmotionCSS
+                </p>
+                <div className="relative flex flex-row justify-between">
+                  <div>
+                    <a
+                      href="https://portfolio-blog-app.vercel.app/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >
+                      Go to Page
+                      <svg
+                        className="ml-2 -mr-1 w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <a
+                    href="https://github.com/Masahiro-Kaga/portfolio-blog-app"
+                    target="_blank"
+                    rel="noreferrer"
+                    color="white"
+                  >
+                    <div className="bg-white rounded-lg w-10 h-10 animate-pulse animate-pulse">
+                      <img src="img/github-icon.svg" alt="Github code page" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Portfolio 4------------------------------------------------------------- */}
 
           <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
@@ -230,8 +290,8 @@ const Projects = () => {
                       rel="noreferrer"
                       className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                    Go to Page
-                     <svg
+                      Go to Page
+                      <svg
                         className="ml-2 -mr-1 w-4 h-4"
                         fill="currentColor"
                         viewBox="0 0 20 20"

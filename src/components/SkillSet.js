@@ -1,5 +1,5 @@
 import React from "react";
-import content from "../content/index";
+import content from "../utility";
 
 const SkillSet = () => {
   const frontEndTech = content.stack.tech_frontend.map((images, index) => {

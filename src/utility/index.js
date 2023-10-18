@@ -1,3 +1,16 @@
+export const wordExperienceContents = [
+  {
+    title: "Cover Letter",
+    src: "contents/Coverletter_MasahiroKaga.jpg",
+    download: "Coverletter_MasahiroKaga.pdf",
+  },
+  {
+    title: "Resume",
+    src: "contents/Resume_MasahiroKaga.jpg",
+    download: "Coverletter_MasahiroKaga.pdf",
+  },
+];
+  
 const allData = {
   nav: {
     logo: "portfolio",

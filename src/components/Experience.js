@@ -2,9 +2,32 @@ import React, { useCallback, useEffect, useState } from "react";
 import Slick from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Modal from "./UI/Modal";
+import { wordExperienceContents } from "../utility";
+
 
 const SkillSet = () => {
   const [open, setOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (imgSrc) => {
+    setSelectedImage(imgSrc);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedImage]);
 
   useEffect(() => {
     if (window.innerWidth <= 1024) {
@@ -41,6 +64,33 @@ const SkillSet = () => {
       <h2 className="text-4xl py-20 font-bold text-center font-dosis bg">
         Work Experience
       </h2>
+      <div className="flex justify-around m-auto max-w-sm sm:max-w-md lg:max-w-lg gap-2 wrap mt-5">
+        {wordExperienceContents.map((doc, index) => (
+          <div key={index} className="text-center mb-3 relative">
+            <div onClick={() => openModal(doc.src)} className="cursor-pointer">
+              <img src={doc.src} alt="Click to view" />
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 rounded-full px-4 py-2 cursor-pointer">
+                <span className="text-white font-semibold">
+                  Check {doc.title}
+                </span>
+              </div>
+            </div>
+            <button className="mt-3 bg-blue-700 rounded-lg hover:bg-blue-800 transition px-4 py-2 shadow text-white font-semibold">
+              <a href={doc.download} download={doc.download}>
+                Download PDF
+              </a>
+            </button>
+          </div>
+        ))}
+        {selectedImage && (
+          <Modal
+            isOpen={!!selectedImage}
+            closeModal={closeModal}
+            imgSrc={selectedImage}
+            altText="Selected document"
+          />
+        )}
+      </div>
 
       {/* --------Bittreo------- */}
       <div className="container max-w-6xl mx-auto my-48">

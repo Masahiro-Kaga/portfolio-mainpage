@@ -51,21 +51,21 @@ const Projects = () => {
             <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
               <img
                 className="rounded-t-lg"
-                src="img/work/jpg/diaryapp.jpg"
+                src="img/work/gif/aiapp.gif"
                 alt="Diary app with React MERN stack"
               />
               <div className="p-5 bg-gray-800 rounded-b-xl">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
-                  Diary app
+                  AI Play Ground App 
                 </h5>
                 <p className="mb-3 font-normal text-gray-400">
-                  Key features :<br></br>MERN, Redux, Axios, Cloudinary
+                  Key features :<br></br>MERN, Redux, AWS, Typescript, MUI
                   {/* ,Authentication */}
                 </p>
                 <div className="relative flex flex-row justify-between">
                   <div>
-                    <a
-                      href="https://note-app-masamern.herokuapp.com/"
+                    {/* <a
+                      href="https://"
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -83,7 +83,13 @@ const Projects = () => {
                           clipRule="evenodd"
                         ></path>
                       </svg>
-                    </a>
+                    </a> */}
+                    <button
+                      disabled
+                      className="disabled inline-flex items-center py-2 px-3 bg-gray-700 text-sm font-medium text-center text-white rounded-lg  focus:ring-4 "
+                    >
+                      Currently Unavailable
+                    </button>
                   </div>
                   <a
                     href="https://github.com/Masahiro-Kaga/practiceFour"

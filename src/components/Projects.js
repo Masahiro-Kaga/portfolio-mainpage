@@ -92,7 +92,7 @@ const Projects = () => {
                     </button>
                   </div>
                   <a
-                    href="https://github.com/Masahiro-Kaga/practiceFour"
+                    href="https://github.com/Masahiro-Kaga/gpt-app"
                     target="_blank"
                     rel="noreferrer"
                   >

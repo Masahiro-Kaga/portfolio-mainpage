@@ -2,12 +2,12 @@ export const wordExperienceContents = [
   {
     title: "Cover Letter",
     src: "contents/Coverletter_MasahiroKaga.jpg",
-    download: "Coverletter_MasahiroKaga.pdf",
+    download: "contents/Coverletter_MasahiroKaga.pdf",
   },
   {
     title: "Resume",
     src: "contents/Resume_MasahiroKaga.jpg",
-    download: "Coverletter_MasahiroKaga.pdf",
+    download: "contents/Resume_MasahiroKaga.pdf",
   },
 ];
   

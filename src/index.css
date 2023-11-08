@@ -11,6 +11,15 @@
   }
 } */
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 2s linear infinite;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&display=swap');
 @tailwind base;
 @tailwind components;

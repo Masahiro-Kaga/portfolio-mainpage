@@ -20,7 +20,7 @@ const Projects = () => {
               href="https://portfolio-blog-app.vercel.app/"
               target="_blank"
               rel="noreferrer"
-              className="mt-2 inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="mt-2 inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-gray-500 rounded-md"
             >
               Go to Page
               <svg
@@ -43,10 +43,9 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
+        {/* Portfolio 7------------------------------------------------------------- */}
 
-          {/* Portfolio 7------------------------------------------------------------- */}
-
+        <div className="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0" id="AIapp">
           <div className="relative flex flex-col items-center justify-between col-span-12 space-y-4 my-10 overflow-hidden rounded-xl">
             <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
               <img
@@ -56,7 +55,7 @@ const Projects = () => {
               />
               <div className="p-5 bg-gray-800 rounded-b-xl">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
-                  AI Play Ground App 
+                  AI Play Ground App<span class="blink text-red-500"> NEW! </span>
                 </h5>
                 <p className="mb-3 font-normal text-gray-400">
                   Key features :<br></br>MERN, Redux, AWS, Typescript, MUI
@@ -64,8 +63,8 @@ const Projects = () => {
                 </p>
                 <div className="relative flex flex-row justify-between">
                   <div>
-                    {/* <a
-                      href="https://"
+                    <a
+                      href="https://mkportfolio.link/"
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -83,13 +82,7 @@ const Projects = () => {
                           clipRule="evenodd"
                         ></path>
                       </svg>
-                    </a> */}
-                    <button
-                      disabled
-                      className="disabled inline-flex items-center py-2 px-3 bg-gray-700 text-sm font-medium text-center text-white rounded-lg  focus:ring-4 "
-                    >
-                      Currently Unavailable
-                    </button>
+                    </a>
                   </div>
                   <a
                     href="https://github.com/Masahiro-Kaga/gpt-app"
@@ -107,7 +100,6 @@ const Projects = () => {
         </div>
 
         <div className="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
-
           {/* Portfolio 2------------------------------------------------------------- */}
 
           <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
@@ -271,6 +263,50 @@ const Projects = () => {
             </div>
           </div>
 
+          {/* Portfolio 8------------------------------------------------------------- */}
+          
+          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
+            <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
+              <img
+                className="rounded-t-lg"
+                src="img/work/png/reunion.png"
+                alt="Portfolio proto"
+              />
+              <div className="p-5 bg-gray-800 rounded-b-xl">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
+                  Hokkaido Reunion<span class="blink text-red-500"> NEW! </span>
+                </h5>
+                <p className="mb-3 font-normal text-gray-400">
+                  Key features :<br></br>WordPress, PHP, Elementor
+                </p>
+                <div className="relative flex flex-row justify-between">
+                  <div>
+                    <a
+                      href="https://dojinkai-bc.ca/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >
+                      Go to Page
+                      <svg
+                        className="ml-2 -mr-1 w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Portfolio 4------------------------------------------------------------- */}
 
           <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
@@ -397,7 +433,7 @@ const Projects = () => {
 
           {/* Portfolio 6------------------------------------------------------------- */}
 
-          <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
+          {/* <div className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl">
             <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
               <img
                 className="rounded-t-lg"
@@ -446,7 +482,7 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

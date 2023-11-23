@@ -29,14 +29,6 @@ const SkillSet = () => {
     };
   }, [selectedImage]);
 
-  useEffect(() => {
-    if (window.innerWidth <= 1024) {
-      setOpen(true);
-    }
-    resizeEvent();
-    return () => window.removeEventListener("resize", resizeEvent);
-  }, []);
-
   const resizeEvent = useCallback(() => {
     window.addEventListener("resize", () => {
       if (window.innerWidth > 1024) {
@@ -46,6 +38,15 @@ const SkillSet = () => {
       }
     });
   }, []);
+
+  useEffect(() => {
+    if (window.innerWidth <= 1024) {
+      setOpen(true);
+    }
+    resizeEvent();
+    return () => window.removeEventListener("resize", resizeEvent);
+  }, [resizeEvent]);
+
 
   const sliderSettings = {
     dots: true,

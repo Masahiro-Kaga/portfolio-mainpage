@@ -66,12 +66,12 @@ const SkillSet = () => {
       </h2>
       <div className="flex justify-around m-auto max-w-sm sm:max-w-md lg:max-w-lg gap-2 wrap mt-5">
         {wordExperienceContents.map((doc, index) => (
-          <div key={index} className="text-center mb-3 relative">
-            <div onClick={() => openModal(doc.src)} className="cursor-pointer">
-              <img src={doc.src} alt="Click to view" />
+          <div key={index} className="text-center mb-3">
+            <div onClick={() => openModal(doc.src)} className="cursor-pointer relative group">
+              <img src={doc.src} alt="Click to view" className="group-hover:opacity-40"/>
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 rounded-full px-4 py-2 cursor-pointer">
                 <span className="text-white font-semibold">
-                  Check {doc.title}
+                  Expand {doc.title}
                 </span>
               </div>
             </div>

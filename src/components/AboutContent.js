@@ -9,7 +9,7 @@ const AboutContent = () => {
         <br />
         <p className="sm:w-[50vw] mx-3 tracking-tight text-xl text-center text-gray-700">
           Thank you for your visit. Here is Masa's portfolio website. I showcase
-          my masterpieces <Link to="AIapp" smooth={true} className="text-blue-500 underline cursor-pointer">(AI Play Ground App and so on)</Link> and my skill sets.I would like you to know more about
+          my masterpieces <Link to="project" smooth={true} className="text-blue-500 underline cursor-pointer">(AI App and so on)</Link> and my skill sets.I would like you to know more about
           me. Please be my guest and take your time. More details and contact me, please visit my LinkedIn.
         </p>
         <div className="flex gap-2">

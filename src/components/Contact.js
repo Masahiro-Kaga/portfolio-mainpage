@@ -98,24 +98,24 @@ const Contact = () => {
                   </svg>
                 </a> */}
               <a
-                href="https://www.facebook.com/profile.php?id=100005520977852"
+                href="https://www.facebook.com/masahiro.kaga.102"
                 target="blank"
               >
                 <div>
                   <img
                     src={`${process.env.PUBLIC_URL}/img/sns/facebook_anime3.gif`}
-                    alt="Link to facebook page"
+                    alt="Link to Facebook page"
                   />
                 </div>
               </a>
               <a
-                href="https://www.instagram.com/masahiro_kaga/?hl=ja"
+                href="https://www.instagram.com/masahirokaga/"
                 target="blank"
               >
                 <div>
                   <img
                     src={`${process.env.PUBLIC_URL}/img/sns/instagram_anime3.gif`}
-                    alt="Link to facebook page"
+                    alt="Link to Instagram page"
                   />
                 </div>
               </a>
@@ -130,7 +130,7 @@ const Contact = () => {
                   />
                 </div>
               </a>
-              <a href="https://twitter.com/kaga_masahiro" target="blank">
+              <a href="https://twitter.com/MK9703620381397" target="blank">
                 <div>
                   <img
                     src={`${process.env.PUBLIC_URL}/img/sns/x_anime.gif`}

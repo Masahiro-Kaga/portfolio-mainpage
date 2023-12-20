@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Contact = () => {
   const showModalHandler = () => {
     localStorage.setItem("sent", true);
   };
+
+  const [facebookUrl, setFacebookUrl] = useState("https://www.facebook.com/masahiro.kaga.102");
+  const [instagramUrl, setInstagramUrl] = useState("https://www.instagram.com/masahirokaga/");
+  const [twitterUrl, setTwitterUrl] = useState("https://twitter.com/MK9703620381397");
+
+  useEffect(() => {
+    const getIpCountry = async() => {
+      const url = "https://ipapi.co/json/";
+      const ipInfo = await axios.get(url);
+      if(ipInfo.data.country_code === "JP"){
+        setFacebookUrl("https://www.facebook.com/profile.php?id=100005520977852");
+        setInstagramUrl("https://www.instagram.com/macchohiro_gram/?hl=ja");
+        setTwitterUrl("https://twitter.com/kaga_masahiro");
+      }
+    }
+    getIpCountry();
+  }, []);
 
   return (
     <>
@@ -98,7 +116,7 @@ const Contact = () => {
                   </svg>
                 </a> */}
               <a
-                href="https://www.facebook.com/masahiro.kaga.102"
+                href={facebookUrl}
                 target="blank"
               >
                 <div>
@@ -109,7 +127,7 @@ const Contact = () => {
                 </div>
               </a>
               <a
-                href="https://www.instagram.com/masahirokaga/"
+                href={instagramUrl}
                 target="blank"
               >
                 <div>
@@ -130,7 +148,7 @@ const Contact = () => {
                   />
                 </div>
               </a>
-              <a href="https://twitter.com/MK9703620381397" target="blank">
+              <a href={twitterUrl} target="blank">
                 <div>
                   <img
                     src={`${process.env.PUBLIC_URL}/img/sns/x_anime.gif`}

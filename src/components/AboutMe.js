@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Slider from "./UI/Slider";
 // import { Document, Page } from "react-pdf";
 // import Modal from "./UI/Modal";
@@ -6,7 +6,6 @@ import Slider from "./UI/Slider";
 
 // const pdfFile =
 //   process.env.PUBLIC_URL + "/contents/resume_MasahiroKaga(20221228).pdf";
-
 
 const AboutMe = () => {
   // const [selectedImage, setSelectedImage] = useState(null);
@@ -60,16 +59,24 @@ const AboutMe = () => {
                 <span className="block xl:inline">What A Beautiful</span>
                 <span className="block text-indigo-600 xl:inline">Life</span>
               </h1>
-              <p className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
-                I was born and raised in Hokkaido prefecture in Japan. I worked
-                prefectual government over 11 years.
-                <br />
-                When I was 31 years old, I determined to persue my future dream
-                which is to travel all over the world, then finally I am in
-                Canada🇨🇦.
-                <br />I already have experience as a web developer and would be
-                happy to work with you.
-              </p>
+              <div className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
+                Born and raised in Hokkaido, Japan, my career began with over a
+                decade of service in the prefectural government.
+              </div>
+              <div className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
+                　At the age of 31, driven by my aspiration to explore the
+                world, I embarked on an international journey, leading me to my
+                current residence in Canada. With a solid background in web
+                development, I bring a wealth of experience and a unique
+                perspective to my work.
+              </div>
+              <div className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
+                I am keen to collaborate and contribute to your projects with my
+                expertise.
+              </div>
+              <div className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
+                Thank you for considering my professional journey.
+              </div>
             </div>
             {/* <div className="flex justify-around m-auto max-w-sm sm:max-w-md lg:max-w-lg gap-2 wrap mt-5">
               {wordExperienceContents.map((doc, index) => (

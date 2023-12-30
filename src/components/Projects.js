@@ -174,7 +174,7 @@ const Projects = () => {
                     </div>
                     {content.githubUrl && (
                       <a
-                        href="https://github.com/Masahiro-Kaga/practiceFour"
+                        href={content.githubUrl}
                         target="_blank"
                         rel="noreferrer"
                       >

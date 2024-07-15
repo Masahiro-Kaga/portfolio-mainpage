@@ -97,12 +97,12 @@ const SkillSet = () => {
       <div className="container max-w-6xl mx-auto my-48">
         <div className="flex justify-between items-center text-lg mt-20">
           <div className="ml-10 mr-10">
-            <h1 className="text-7xl mt-2">Bittreo</h1>
+            <h1 className="text-7xl mt-2">Bittreo/Vancouver Bitcoin</h1>
             <div className="font-light my-2">
               Apr, 2022 - Current : Full Stack Developer
             </div>
             <p className="my-12 text-xl max-w-4xl w-full text-gray-600">
-              Bittreo is a Vancouver based over-the-counter buy and sell
+              Bittreo/Vancouver Bitcoin is a Vancouver based over-the-counter buy and sell
               cryptocurrency platform. The platform is solely used by the
               owners, and employees of Bittreo to expedite their daily business
               operations. Additionally, services and data structure in the

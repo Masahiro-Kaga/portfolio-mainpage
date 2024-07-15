@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../../App";
 import Typical from "react-typical";
 import content from "../../utility";
 
 const Header = () => {
-  
+  const { language } = useContext( LanguageContext )
+
   return (
     <div
       style={{ backgroundImage: `url("img/background_image.jpg")` }}
@@ -17,7 +19,8 @@ const Header = () => {
           wrapper="div"
         />
         <br />
-        <h1 className="text-white text-2xl">{content.header.type}</h1>
+        {/* <h1 className="text-white text-2xl">{content.header.type}</h1> */}
+        <h1 className="text-white text-2xl">{language === 'en' ? 'FullStack Developer' : 'フルスタックデベロッパー' }</h1>
         <h1 className="text-white text-5xl">{content.header.name}</h1>
       </div>
     </div>

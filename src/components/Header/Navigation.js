@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { animateScroll, Link } from "react-scroll";
 import content from "../../utility";
+import { LanguageContext } from "../../App";
 import "./Navigation.css";
 
 const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  const { language, changeLanguage } = useContext( LanguageContext );
 
   const toggleDropdownHandler = (event) => {
     event.preventDefault();
@@ -147,7 +150,7 @@ const Navigation = () => {
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
                 <Link
-                  className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
+                  className="block py-2 pr-3 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
                   activeClass="active"
                   to="experiences"
                   spy={true}
@@ -161,7 +164,7 @@ const Navigation = () => {
 
               <li>
                 <Link
-                  className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
+                  className="block py-2 pr-3 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
                   activeClass="active"
                   to="skills"
                   spy={true}
@@ -175,7 +178,7 @@ const Navigation = () => {
 
               <li>
                 <Link
-                  className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
+                  className="block py-2 pr-3 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
                   activeClass="active"
                   to="project"
                   spy={true}
@@ -188,7 +191,7 @@ const Navigation = () => {
               </li>
               <li>
                 <Link
-                  className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
+                  className="block py-2 pr-3 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
                   activeClass="active"
                   to="contact"
                   spy={true}
@@ -200,12 +203,21 @@ const Navigation = () => {
                 </Link>
               </li>
 
+              <li>
+                <button
+                  className="block py-2 pr-3 pl-3 text-white w-20"
+                  onClick={changeLanguage}
+                  >
+                  {language === 'en' ? '日本語' : 'English'}
+                </button>
+              </li>
+
               {/* {content.nav.links.map((link, index) => {
                 return (
                   <li key={index}>
                     <a
                       href="#"
-                      className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl"
+                      className="block py-2 pr-3 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl"
                     >
                       {link.text}
                     </a>

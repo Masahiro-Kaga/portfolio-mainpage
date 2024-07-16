@@ -20,7 +20,7 @@ const Header = () => {
         />
         <br />
         {/* <h1 className="text-white text-2xl">{content.header.type}</h1> */}
-        <h1 className="text-white text-2xl">{language === 'en' ? 'FullStack Developer' : 'フルスタックデベロッパー' }</h1>
+        <h1 className="text-white text-2xl">{language === 'en' ? 'Fullstack Developer' : 'Fullstack Developer' }</h1>
         <h1 className="text-white text-5xl">{content.header.name}</h1>
       </div>
     </div>

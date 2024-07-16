@@ -98,7 +98,7 @@ const allData = {
     img: "img/background_image.jpg",
     type: "Full Stack Developer",
     name: "Masahiro Kaga",
-    typical: ["No Code , No Life 💻", 3000, " No Code , No Vibe 🎸", 3000],
+    typical: ["No Curiosity , No Improvement 💻", 3000, " No Work , No Wife 👩", 3000],
   },
   stack: {
     title: "Stack",

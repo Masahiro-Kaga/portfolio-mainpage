@@ -283,15 +283,6 @@ const Experience = () => {
         <div className="flex flex-wrap justify-between gap-6 mx-5">
           <div>
             <h1 className="text-4xl">NinjaDo Website</h1>
-            <a
-              href="http://hokkaido-ninjado.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="max-w-md min-w-full my-5 bg-gray-700 hover:bg-white hover:text-gray-700 border-2 hover:border-gray-700 text-white font-bold py-2 px-4 rounded-full">
-                Visit Website
-              </button>
-            </a>
           </div>
 
           <div className="max-w-5xl flex flex-col gap-6 text-xl">

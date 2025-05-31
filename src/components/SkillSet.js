@@ -1,6 +1,6 @@
 import React from "react";
 import content from "../utility";
-import { SkillIcon, getSkillLevelStyles, SectionTitle } from "../utils/commonUtils";
+import { SkillIcon, SectionTitle } from "../utils/commonUtils";
 
 const SkillSet = () => {
   // 共通のスキルマッピング関数
@@ -22,11 +22,26 @@ const SkillSet = () => {
 
   // レベルインジケーター用の共通コンポーネント
   const LevelIndicator = ({ level, levelName, levelRange }) => {
-    const styles = getSkillLevelStyles(level);
+    // 各レベル範囲に対応する背景スタイル
+    const getLevelBackground = (levelName) => {
+      switch (levelName) {
+        case "Super Saiyan":
+          return "bg-[url('../public/img/background_fire2.gif')] bg-cover";
+        case "Gold":
+          return "bg-[gold]";
+        case "Silver":
+          return "bg-[silver]";
+        case "Bronze":
+          return "bg-[#cc6633]";
+        default:
+          return "bg-gray-300";
+      }
+    };
+
     return (
       <div className="flex items-center mx-3">
         <div className="h-16 w-16 border-2 overflow-hidden m-2 rounded-lg border-gray-800">
-          <div className={`bg-cover h-full w-full flex bg-white justify-center ${styles.iconBg}`}></div>
+          <div className={`h-full w-full flex justify-center items-center ${getLevelBackground(levelName)}`}></div>
         </div>
         <div className="font-dosis font-extrabold text-[20px] w-[140px]">
           <p>Level : {levelRange}</p>

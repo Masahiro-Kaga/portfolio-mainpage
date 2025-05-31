@@ -1,174 +1,47 @@
 import React from "react";
 import content from "../utility";
+import { SkillIcon, getSkillLevelStyles, SectionTitle } from "../utils/commonUtils";
 
 const SkillSet = () => {
-  const frontEndTech = content.stack.tech_frontend.map((images, index) => {
-    let iconBg;
-    let animation;
-    let skillname;
-    if (images.level >= 0 && images.level < 25) {
-      iconBg = "items-center bg-[#cc6633]";
-      animation = "";
-      skillname = images.alt;
-    } else if (images.level >= 25 && images.level < 50) {
-      iconBg = "items-center bg-[silver]";
-      animation = "";
-      skillname = images.alt;
-    } else if (images.level >= 50 && images.level < 75) {
-      iconBg = "items-center bg-[gold]";
-      animation = "";
-      skillname = images.alt;
-    } else if (images.level >= 75 && images.level < 100) {
-      iconBg = "items-end bg-[url('../public/img/background_fire2.gif')]";
-      animation = "animate-bounce";
-      skillname = images.alt;
-    }
+  // 共通のスキルマッピング関数
+  const createSkillList = (techArray) => {
+    return techArray.map((skill, index) => (
+      <SkillIcon
+        key={`${skill.alt}-${index}`}
+        image={skill.img}
+        level={skill.level}
+        alt={skill.alt}
+      />
+    ));
+  };
+
+  const frontEndTech = createSkillList(content.stack.tech_frontend);
+  const backEndTech = createSkillList(content.stack.tech_backend);
+  const devTool = createSkillList(content.stack.tech_devtool);
+  const media = createSkillList(content.stack.tech_media);
+
+  // レベルインジケーター用の共通コンポーネント
+  const LevelIndicator = ({ level, levelName, levelRange }) => {
+    const styles = getSkillLevelStyles(level);
     return (
-      <div key={index}>
-        <div className="h-16 w-16 border-2 m-2 rounded-lg border-white overflow-hidden">
-          <div
-            className={`bg-cover h-full w-full flex bg-white justify-center ${iconBg}`}
-          >
-            <img
-              src={images.img}
-              alt={images.alt}
-              className={`w-12 h-12 ${animation}`}
-            />
-          </div>
+      <div className="flex items-center mx-3">
+        <div className="h-16 w-16 border-2 overflow-hidden m-2 rounded-lg border-gray-800">
+          <div className={`bg-cover h-full w-full flex bg-white justify-center ${styles.iconBg}`}></div>
         </div>
-        <p className="text-center text-[14px] text-white font-dosis">
-          {skillname}
-        </p>
+        <div className="font-dosis font-extrabold text-[20px] w-[140px]">
+          <p>Level : {levelRange}</p>
+          <p>{levelName}</p>
+        </div>
       </div>
     );
-  });
-  const backEndTech = content.stack.tech_backend.map((images, index) => {
-    let iconBg;
-    let animation;
-    let skillname;
-    if (images.level >= 0 && images.level < 25) {
-      iconBg = "items-center bg-[#cc6633]";
-      animation = "";
-      skillname = images.alt;
-    } else if (images.level >= 25 && images.level < 50) {
-      iconBg = "items-center bg-[silver]";
-      animation = "";
-      skillname = images.alt;
-    } else if (images.level >= 50 && images.level < 75) {
-      iconBg = "items-center bg-[gold]";
-      animation = "";
-      skillname = images.alt;
-    } else if (images.level >= 75 && images.level < 100) {
-      iconBg = "items-end bg-[url('../public/img/background_fire2.gif')]";
-      animation = "animate-bounce";
-      skillname = images.alt;
-    }
-    return (
-      <div key={index}>
-        <div className="h-16 w-16 border-2 m-2 rounded-lg border-white overflow-hidden">
-          <div
-            className={`bg-cover h-full w-full flex bg-white justify-center ${iconBg}`}
-          >
-            <img
-              src={images.img}
-              alt={images.alt}
-              className={`w-12 h-12 ${animation}`}
-            />
-          </div>
-        </div>
-        <p className="text-center text-[14px] text-white font-dosis">
-          {skillname}
-        </p>
-      </div>
-    );
-  });
-  const devTool = content.stack.tech_devtool.map((images, index) => {
-    let iconBg;
-    let animation;
-    let skillname;
-    if (images.level >= 0 && images.level < 25) {
-      iconBg = "items-center bg-[#cc6633]";
-      animation = "";
-      skillname = images.alt;
-    } else if (images.level >= 25 && images.level < 50) {
-      iconBg = "items-center bg-[silver]";
-      animation = "";
-      skillname = images.alt;
-    } else if (images.level >= 50 && images.level < 75) {
-      iconBg = "items-center bg-[gold]";
-      animation = "";
-      skillname = images.alt;
-    } else if (images.level >= 75 && images.level < 100) {
-      iconBg = "items-end bg-[url('../public/img/background_fire2.gif')]";
-      animation = "animate-bounce";
-      skillname = images.alt;
-    }
-    return (
-      <div key={index}>
-        <div className="h-16 w-16 border-2 m-2 rounded-lg border-white overflow-hidden">
-          <div
-            className={`bg-cover h-full w-full flex bg-white justify-center ${iconBg}`}
-          >
-            <img
-              src={images.img}
-              alt={images.alt}
-              className={`w-12 h-12 ${animation}`}
-            />
-          </div>
-        </div>
-        <p className="text-center text-[14px] text-white font-dosis">
-          {skillname}
-        </p>
-      </div>
-    );
-  });
-  const media = content.stack.tech_media.map((images, index) => {
-    let iconBg;
-    let animation;
-    let skillname;
-    if (images.level >= 0 && images.level < 25) {
-      iconBg = "items-center bg-[#cc6633]";
-      animation = "";
-      skillname = images.alt;
-    } else if (images.level >= 25 && images.level < 50) {
-      iconBg = "items-center bg-[silver]";
-      animation = "";
-      skillname = images.alt;
-    } else if (images.level >= 50 && images.level < 75) {
-      iconBg = "items-center bg-[gold]";
-      animation = "";
-      skillname = images.alt;
-    } else if (images.level >= 75 && images.level <= 100) {
-      iconBg = "items-end bg-[url('../public/img/background_fire2.gif')]";
-      animation = "animate-bounce";
-      skillname = images.alt;
-    }
-    return (
-      <div key={index}>
-        <div className="h-16 w-16 border-2 m-2 rounded-lg border-white overflow-hidden">
-          <div
-            className={`bg-cover h-full w-full flex bg-white justify-center ${iconBg}`}
-          >
-            <img
-              src={images.img}
-              alt={images.alt}
-              className={`w-12 h-12 ${animation}`}
-            />
-          </div>
-        </div>
-        <p className="text-center text-[14px] text-white font-dosis">
-          {skillname}
-        </p>
-      </div>
-    );
-  });
+  };
 
   return (
     <section className="py-32 bg-white" id="skills">
       <div className="container max-w-6xl mx-auto">
-        <h2 className="text-4xl py-20 font-bold text-center font-dosis bg">
+        <SectionTitle>
           My Skillset [As a Jr.Dev]
-        </h2>
+        </SectionTitle>
         {/* <p className="my-11 text-md sm:text-lg text-center text-gray-600 tracking-tight mx-3 md:mx-32 leading-6">
           I have compiled a list of skills that I have acquired through my
           studies at school, self-learning, and work experience. I have been
@@ -181,50 +54,10 @@ const SkillSet = () => {
         </p> */}
 
         <div className="my-40 flex flex-col lg:flex-row flex-wrap justify-center items-center ">
-          <div className="flex items-center mx-3">
-            <div className="h-16 w-16 border-2 overflow-hidden m-2 rounded-lg border-gray-800">
-              <div
-                className={`bg-cover h-full w-full flex bg-white justify-center items-end bg-[url('../public/img/background_fire2.gif')]`}
-              ></div>
-            </div>
-            <div className="font-dosis font-extrabold text-[20px] w-[140px]">
-              <p>Level : 75 ~ 100</p>
-              <p>Super Saiyan</p>
-            </div>
-          </div>
-          <div className="flex items-center mx-3">
-            <div className="h-16 w-16 border-2 overflow-hidden m-2 rounded-lg border-gray-800">
-              <div
-                className={`bg-cover h-full w-full flex bg-[gold] justify-center items-end`}
-              ></div>
-            </div>
-            <div className="font-dosis font-extrabold text-[20px] w-[140px]">
-              <p>Level : 50 ~ 74</p>
-              <p>Gold</p>
-            </div>
-          </div>
-          <div className="flex items-center mx-3">
-            <div className="h-16 w-16 border-2 overflow-hidden m-2 rounded-lg border-gray-800">
-              <div
-                className={`bg-cover h-full w-full flex bg-[silver] justify-center items-end`}
-              ></div>
-            </div>
-            <div className="font-dosis font-extrabold text-[20px] w-[140px]">
-              <p>Level : 25 ~ 49</p>
-              <p>Silver</p>
-            </div>
-          </div>
-          <div className="flex items-center mx-3">
-            <div className="h-16 w-16 border-2 overflow-hidden m-2 rounded-lg border-gray-800">
-              <div
-                className={`bg-cover h-full w-full flex bg-[#cc6633] justify-center items-end`}
-              ></div>
-            </div>
-            <div className="font-dosis font-extrabold text-[20px] w-[140px]">
-              <p>Level : 0 ~ 24</p>
-              <p>Blonze</p>
-            </div>
-          </div>
+          <LevelIndicator level={100} levelName="Super Saiyan" levelRange="75 ~ 100" />
+          <LevelIndicator level={75} levelName="Gold" levelRange="50 ~ 74" />
+          <LevelIndicator level={50} levelName="Silver" levelRange="25 ~ 49" />
+          <LevelIndicator level={25} levelName="Bronze" levelRange="0 ~ 24" />
         </div>
 
         <div className="grid gap-8 mt-10 sm:grid-cols-8 sm:px-8 xl:px-0">

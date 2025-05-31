@@ -4,9 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "./UI/Modal";
 import { wordExperienceContents } from "../utility";
+import { getSliderSettings, SectionTitle } from "../utils/commonUtils";
 
-
-const SkillSet = () => {
+const Experience = () => {
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -47,24 +47,13 @@ const SkillSet = () => {
     return () => window.removeEventListener("resize", resizeEvent);
   }, [resizeEvent]);
 
-
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: open ? 1 : 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    centerMode: true,
-    arrows: false,
-  };
+  const sliderSettings = getSliderSettings(open);
 
   return (
     <section className="py-32 bg-gray-200" id="experiences">
-      <h2 className="text-4xl py-20 font-bold text-center font-dosis bg">
+      <SectionTitle className="bg">
         Work Experience
-      </h2>
+      </SectionTitle>
       <div className="flex justify-around m-auto max-w-sm sm:max-w-md lg:max-w-lg gap-2 wrap mt-5">
         {wordExperienceContents.map((doc, index) => (
           <div key={index} className="text-center mb-3">
@@ -364,4 +353,4 @@ const SkillSet = () => {
   );
 };
 
-export default SkillSet;
+export default Experience;

@@ -1,14 +1,15 @@
 import React from "react";
-
 import { portfolioContents } from "../utility";
+import Button from "./UI/Button";
+import { SectionTitle, ArrowRightIcon, externalLinkProps } from "../utils/commonUtils";
 
 const Projects = () => {
   return (
     <section className="py-32 bg-gray-200" id="project">
       <div className="container max-w-6xl mx-auto">
-        <p className="font-dosis font-bold text-4xl text-center py-20">
+        <SectionTitle>
           Projects
-        </p>
+        </SectionTitle>
         <p className="my-5 text-lg text-center text-gray-600">
           Please check out my individual works.
         </p>
@@ -18,26 +19,10 @@ const Projects = () => {
           </p>
           <div className="mt-2 text-lg text-center text-gray-600">
             <p>You can go to portpholio pages with clicking</p>
-            <div
-              href="https://portfolio-blog-app.vercel.app/"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-gray-500 rounded-md"
-            >
+            <Button variant="secondary" size="sm" className="mt-2">
               Go to Page
-              <svg
-                className="ml-2 -mr-1 w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-            </div>
+              <ArrowRightIcon className="ml-2 -mr-1 w-4 h-4" />
+            </Button>
             <p className="mt-2">Also check Github pages with clicking</p>
             <div className="my-2 bg-white rounded-lg w-10 h-10 mx-auto animate-pulse">
               <img src="img/github-icon.svg" alt="Github code page" />
@@ -78,32 +63,18 @@ const Projects = () => {
                   {/* ,Authentication */}
                 </p>
                 <div className="relative flex flex-row justify-between">
-                  <div>
-                    <a
-                      href="https://mkportfolio.link/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    >
-                      Go to Page
-                      <svg
-                        className="ml-2 -mr-1 w-4 h-4"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                          clipRule="evenodd"
-                        ></path>
-                      </svg>
-                    </a>
-                  </div>
+                  <Button 
+                    href="https://mkportfolio.link/"
+                    variant="primary"
+                    size="sm"
+                    {...externalLinkProps}
+                  >
+                    Go to Page
+                    <ArrowRightIcon className="ml-2 -mr-1 w-4 h-4" />
+                  </Button>
                   <a
                     href="https://github.com/Masahiro-Kaga/gpt-app"
-                    target="_blank"
-                    rel="noreferrer"
+                    {...externalLinkProps}
                   >
                     <div className="bg-white rounded-lg w-10 h-10 animate-pulse">
                       <img src="img/github-icon.svg" alt="Github code page" />
@@ -150,33 +121,19 @@ const Projects = () => {
                     {/* ,Authentication */}
                   </p>
                   <div className="relative flex flex-row justify-between">
-                    <div>
-                      <a
-                        href={content.pageUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      >
-                        Go to Page
-                        <svg
-                          className="ml-2 -mr-1 w-4 h-4"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                            clipRule="evenodd"
-                          ></path>
-                        </svg>
-                      </a>
-                    </div>
+                    <Button 
+                      href={content.pageUrl}
+                      variant="primary"
+                      size="sm"
+                      {...externalLinkProps}
+                    >
+                      Go to Page
+                      <ArrowRightIcon className="ml-2 -mr-1 w-4 h-4" />
+                    </Button>
                     {content.githubUrl && (
                       <a
                         href={content.githubUrl}
-                        target="_blank"
-                        rel="noreferrer"
+                        {...externalLinkProps}
                       >
                         <div className="bg-white rounded-lg w-10 h-10 animate-pulse">
                           <img src="img/github-icon.svg" alt="Github code page" />

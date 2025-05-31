@@ -6,6 +6,19 @@ import "./Navigation.css";
 const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
+  // ナビゲーションアイテムの設定
+  const navigationItems = [
+    { to: "experiences", label: "Experience" },
+    { to: "skills", label: "Skillset" },
+    { to: "project", label: "Project" },
+    { to: "contact", label: "Contact" }
+  ];
+
+  const navLinkClasses = {
+    mobile: "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 active:bg-blue-600 cursor-pointer",
+    desktop: "block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
+  };
+
   const toggleDropdownHandler = (event) => {
     event.preventDefault();
     setIsOpenMenu(!isOpenMenu);
@@ -22,7 +35,6 @@ const Navigation = () => {
 
   useEffect(() => {
     document.addEventListener("click", (event) => {
-      // event.preventDefault();
       event.stopPropagation();
       if (
         (!event.target.closest("#dropdownButton") &&
@@ -50,6 +62,7 @@ const Navigation = () => {
             </span>
             <span className="h-2 w-2 bg-sky-500 inline-block rounded-full self-end"></span>
           </button>
+          
           {/* For the mobile display  */}
           <div className="relative">
             <button
@@ -79,6 +92,7 @@ const Navigation = () => {
                 ></span>
               </div>
             </button>
+            
             <ul
               className={`md:hidden min-w-max absolute left-0 text-base z-50 py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none bg-gray-800 ${
                 !isOpenMenu ? "translate-x-52" : "transition-x-0"
@@ -86,132 +100,42 @@ const Navigation = () => {
               aria-labelledby="dropdownMenuButton"
               id="dropdownMenuButton"
             >
-              <li>
-                <Link
-                  className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 active:bg-blue-600 cursor-pointer"
-                  activeClass="active"
-                  to="experiences"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  Experience
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 active:bg-blue-600 cursor-pointer"
-                  activeClass="active"
-                  to="skills"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  Skillset
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 active:bg-blue-600 cursor-pointer"
-                  activeClass="active"
-                  to="project"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  Project
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 cursor-pointer"
-                  activeClass="active"
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  Contact
-                </Link>
-              </li>
+              {navigationItems.map((item) => (
+                <li key={item.to}>
+                  <Link
+                    className={navLinkClasses.mobile}
+                    activeClass="active"
+                    to={item.to}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
+          
           {/* For the desktop display  */}
           <div className="hidden w-full md:block md:w-auto">
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-              <li>
-                <Link
-                  className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
-                  activeClass="active"
-                  to="experiences"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  Experience
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
-                  activeClass="active"
-                  to="skills"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  Skillset
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
-                  activeClass="active"
-                  to="project"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  Project
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
-                  activeClass="active"
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  Contact
-                </Link>
-              </li>
-
-              {/* {content.nav.links.map((link, index) => {
-                return (
-                  <li key={index}>
-                    <a
-                      href="#"
-                      className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl"
-                    >
-                      {link.text}
-                    </a>
-                  </li>
-                );
-              })} */}
+              {navigationItems.map((item) => (
+                <li key={item.to}>
+                  <Link
+                    className={navLinkClasses.desktop}
+                    activeClass="active"
+                    to={item.to}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

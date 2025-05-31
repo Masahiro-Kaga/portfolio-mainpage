@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-scroll";
+import Button from "./UI/Button";
+import { externalLinkProps } from "../utils/commonUtils";
 
 const AboutContent = () => {
   return (
@@ -16,16 +17,22 @@ const AboutContent = () => {
         </div>
         <br></br>
         <div className="flex gap-2">
-          <button className="mt-3 bg-blue-700 rounded-lg hover:bg-blue-800 transition shadow text-white font-semibold">
-            <a href="https://www.linkedin.com/in/masahiro-kaga-ab8604192/" target="_blank" rel="noreferrer" className="px-4 py-2 block">
-              Visit LinkedIn
-            </a>
-          </button>
-          <button className="mt-3 bg-blue-700 rounded-lg hover:bg-blue-800 transition shadow text-white font-semibold">
-            <Link to="project" smooth={true} className="px-4 py-2 block">
-              My Projects
-            </Link>
-          </button>
+          <Button 
+            href="https://www.linkedin.com/in/masahiro-kaga-ab8604192/"
+            variant="primary"
+            {...externalLinkProps}
+          >
+            Visit LinkedIn
+          </Button>
+          <Button 
+            onClick={() => {
+              const element = document.getElementById('project');
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            variant="primary"
+          >
+            My Projects
+          </Button>
         </div>
       </div>
     </div>

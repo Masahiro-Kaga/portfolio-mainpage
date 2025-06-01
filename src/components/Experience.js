@@ -82,8 +82,6 @@ const Experience = () => {
     speed: 500,
     slidesToShow: open ? 1 : 2,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
     centerMode: false,
     arrows: true,
     initialSlide: 0,

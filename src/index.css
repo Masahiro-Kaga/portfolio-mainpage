@@ -105,11 +105,11 @@
 }
 
 .slick-prev {
-  left: 10px !important;
+  left: -5px !important;
 }
 
 .slick-next {
-  right: 10px !important;
+  right: -5px !important;
 }
 
 .slick-prev:hover,
@@ -127,8 +127,8 @@
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
-  width: 16px !important;
-  height: 16px !important;
+  width: 30px !important;
+  height: 30px !important;
   transform: translate(-50%, -50%) !important;
 }
 
@@ -165,17 +165,17 @@
   }
 
   .slick-prev {
-    left: 5px !important;
+    left: -2px !important;
   }
 
   .slick-next {
-    right: 5px !important;
+    right: -2px !important;
   }
 
   .slick-prev:before,
   .slick-next:before {
-    width: 14px !important;
-    height: 14px !important;
+    width: 18px !important;
+    height: 18px !important;
   }
 }
 
@@ -246,14 +246,14 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* アウトラインの削除 */
+/* アウトラインの削除
 .slick-slide {
   outline: none !important;
 }
 
 .slick-slide:focus {
   outline: none !important;
-}
+} */
 
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&display=swap");
 @tailwind base;

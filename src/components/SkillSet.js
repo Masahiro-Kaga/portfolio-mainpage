@@ -1,9 +1,8 @@
 import React from "react";
 import portfolioData from "../utility";
-import { SectionTitle } from "../utils/commonUtils";
 
 const SkillSet = ({ pageType = "job", styleType = "casual" }) => {
-  // 共通のスキルマッピング関数（2列レイアウト用）
+  // フォーマル用のスキルマッピング関数（2列レイアウト用）
   const createSkillGrid = (techArray, isDark = true) => {
     return (
       <div className="grid grid-cols-2 gap-4 w-full">
@@ -24,91 +23,154 @@ const SkillSet = ({ pageType = "job", styleType = "casual" }) => {
     );
   };
 
-  const frontEndTech = createSkillGrid(portfolioData.stack.tech_frontend, true);
-  const backEndTech = createSkillGrid(portfolioData.stack.tech_backend, true);
-  const devTool = createSkillGrid(portfolioData.stack.tech_devtool, true);
-  const media = createSkillGrid(portfolioData.stack.tech_media, true);
-  const cloudTech = createSkillGrid(portfolioData.stack.tech_cloud, true);
-  const aiTech = createSkillGrid(portfolioData.stack.tech_ai, true);
-
-  // レベルインジケーター用の共通コンポーネント（カジュアル用）
-  const LevelIndicator = ({ level, levelName, levelRange }) => {
-    // 各レベル範囲に対応する背景スタイル
-    const getLevelBackground = (levelName) => {
-      switch (levelName) {
-        case "Super Saiyan":
-          return "bg-[url('../public/img/background_fire2.gif')] bg-cover";
-        case "Gold":
-          return "bg-[gold]";
-        case "Silver":
-          return "bg-[silver]";
-        case "Bronze":
-          return "bg-[#cc6633]";
-        default:
-          return "bg-gray-300";
+  // カジュアルデザイン用のスキルマッピング関数（元の構造）
+  const createCasualSkillGrid = (techArray) => {
+    return techArray.map((images, index) => {
+      let iconBg;
+      let animation;
+      let skillname;
+      if (images.level >= 0 && images.level < 25) {
+        iconBg = "items-center bg-[#cc6633]";
+        animation = "";
+        skillname = images.alt;
+      } else if (images.level >= 25 && images.level < 50) {
+        iconBg = "items-center bg-[silver]";
+        animation = "";
+        skillname = images.alt;
+      } else if (images.level >= 50 && images.level < 75) {
+        iconBg = "items-center bg-[gold]";
+        animation = "";
+        skillname = images.alt;
+      } else if (images.level >= 75 && images.level <= 100) {
+        iconBg = "items-end bg-[url('../public/img/background_fire2.gif')]";
+        animation = "animate-bounce";
+        skillname = images.alt;
       }
-    };
-
-    return (
-      <div className="flex items-center mx-3">
-        <div className="h-16 w-16 border-2 overflow-hidden m-2 rounded-lg border-gray-800">
-          <div
-            className={`h-full w-full flex justify-center items-center ${getLevelBackground(
-              levelName
-            )}`}
-          ></div>
+      return (
+        <div key={index}>
+          <div className="h-16 w-16 border-2 m-2 rounded-lg border-white overflow-hidden">
+            <div
+              className={`bg-cover h-full w-full flex bg-white justify-center ${iconBg}`}
+            >
+              <img
+                src={images.img}
+                alt={images.alt}
+                className={`w-12 h-12 ${animation}`}
+              />
+            </div>
+          </div>
+          <p className="text-center text-[14px] text-white font-dosis">
+            {skillname}
+          </p>
         </div>
-        <div className="font-dosis font-extrabold text-[20px] w-[140px]">
-          <p>Level : {levelRange}</p>
-          <p>{levelName}</p>
-        </div>
-      </div>
-    );
+      );
+    });
   };
 
   // カジュアルなデザインのレンダリング
-  const renderCasualDesign = () => (
-    <>
-      <div className="my-40 flex flex-col lg:flex-row flex-wrap justify-center items-center ">
-        <LevelIndicator level={100} levelName="Super Saiyan" levelRange="75 ~ 100" />
-        <LevelIndicator level={75} levelName="Gold" levelRange="50 ~ 74" />
-        <LevelIndicator level={50} levelName="Silver" levelRange="25 ~ 49" />
-        <LevelIndicator level={25} levelName="Bronze" levelRange="0 ~ 24" />
-      </div>
+  const renderCasualDesign = () => {
+    const aiTechCasual = createCasualSkillGrid(portfolioData.stack.tech_ai);
+    const frontEndTechCasual = createCasualSkillGrid(portfolioData.stack.tech_frontend);
+    const backEndTechCasual = createCasualSkillGrid(portfolioData.stack.tech_backend);
+    const cloudTechCasual = createCasualSkillGrid(portfolioData.stack.tech_cloud);
+    const devToolCasual = createCasualSkillGrid(portfolioData.stack.tech_devtool);
+    const mediaCasual = createCasualSkillGrid(portfolioData.stack.tech_media);
 
-      <div className="grid gap-8 mt-10 sm:grid-cols-8 sm:px-8 xl:px-0">
-        <div className="flex flex-col items-center justify-start col-span-4 px-8 py-12 space-y-6 overflow-hidden bg-gray-800 sm:rounded-xl">
-          <h4 className="text-[2rem] font-medium text-white font-dosis">AI Tools</h4>
-          <div className="w-full">{aiTech}</div>
+    return (
+      <>
+        <div className="my-40 flex flex-col lg:flex-row flex-wrap justify-center items-center ">
+          <div className="flex items-center mx-3">
+            <div className="h-16 w-16 border-2 overflow-hidden m-2 rounded-lg border-gray-800">
+              <div
+                className={`bg-cover h-full w-full flex bg-white justify-center items-end bg-[url('../public/img/background_fire2.gif')]`}
+              ></div>
+            </div>
+            <div className="font-dosis font-extrabold text-[20px] w-[140px]">
+              <p>Level : 75 ~ 100</p>
+              <p>Super Saiyan</p>
+            </div>
+          </div>
+          <div className="flex items-center mx-3">
+            <div className="h-16 w-16 border-2 overflow-hidden m-2 rounded-lg border-gray-800">
+              <div
+                className={`bg-cover h-full w-full flex bg-[gold] justify-center items-end`}
+              ></div>
+            </div>
+            <div className="font-dosis font-extrabold text-[20px] w-[140px]">
+              <p>Level : 50 ~ 74</p>
+              <p>Gold</p>
+            </div>
+          </div>
+          <div className="flex items-center mx-3">
+            <div className="h-16 w-16 border-2 overflow-hidden m-2 rounded-lg border-gray-800">
+              <div
+                className={`bg-cover h-full w-full flex bg-[silver] justify-center items-end`}
+              ></div>
+            </div>
+            <div className="font-dosis font-extrabold text-[20px] w-[140px]">
+              <p>Level : 25 ~ 49</p>
+              <p>Silver</p>
+            </div>
+          </div>
+          <div className="flex items-center mx-3">
+            <div className="h-16 w-16 border-2 overflow-hidden m-2 rounded-lg border-gray-800">
+              <div
+                className={`bg-cover h-full w-full flex bg-[#cc6633] justify-center items-end`}
+              ></div>
+            </div>
+            <div className="font-dosis font-extrabold text-[20px] w-[140px]">
+              <p>Level : 0 ~ 24</p>
+              <p>Bronze</p>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-col items-center justify-start col-span-4 px-8 py-12 space-y-6 overflow-hidden bg-gray-800 sm:rounded-xl">
-          <h4 className="text-[2rem] font-medium text-white font-dosis">Frontend</h4>
-          <div className="w-full">{frontEndTech}</div>
-        </div>
+        <div className="grid gap-8 mt-10 sm:grid-cols-8 sm:px-8 xl:px-0">
+          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
+            <h4 className="text-[2rem] font-medium text-white font-dosis text-center">
+              AI Tools
+            </h4>
+            <div className="flex flex-wrap justify-center items-center flex-1">{aiTechCasual}</div>
+          </div>
 
-        <div className="flex flex-col items-center justify-start col-span-4 px-8 py-12 space-y-6 overflow-hidden bg-gray-800 sm:rounded-xl">
-          <h4 className="text-[2rem] font-medium text-white font-dosis">Backend</h4>
-          <div className="w-full">{backEndTech}</div>
-        </div>
+          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
+            <h4 className="text-[2rem] font-medium text-white font-dosis text-center">
+              Frontend
+            </h4>
+            <div className="flex flex-wrap justify-center items-center flex-1">{frontEndTechCasual}</div>
+          </div>
 
-        <div className="flex flex-col items-center justify-start col-span-4 px-8 py-12 space-y-6 overflow-hidden bg-gray-800 sm:rounded-xl">
-          <h4 className="text-[2rem] font-medium text-white font-dosis">Cloud Services</h4>
-          <div className="w-full">{cloudTech}</div>
-        </div>
+          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
+            <h4 className="text-[2rem] font-medium text-white font-dosis text-center">
+              Backend
+            </h4>
+            <div className="flex flex-wrap justify-center items-center flex-1">{backEndTechCasual}</div>
+          </div>
 
-        <div className="flex flex-col items-center justify-start col-span-4 px-8 py-12 space-y-6 overflow-hidden bg-gray-800 sm:rounded-xl">
-          <h4 className="text-[2rem] font-medium text-white font-dosis">Dev tools</h4>
-          <div className="w-full">{devTool}</div>
-        </div>
+          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
+            <h4 className="text-[2rem] font-medium text-white font-dosis text-center">
+              Cloud Services
+            </h4>
+            <div className="flex flex-wrap justify-center items-center flex-1">{cloudTechCasual}</div>
+          </div>
 
-        <div className="flex flex-col items-center justify-start col-span-8 px-8 py-12 space-y-6 overflow-hidden bg-gray-800 sm:rounded-xl">
-          <h4 className="text-[2rem] font-medium text-white font-dosis">Media & Design</h4>
-          <div className="w-full">{media}</div>
+          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
+            <h4 className="text-[2rem] font-medium text-white font-dosis text-center">
+              Dev tools
+            </h4>
+            <div className="flex flex-wrap justify-center items-center flex-1">{devToolCasual}</div>
+          </div>
+
+          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
+            <h4 className="text-[2rem] font-medium text-white font-dosis text-center">
+              Media & Design
+            </h4>
+            <div className="flex flex-wrap justify-center items-center flex-1">{mediaCasual}</div>
+          </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  };
 
   // フォーマルなデザインのレンダリング
   const renderFormalDesign = () => (
@@ -170,9 +232,11 @@ const SkillSet = ({ pageType = "job", styleType = "casual" }) => {
   );
 
   return (
-    <section className="py-32 bg-gray-200" id="skills">
+    <section className="py-32 bg-white" id="skills">
       <div className="container max-w-6xl mx-auto">
-        <SectionTitle>Skillset</SectionTitle>
+        <h2 className="text-4xl py-20 font-bold text-center font-dosis bg">
+          My Skillset [As a Jr.Dev]
+        </h2>
         {styleType === "formal" ? renderFormalDesign() : renderCasualDesign()}
       </div>
     </section>

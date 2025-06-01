@@ -5,13 +5,35 @@ import "slick-carousel/slick/slick-theme.css";
 import Modal from "./UI/Modal";
 import { wordExperienceContents } from "../utility";
 
-
-const Experience = () => {
+const Experience = ({ pageType = "job" }) => {
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const sliderRef1 = useRef(null);
   const sliderRef2 = useRef(null);
   const sliderRef3 = useRef(null);
+
+  // Freelanceモードでは"Cover Letter"と"Resume"を非表示にする
+  const getFilteredDocuments = () => {
+    if (pageType === "freelance") {
+      const filtered = wordExperienceContents.filter(
+        (doc) => !["Cover Letter", "Resume"].includes(doc.title)
+      );
+      console.log("🔧 Freelance mode: Hiding Cover Letter and Resume", {
+        original: wordExperienceContents.length,
+        filtered: filtered.length,
+        hiddenItems: wordExperienceContents
+          .filter((doc) => ["Cover Letter", "Resume"].includes(doc.title))
+          .map((doc) => doc.title),
+      });
+      return filtered;
+    }
+    console.log("🔧 Job mode: Showing all documents", {
+      total: wordExperienceContents.length,
+    });
+    return wordExperienceContents;
+  };
+
+  const filteredDocuments = getFilteredDocuments();
 
   const openModal = (imgSrc) => {
     setSelectedImage(imgSrc);
@@ -27,16 +49,16 @@ const Experience = () => {
       // 横方向のスクロールまたは縦方向のスクロールを検出
       if (Math.abs(e.deltaX) > 30 || Math.abs(e.deltaY) > 30) {
         e.preventDefault();
-        
+
         // スロットリング機能
         const now = Date.now();
         if (!sliderRef.current.lastWheelTime || now - sliderRef.current.lastWheelTime > 300) {
           sliderRef.current.lastWheelTime = now;
-          
+
           // 右または下方向
           if (e.deltaX > 0 || e.deltaY > 0) {
             sliderRef.current.slickNext();
-          } 
+          }
           // 左または上方向
           else {
             sliderRef.current.slickPrev();
@@ -75,7 +97,6 @@ const Experience = () => {
     return () => window.removeEventListener("resize", resizeEvent);
   }, [resizeEvent]);
 
-
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -89,18 +110,14 @@ const Experience = () => {
 
   return (
     <section className="py-32 bg-gray-200" id="experiences">
-      <h2 className="text-4xl py-20 font-bold text-center font-dosis bg">
-        Work Experience
-      </h2>
+      <h2 className="text-4xl py-20 font-bold text-center font-dosis bg">Work Experience</h2>
       <div className="flex justify-around m-auto max-w-sm sm:max-w-md lg:max-w-lg gap-2 wrap mt-5">
-        {wordExperienceContents.map((doc, index) => (
+        {filteredDocuments.map((doc, index) => (
           <div key={index} className="text-center mb-3">
             <div onClick={() => openModal(doc.src)} className="cursor-pointer relative group">
-              <img src={doc.src} alt="Click to view" className="group-hover:opacity-40"/>
+              <img src={doc.src} alt="Click to view" className="group-hover:opacity-40" />
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 rounded-full px-4 py-2 cursor-pointer">
-                <span className="text-white font-semibold">
-                  Expand {doc.title}
-                </span>
+                <span className="text-white font-semibold">Expand {doc.title}</span>
               </div>
             </div>
             <button className="mt-3 bg-blue-700 rounded-lg hover:bg-blue-800 transition px-4 py-2 shadow text-white font-semibold">
@@ -125,16 +142,12 @@ const Experience = () => {
         <div className="flex justify-between items-center text-lg mt-20">
           <div className="ml-10 mr-10">
             <h1 className="text-7xl mt-2">Bittreo</h1>
-            <div className="font-light my-2">
-              Apr, 2022 - Current : Full Stack Developer
-            </div>
+            <div className="font-light my-2">Apr, 2022 - Current : Full Stack Developer</div>
             <p className="my-12 text-xl max-w-4xl w-full text-gray-600">
-              Bittreo is a Vancouver based over-the-counter buy and sell
-              cryptocurrency platform. The platform is solely used by the
-              owners, and employees of Bittreo to expedite their daily business
-              operations. Additionally, services and data structure in the
-              platform conform with Fintrac regulations and provide in-depth
-              support for BI reporting.
+              Bittreo is a Vancouver based over-the-counter buy and sell cryptocurrency platform.
+              The platform is solely used by the owners, and employees of Bittreo to expedite their
+              daily business operations. Additionally, services and data structure in the platform
+              conform with Fintrac regulations and provide in-depth support for BI reporting.
             </p>
             {/* <button className="max-w-md min-w-full my-5 bg-gray-700 hover:bg-transparent hover:text-gray-700 border-2 hover:border-gray-700 text-white font-bold py-2 px-4 rounded-full">
               <a href="https://bittreo.com/" target="_blank" rel="noreferrer">
@@ -156,16 +169,14 @@ const Experience = () => {
           <h1 className="text-4xl">Bittreo Application</h1>
           <div className="max-w-5xl flex flex-col gap-6 text-xl">
             <p>
-              The Bittreo platform incorporates core market functionalities from
-              an online cryptocurrency exchange, Binance. Market orders based on
-              customer variables and asset details are performed and displayed
-              appropriately to improve the daily processes of a Bittreo platform
-              user.
+              The Bittreo platform incorporates core market functionalities from an online
+              cryptocurrency exchange, Binance. Market orders based on customer variables and asset
+              details are performed and displayed appropriately to improve the daily processes of a
+              Bittreo platform user.
             </p>
             <p className="underline">
-              Technology used for the development of Bittreo include Node,
-              Express, MongoDB, Vue and AWS infrastructure including Route53,
-              Code Deploy, ACM, EC2, ALB, and RDS.
+              Technology used for the development of Bittreo include Node, Express, MongoDB, Vue and
+              AWS infrastructure including Route53, Code Deploy, ACM, EC2, ALB, and RDS.
             </p>
           </div>
         </div>
@@ -173,10 +184,7 @@ const Experience = () => {
           <div onWheel={(e) => handleWheel(e, sliderRef1)}>
             <Slick ref={sliderRef1} {...sliderSettings}>
               <li className="mx-auto px-3">
-                <img
-                  src={`${process.env.PUBLIC_URL}/img/experience/bittreo/login.png`}
-                  alt=""
-                />
+                <img src={`${process.env.PUBLIC_URL}/img/experience/bittreo/login.png`} alt="" />
                 <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
                   1. Bittreo Login
                 </div>
@@ -220,24 +228,17 @@ const Experience = () => {
         <div className="flex flex-wrap justify-between gap-6 mx-5">
           <div>
             <h1 className="text-4xl text-white">Vancouver Bitcoin Website</h1>
-            <a
-              href="https://vancouverbitcoin.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://vancouverbitcoin.com/" target="_blank" rel="noreferrer">
               <button className="max-w-md min-w-full my-5 bg-gray-700 hover:bg-white hover:text-gray-700 border-2 hover:border-gray-700 text-white font-bold py-2 px-4 rounded-full">
                 Visit Website
               </button>
             </a>
           </div>
           <div className="max-w-5xl flex flex-col gap-6 text-xl">
-            <p>
-              Vancouver Bitcoin is a Wordpress website built for a crypto
-              brokerage.
-            </p>
+            <p>Vancouver Bitcoin is a Wordpress website built for a crypto brokerage.</p>
             <p className="underline">
-              The website utilizes WordPress with Elementor, HTML, CSS,
-              Javascript, PHP, MariaDB, Docker, and Node hosted on an AWS.
+              The website utilizes WordPress with Elementor, HTML, CSS, Javascript, PHP, MariaDB,
+              Docker, and Node hosted on an AWS.
             </p>
           </div>
         </div>
@@ -245,19 +246,13 @@ const Experience = () => {
           <div onWheel={(e) => handleWheel(e, sliderRef2)}>
             <Slick ref={sliderRef2} {...sliderSettings}>
               <li className="mx-auto px-3">
-                <img
-                  src={`${process.env.PUBLIC_URL}/img/experience/vb/vb-home.png`}
-                  alt=""
-                />
+                <img src={`${process.env.PUBLIC_URL}/img/experience/vb/vb-home.png`} alt="" />
                 <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
                   1. Vancouver Bitcoin Homepage
                 </div>
               </li>
               <li className="mx-auto px-3">
-                <img
-                  src={`${process.env.PUBLIC_URL}/img/experience/vb/vb-blog.png`}
-                  alt=""
-                />
+                <img src={`${process.env.PUBLIC_URL}/img/experience/vb/vb-blog.png`} alt="" />
                 <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
                   2. Vancouver Bitcoin Blog
                 </div>
@@ -293,14 +288,11 @@ const Experience = () => {
         <div className="flex justify-between items-center text-lg mt-20">
           <div className="ml-10 mr-10">
             <h1 className="text-7xl mt-2">Massive Sapporo</h1>
-            <div className="font-light my-2">
-              June, 2018 - May,2019 : Web Developer
-            </div>
+            <div className="font-light my-2">June, 2018 - May,2019 : Web Developer</div>
             <p className="my-12 text-xl max-w-4xl w-full text-gray-600">
-              Massive Sapporo is the company that manages inbound and real
-              estate business in Japan. Especially, they operates Vacation
-              rentals(Airbnb), Unmanned hotels, Shared offices/houses, and
-              Entertainment facilities called Ninja Dojo for overseas tourists.
+              Massive Sapporo is the company that manages inbound and real estate business in Japan.
+              Especially, they operates Vacation rentals(Airbnb), Unmanned hotels, Shared
+              offices/houses, and Entertainment facilities called Ninja Dojo for overseas tourists.
             </p>
             {/* <button className="max-w-md min-w-full my-5 bg-gray-700 hover:bg-transparent hover:text-gray-700 border-2 hover:border-gray-700 text-white font-bold py-2 px-4 rounded-full">
               <a
@@ -329,14 +321,13 @@ const Experience = () => {
 
           <div className="max-w-5xl flex flex-col gap-6 text-xl">
             <p>
-              Hokkaido Ninjado is one part of entertainment facility. Decendants
-              of Ninja teach people the history of Ninja. People can also
-              experience Ninja training. They advertise Ninja atraction with
-              Website and Airbnb platform.
+              Hokkaido Ninjado is one part of entertainment facility. Decendants of Ninja teach
+              people the history of Ninja. People can also experience Ninja training. They advertise
+              Ninja atraction with Website and Airbnb platform.
             </p>
             <p className="underline">
-              Technology used for the website is Wordpress, php. Also Adobe
-              Premieor and Photoshop are used for contents.
+              Technology used for the website is Wordpress, php. Also Adobe Premieor and Photoshop
+              are used for contents.
             </p>
           </div>
         </div>

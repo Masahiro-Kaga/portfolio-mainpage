@@ -11,12 +11,14 @@ const Navigation = () => {
     { to: "experiences", label: "Experience" },
     { to: "skills", label: "Skillset" },
     { to: "project", label: "Project" },
-    { to: "contact", label: "Contact" }
+    { to: "contact", label: "Contact" },
   ];
 
   const navLinkClasses = {
-    mobile: "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 active:bg-blue-600 cursor-pointer",
-    desktop: "block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer"
+    mobile:
+      "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-300 hover:bg-gray-700 hover:text-white focus:text-white focus:bg-gray-700 active:bg-blue-600 cursor-pointer",
+    desktop:
+      "block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-700 rounded-xl cursor-pointer",
   };
 
   const toggleDropdownHandler = (event) => {
@@ -62,7 +64,7 @@ const Navigation = () => {
             </span>
             <span className="h-2 w-2 bg-sky-500 inline-block rounded-full self-end"></span>
           </button>
-          
+
           {/* For the mobile display  */}
           <div className="relative">
             <button
@@ -92,7 +94,7 @@ const Navigation = () => {
                 ></span>
               </div>
             </button>
-            
+
             <ul
               className={`md:hidden min-w-max absolute left-0 text-base z-50 py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none bg-gray-800 ${
                 !isOpenMenu ? "translate-x-52" : "transition-x-0"
@@ -117,7 +119,7 @@ const Navigation = () => {
               ))}
             </ul>
           </div>
-          
+
           {/* For the desktop display  */}
           <div className="hidden w-full md:block md:w-auto">
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">

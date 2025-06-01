@@ -46,6 +46,8 @@ const Layout = () => {
 
   // デバッグスイッチの状態管理
   const [debugVisible, setDebugVisible] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
+  const clickTimerRef = useRef(null);
   const autoCloseTimerRef = useRef(null);
 
   useEffect(() => {
@@ -91,10 +93,6 @@ const Layout = () => {
 
     return () => {
       clearTimeout(maxLoadingTimer);
-      // タイマーのクリーンアップ
-      if (autoCloseTimerRef.current) {
-        clearTimeout(autoCloseTimerRef.current);
-      }
     };
   }, []);
 
@@ -102,11 +100,28 @@ const Layout = () => {
     setSentComment(false);
   };
 
-  // 名前クリック/タップハンドラー（隠し機能）
-  const handleNameClick = () => {
-    setDebugVisible(true);
-    startAutoCloseTimer();
-    console.log("🔧 Debug switches activated!");
+  // ロゴクリックハンドラー（隠しクリック領域）
+  const handleLogoClick = () => {
+    const newCount = clickCount + 1;
+    setClickCount(newCount);
+
+    // 3秒のタイマーをリセット
+    if (clickTimerRef.current) {
+      clearTimeout(clickTimerRef.current);
+    }
+
+    // 5回クリックでスイッチ表示
+    if (newCount >= 5) {
+      setDebugVisible(true);
+      setClickCount(0);
+      startAutoCloseTimer();
+      console.log("🔧 Debug switches activated!");
+    } else {
+      // 3秒後にクリックカウントをリセット
+      clickTimerRef.current = setTimeout(() => {
+        setClickCount(0);
+      }, 3000);
+    }
   };
 
   // 自動クローズタイマー開始
@@ -236,8 +251,8 @@ const Layout = () => {
       {!isLoading && (
         <PageComponent>
           {sentComment && <SuccessModal onClose={closeModalHandler} />}
-          <Navigation />
-          <Header onNameClick={handleNameClick} />
+          <Navigation onLogoClick={handleLogoClick} />
+          <Header />
           <AboutContent />
           <AboutMe />
           <Experience />

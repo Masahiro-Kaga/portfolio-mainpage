@@ -46,6 +46,8 @@ const Layout = () => {
 
   // デバッグスイッチの状態管理
   const [debugVisible, setDebugVisible] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
+  const clickTimerRef = useRef(null);
   const autoCloseTimerRef = useRef(null);
 
   useEffect(() => {
@@ -91,10 +93,6 @@ const Layout = () => {
 
     return () => {
       clearTimeout(maxLoadingTimer);
-      // タイマーのクリーンアップ
-      if (autoCloseTimerRef.current) {
-        clearTimeout(autoCloseTimerRef.current);
-      }
     };
   }, []);
 
@@ -102,11 +100,28 @@ const Layout = () => {
     setSentComment(false);
   };
 
-  // 名前クリック/タップハンドラー（隠し機能）
-  const handleNameClick = () => {
-    setDebugVisible(true);
-    startAutoCloseTimer();
-    console.log("🔧 Debug switches activated!");
+  // ロゴクリックハンドラー（隠しクリック領域）
+  const handleLogoClick = () => {
+    const newCount = clickCount + 1;
+    setClickCount(newCount);
+
+    // 3秒のタイマーをリセット
+    if (clickTimerRef.current) {
+      clearTimeout(clickTimerRef.current);
+    }
+
+    // 5回クリックでスイッチ表示
+    if (newCount >= 5) {
+      setDebugVisible(true);
+      setClickCount(0);
+      startAutoCloseTimer();
+      console.log('🔧 Debug switches activated!');
+    } else {
+      // 3秒後にクリックカウントをリセット
+      clickTimerRef.current = setTimeout(() => {
+        setClickCount(0);
+      }, 3000);
+    }
   };
 
   // 自動クローズタイマー開始
@@ -114,10 +129,10 @@ const Layout = () => {
     if (autoCloseTimerRef.current) {
       clearTimeout(autoCloseTimerRef.current);
     }
-
+    
     autoCloseTimerRef.current = setTimeout(() => {
       setDebugVisible(false);
-      console.log("🔧 Debug switches auto-closed");
+      console.log('🔧 Debug switches auto-closed');
     }, 5000);
   };
 
@@ -134,7 +149,7 @@ const Layout = () => {
     if (autoCloseTimerRef.current) {
       clearTimeout(autoCloseTimerRef.current);
     }
-    console.log("🔧 Debug switches manually closed");
+    console.log('🔧 Debug switches manually closed');
   };
 
   // ページタイプ切り替えハンドラー
@@ -159,85 +174,84 @@ const Layout = () => {
           className="fixed top-4 right-4 z-[9999] bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-4 border-2 border-gray-300 transition-all duration-300"
           id="debug-switches"
         >
-          <div className="flex justify-between items-center mb-2">
-            <div className="text-xs font-bold text-gray-800">Debug Controls</div>
+        <div className="flex justify-between items-center mb-2">
+          <div className="text-xs font-bold text-gray-800">Debug Controls</div>
+          <button
+            onClick={handleCloseSwitch}
+            className="text-gray-500 hover:text-gray-700 text-sm"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* ページタイプ切り替え */}
+        <div className="mb-3">
+          <div className="text-xs text-gray-600 mb-1">Page Type:</div>
+          <div className="flex gap-1">
             <button
-              onClick={handleCloseSwitch}
-              className="text-gray-500 hover:text-gray-700 text-sm"
+              onClick={() => handlePageTypeChange("job")}
+              className={`px-2 py-1 text-xs rounded ${
+                pageType === "job"
+                  ? "bg-blue-500 text-white"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
             >
-              ✕
+              Job
+            </button>
+            <button
+              onClick={() => handlePageTypeChange("freelance")}
+              className={`px-2 py-1 text-xs rounded ${
+                pageType === "freelance"
+                  ? "bg-green-500 text-white"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
+            >
+              Freelance
             </button>
           </div>
+        </div>
 
-          {/* ページタイプ切り替え */}
-          <div className="mb-3">
-            <div className="text-xs text-gray-600 mb-1">Page Type:</div>
-            <div className="flex gap-1">
-              <button
-                onClick={() => handlePageTypeChange("job")}
-                className={`px-2 py-1 text-xs rounded ${
-                  pageType === "job"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-              >
-                Job
-              </button>
-              <button
-                onClick={() => handlePageTypeChange("freelance")}
-                className={`px-2 py-1 text-xs rounded ${
-                  pageType === "freelance"
-                    ? "bg-green-500 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-              >
-                Freelance
-              </button>
-            </div>
-          </div>
-
-          {/* スタイルタイプ切り替え */}
-          <div>
-            <div className="text-xs text-gray-600 mb-1">Style Type:</div>
-            <div className="flex gap-1">
-              <button
-                onClick={() => handleStyleTypeChange("formal")}
-                className={`px-2 py-1 text-xs rounded ${
-                  styleType === "formal"
-                    ? "bg-purple-500 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-              >
-                Formal
-              </button>
-              <button
-                onClick={() => handleStyleTypeChange("casual")}
-                className={`px-2 py-1 text-xs rounded ${
-                  styleType === "casual"
-                    ? "bg-orange-500 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-              >
-                Casual
-              </button>
-            </div>
-          </div>
-
-          {/* 現在の設定表示 */}
-          <div className="mt-3 pt-2 border-t border-gray-300">
-            <div className="text-xs text-gray-600">
-              Current: {pageType} + {styleType}
-            </div>
+        {/* スタイルタイプ切り替え */}
+        <div>
+          <div className="text-xs text-gray-600 mb-1">Style Type:</div>
+          <div className="flex gap-1">
+            <button
+              onClick={() => handleStyleTypeChange("formal")}
+              className={`px-2 py-1 text-xs rounded ${
+                styleType === "formal"
+                  ? "bg-purple-500 text-white"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
+            >
+              Formal
+            </button>
+            <button
+              onClick={() => handleStyleTypeChange("casual")}
+              className={`px-2 py-1 text-xs rounded ${
+                styleType === "casual"
+                  ? "bg-orange-500 text-white"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
+            >
+              Casual
+            </button>
           </div>
         </div>
-      )}
+
+        {/* 現在の設定表示 */}
+        <div className="mt-3 pt-2 border-t border-gray-300">
+          <div className="text-xs text-gray-600">
+            Current: {pageType} + {styleType}
+          </div>
+        </div>
+      </div>
 
       {isLoading && <LoadingScreen isFadingOut={isFadingOut} />}
       {!isLoading && (
         <PageComponent>
           {sentComment && <SuccessModal onClose={closeModalHandler} />}
           <Navigation />
-          <Header onNameClick={handleNameClick} />
+          <Header />
           <AboutContent />
           <AboutMe />
           <Experience />

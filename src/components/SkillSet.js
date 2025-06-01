@@ -41,7 +41,11 @@ const SkillSet = () => {
     return (
       <div className="flex items-center mx-3">
         <div className="h-16 w-16 border-2 overflow-hidden m-2 rounded-lg border-gray-800">
-          <div className={`h-full w-full flex justify-center items-center ${getLevelBackground(levelName)}`}></div>
+          <div
+            className={`h-full w-full flex justify-center items-center ${getLevelBackground(
+              levelName
+            )}`}
+          ></div>
         </div>
         <div className="font-dosis font-extrabold text-[20px] w-[140px]">
           <p>Level : {levelRange}</p>
@@ -52,11 +56,9 @@ const SkillSet = () => {
   };
 
   return (
-    <section className="py-32 bg-white" id="skills">
+    <section className="py-32 bg-gray-200" id="skills">
       <div className="container max-w-6xl mx-auto">
-        <SectionTitle>
-          My Skillset [As a Jr.Dev]
-        </SectionTitle>
+        <SectionTitle>My Skillset [As a Jr.Dev]</SectionTitle>
         {/* <p className="my-11 text-md sm:text-lg text-center text-gray-600 tracking-tight mx-3 md:mx-32 leading-6">
           I have compiled a list of skills that I have acquired through my
           studies at school, self-learning, and work experience. I have been
@@ -77,30 +79,22 @@ const SkillSet = () => {
 
         <div className="grid gap-8 mt-10 sm:grid-cols-8 sm:px-8 xl:px-0">
           <div className="flex flex-col items-center justify-around col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
-            <h4 className="text-[2rem] font-medium text-white font-dosis">
-              Frontend
-            </h4>
+            <h4 className="text-[2rem] font-medium text-white font-dosis">Frontend</h4>
             <div className="flex flex-wrap justify-center">{frontEndTech}</div>
           </div>
 
           <div className="flex flex-col items-center justify-around col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
-            <h4 className="text-[2rem] font-medium text-white font-dosis">
-              Backend
-            </h4>
+            <h4 className="text-[2rem] font-medium text-white font-dosis">Backend</h4>
             <div className="flex flex-wrap justify-center">{backEndTech}</div>
           </div>
 
           <div className="flex flex-col items-center justify-around col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
-            <h4 className="text-[2rem] font-medium text-white font-dosis">
-              Dev tools
-            </h4>
+            <h4 className="text-[2rem] font-medium text-white font-dosis">Dev tools</h4>
             <div className="flex flex-wrap justify-center">{devTool}</div>
           </div>
 
           <div className="flex flex-col items-center justify-around col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
-            <h4 className="text-[2rem] font-medium text-white font-dosis">
-              Media
-            </h4>
+            <h4 className="text-[2rem] font-medium text-white font-dosis">Media</h4>
             <div className="flex flex-wrap justify-center">{media}</div>
           </div>
         </div>

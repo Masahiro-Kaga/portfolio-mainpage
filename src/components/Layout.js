@@ -240,8 +240,8 @@ const Layout = () => {
           <Header onNameClick={handleNameClick} />
           <AboutContent pageType={pageType} />
           <AboutMe pageType={pageType} styleType={styleType} />
-          <Experience pageType={pageType} />
           <SkillSet />
+          <Experience pageType={pageType} />
           <Projects />
           <Contact />
         </PageComponent>

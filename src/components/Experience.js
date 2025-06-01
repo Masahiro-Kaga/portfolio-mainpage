@@ -109,7 +109,7 @@ const Experience = ({ pageType = "job" }) => {
   };
 
   return (
-    <section className="py-32 bg-gray-200" id="experiences">
+    <section className="py-32 bg-white" id="experiences">
       <h2 className="text-4xl font-bold text-center font-dosis bg mb-8">Work Experience</h2>
       <div className="flex justify-around m-auto max-w-sm sm:max-w-md lg:max-w-lg gap-2 wrap mt-5">
         {filteredDocuments.map((doc, index) => (

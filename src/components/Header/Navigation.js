@@ -8,8 +8,8 @@ const Navigation = () => {
 
   // ナビゲーションアイテムの設定
   const navigationItems = [
-    { to: "experiences", label: "Experience" },
     { to: "skills", label: "Skillset" },
+    { to: "experiences", label: "Experience" },
     { to: "project", label: "Project" },
     { to: "contact", label: "Contact" },
   ];

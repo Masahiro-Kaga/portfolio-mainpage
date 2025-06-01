@@ -313,14 +313,14 @@ const Experience = ({ pageType = "job" }) => {
       {/* Website  */}
       <div className="bg-gray-600 py-20 md:mx-10 text-white border-8 border-gray-300 rounded-lg">
         <div className="flex flex-wrap justify-between gap-6 mx-5">
-          <div>
+          {/* <div>
             <h1 className="text-4xl text-white">Vancouver Bitcoin Website</h1>
             <a href="https://vancouverbitcoin.com/" target="_blank" rel="noreferrer">
               <button className="max-w-md min-w-full my-5 bg-gray-700 hover:bg-white hover:text-gray-700 border-2 hover:border-gray-700 text-white font-bold py-2 px-4 rounded-full">
                 Visit Website
               </button>
             </a>
-          </div>
+          </div> */}
           <div className="max-w-5xl flex flex-col gap-6 text-xl">
             <p>Vancouver Bitcoin is a Wordpress website built for a crypto brokerage.</p>
             <p className="underline">

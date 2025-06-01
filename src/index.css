@@ -246,14 +246,15 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* アウトラインの削除
-.slick-slide {
+/* フォーカス削除 - すべての要素 */
+.slick-slider *,
+.slick-slider *:focus,
+.slick-slider *:focus-visible,
+.slick-slider *:active {
   outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
-
-.slick-slide:focus {
-  outline: none !important;
-} */
 
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&display=swap");
 @tailwind base;

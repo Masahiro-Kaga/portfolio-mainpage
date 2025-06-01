@@ -136,13 +136,100 @@ const Experience = ({ pageType = "job" }) => {
           />
         )}
       </div>
+      {/* --------Freelance------- */}
+      <div className="container max-w-6xl mx-auto my-48">
+        <div className="flex justify-between items-center text-lg mt-20">
+          <div className="ml-10 mr-10">
+            <h1 className="text-7xl mt-2">Freelance Projects</h1>
+            <div className="font-light my-2">2020 - Present : Various Roles</div>
+            <p className="my-12 text-xl max-w-4xl w-full text-gray-600">
+              A diverse portfolio of freelance development projects spanning various industries and
+              technologies. From e-commerce solutions to AI-powered applications, each project
+              demonstrates adaptability and expertise across different technical stacks and business
+              requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Freelance Projects List */}
+      <div className="bg-gray-600 py-20 md:mx-10 text-white border-8 border-gray-300 rounded-lg">
+        <div className="flex flex-wrap justify-between gap-6 mx-5">
+          <h1 className="text-4xl">Key Freelance Projects</h1>
+          <div className="max-w-5xl flex flex-col gap-6 text-xl">
+            <div className="space-y-4">
+              <div className="border-l-4 border-blue-400 pl-4">
+                <h3 className="text-2xl font-semibold text-white mb-2">
+                  Vendor Marketing System for Amazon-related Services
+                </h3>
+                <p className="text-lg">
+                  Full-stack development of marketing automation platform for Amazon vendors with
+                  data analytics and reporting capabilities.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-green-400 pl-4">
+                <h3 className="text-2xl font-semibold text-white mb-2">
+                  Corporate Promotional Website and Application
+                </h3>
+                <p className="text-lg">
+                  End-to-end development of corporate website with integrated web application for
+                  client engagement and business operations.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-yellow-400 pl-4">
+                <h3 className="text-2xl font-semibold text-white mb-2">
+                  Project Management for Major Real Estate Management Application
+                </h3>
+                <p className="text-lg">
+                  Led project management and development coordination for comprehensive real estate
+                  management platform with multi-user functionality.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-purple-400 pl-4">
+                <h3 className="text-2xl font-semibold text-white mb-2">
+                  3D System in the Construction Industry
+                </h3>
+                <p className="text-lg">
+                  Frontend development of 3D visualization system for construction project planning
+                  and management with real-time rendering capabilities.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-red-400 pl-4">
+                <h3 className="text-2xl font-semibold text-white mb-2">
+                  Bot and Image Generation Test System Using ChatGPT API
+                </h3>
+                <p className="text-lg">
+                  AI integration development featuring automated bot interactions and image
+                  generation using OpenAI's ChatGPT API with custom workflows.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-indigo-400 pl-4">
+                <h3 className="text-2xl font-semibold text-white mb-2">
+                  Community Website for Hokkaido Residents Living in Canada
+                </h3>
+                <p className="text-lg">
+                  WordPress-based community platform development with custom features for Japanese
+                  expatriate community engagement and event management.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="my-20"></div>
 
       {/* --------Bittreo------- */}
       <div className="container max-w-6xl mx-auto my-48">
         <div className="flex justify-between items-center text-lg mt-20">
           <div className="ml-10 mr-10">
             <h1 className="text-7xl mt-2">Bittreo</h1>
-            <div className="font-light my-2">Apr, 2022 - Current : Full Stack Developer</div>
+            <div className="font-light my-2">Apr, 2022 - Sep, 2023 : Full Stack Developer</div>
             <p className="my-12 text-xl max-w-4xl w-full text-gray-600">
               Bittreo is a Vancouver based over-the-counter buy and sell cryptocurrency platform.
               The platform is solely used by the owners, and employees of Bittreo to expedite their

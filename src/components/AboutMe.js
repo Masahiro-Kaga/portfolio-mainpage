@@ -57,8 +57,8 @@ const AboutMe = () => {
           <div className="flex flex-col md:px-3 text-left mt-0">
             <div className="max-w-2xl pb-6 space-y-8 sm:pr-5 lg:pr-0 md:pb-0">
               <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl text-center">
-                <span className="block xl:inline">My</span>
-                <span className="block text-indigo-600 xl:inline ml-3">Journey</span>
+                <span className="inline">My</span>
+                <span className="text-indigo-600 inline ml-3">Journey</span>
               </h1>
 
               {/* 政府での経験 */}
@@ -130,7 +130,6 @@ const AboutMe = () => {
                       •{" "}
                       <strong>
                         Development of Corporate Promotional Website and Application
-                        Developer
                       </strong>
                     </li>
                     <li>

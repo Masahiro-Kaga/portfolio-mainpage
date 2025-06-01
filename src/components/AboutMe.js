@@ -32,9 +32,7 @@ const AboutMe = () => {
   return (
     <section className="w-full min-h-screen md:flex px-2 py-32 bg-white md:px-0">
       <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
-        <h2 className="text-4xl py-20 font-bold text-center font-dosis bg mb-16">
-          About Me
-        </h2>
+        <h2 className="text-4xl py-20 font-bold text-center font-dosis bg mb-16">About Me</h2>
         <div className="w-full flex flex-wrap items-center justify-around">
           <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 overflow-hidden">
             <Slider></Slider>
@@ -43,39 +41,87 @@ const AboutMe = () => {
                 Name : Masahiro Kaga
               </p>
               <p className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Hometown : Hokkaido,Japan
+                Hometown : Hokkaido, Japan
               </p>
               <p className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Education : Langara College, CS
+                Education : Langara College
+              </p>
+              <p className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Major : Computer Science 
               </p>
               <p className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Hobby : Snowboard
               </p>
             </div>
           </div>
-          <div className="flex flex-col md:px-3 text-center my-20">
-            <div className="max-w-sm pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
-              <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
-                <span className="block xl:inline">What A Beautiful</span>
-                <span className="block text-indigo-600 xl:inline">Life</span>
+          <div className="flex flex-col md:px-3 text-left my-20">
+            <div className="max-w-2xl pb-6 space-y-8 sm:pr-5 lg:pr-0 md:pb-0">
+              <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl text-center">
+                <span className="block xl:inline">My</span>
+                <span className="block text-indigo-600 xl:inline ml-3">Journey</span>
               </h1>
-              <div className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
-                Born and raised in Hokkaido, Japan, my career began with over a
-                decade of service in the prefectural government.
+
+              {/* プロフィール紹介 */}
+              <div className="bg-gray-50 rounded-lg p-6 shadow-sm">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">🏔️</span>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    From Hokkaido to the World
+                  </h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  Born and raised in beautiful Hokkaido, Japan. Started my career with over a decade
+                  of dedicated service in the prefectural government.
+                </p>
               </div>
-              <div className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
-                　At the age of 31, driven by my aspiration to explore the
-                world, I embarked on an international journey, leading me to my
-                current residence in Canada. With a solid background in web
-                development, I bring a wealth of experience and a unique
-                perspective to my work.
+
+              {/* 転機 */}
+              <div className="bg-blue-50 rounded-lg p-6 shadow-sm">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">✈️</span>
+                  <h3 className="text-xl font-semibold text-gray-800">The Big Move</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  At 31, I took a leap of faith to explore the world. This international journey led
+                  me to Canada, where I now call home.
+                </p>
               </div>
-              <div className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
-                I am keen to collaborate and contribute to your projects with my
-                expertise.
+
+              {/* 現在の活動 */}
+              <div className="bg-green-50 rounded-lg p-6 shadow-sm">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">💻</span>
+                  <h3 className="text-xl font-semibold text-gray-800">Web Development Passion</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  With a solid background in web development, I bring:
+                </p>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Wealth of experience from diverse backgrounds
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Unique perspective combining government and tech experience
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    International mindset and adaptability
+                  </li>
+                </ul>
               </div>
-              <div className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
-                Thank you for considering my professional journey.
+
+              {/* CTA */}
+              <div className="bg-indigo-50 rounded-lg p-6 shadow-sm">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">🤝</span>
+                  <h3 className="text-xl font-semibold text-gray-800">Let's Collaborate</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  I'm eager to contribute my expertise to your projects and bring fresh perspectives
+                  to your team. Ready to create something amazing together!
+                </p>
               </div>
             </div>
             {/* <div className="flex justify-around m-auto max-w-sm sm:max-w-md lg:max-w-lg gap-2 wrap mt-5">

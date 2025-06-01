@@ -9,6 +9,13 @@ const labelClasses = "uppercase text-sm text-gray-600 font-bold";
 // SNS links configuration
 const snsLinks = [
   { 
+    key: 'linkedin', 
+    name: 'LinkedIn', 
+    alt: 'Link to LinkedIn page',
+    gif: 'linkedin_anime.gif',
+    url: 'https://www.linkedin.com/in/masahiro-kaga-ab8604192/'
+  },
+  { 
     key: 'facebook', 
     name: 'Facebook', 
     alt: 'Link to Facebook page',
@@ -21,25 +28,18 @@ const snsLinks = [
     gif: 'instagram_anime3.gif'
   },
   { 
-    key: 'linkedin', 
-    name: 'LinkedIn', 
-    alt: 'Link to LinkedIn page',
-    gif: 'linkedin_anime.gif',
-    url: 'https://www.linkedin.com/in/masahiro-kaga-ab8604192/'
-  },
-  { 
     key: 'twitter', 
     name: 'Twitter/X', 
     alt: 'Link to Twitter/X page',
     gif: 'x_anime.gif'
   },
-  { 
-    key: 'discord', 
-    name: 'Discord', 
-    alt: 'Link to Discord server',
-    gif: 'discord_anime.gif',
-    url: 'https://discord.gg/MEtUuWDA'
-  }
+  // { 
+  //   key: 'discord', 
+  //   name: 'Discord', 
+  //   alt: 'Link to Discord server',
+  //   gif: 'discord_anime.gif',
+  //   url: 'https://discord.gg/MEtUuWDA'
+  // }
 ];
 
 // SNS Link Component

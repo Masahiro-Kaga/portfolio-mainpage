@@ -1,17 +1,15 @@
 import React from "react";
 import Button from "./UI/Button";
-import { externalLinkProps } from "../utils/commonUtils";
 
 const AboutContent = () => {
   return (
     <div>
       <div className="min-h-screen w-full flex flex-col justify-center items-center bg-gray-200">
-        <p className="font-dosis font-bold text-4xl">Introduction</p>
+        <p className="font-dosis font-bold text-4xl">What Drives Me</p>
         <br />
         <div className="sm:w-[50vw] mx-3 tracking-tight text-xl text-center text-gray-700">
-          Thank you for visiting my portfolio. I specialize in modern web development and take pride
-          in crafting <span className="font-semibold">responsive</span> and{" "}
-          <span className="font-semibold">scalable</span> solutions.
+          I specialize in modern Web Development & Cloud Engineering, and take pride in crafting
+          responsive and scalable solutions.
         </div>
         <br />
         <div className="sm:w-[50vw] mx-3 tracking-tight text-xl text-center text-gray-700">
@@ -24,17 +22,19 @@ const AboutContent = () => {
         </div>
         <br />
         <div className="sm:w-[50vw] mx-3 tracking-tight text-xl text-center text-gray-700">
-          I invite you to explore my projects. For more about my experience or to connect, please
-          visit my LinkedIn profile.
+          I'm always excited to discuss new opportunities and explore how we can work together. Feel
+          free to reach out - I'd love to hear about your projects and ideas.
         </div>{" "}
         <br></br>
         <div className="flex gap-2">
           <Button
-            href="https://www.linkedin.com/in/masahiro-kaga-ab8604192/"
+            onClick={() => {
+              const element = document.getElementById("contact");
+              element?.scrollIntoView({ behavior: "smooth" });
+            }}
             variant="primary"
-            {...externalLinkProps}
           >
-            Visit LinkedIn
+            Contact Info
           </Button>
           {/* <Button 
             onClick={() => {

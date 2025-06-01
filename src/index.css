@@ -260,3 +260,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* デバッグ用スイッチのスタイル */
+#debug-switches {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-width: 180px;
+  transition: all 0.3s ease;
+}
+
+#debug-switches button {
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+#debug-switches button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* デバッグスイッチ表示用のクラス */
+.debug-visible {
+  visibility: visible !important;
+  opacity: 1;
+}
+
+.debug-hidden {
+  visibility: hidden !important;
+  opacity: 0;
+}

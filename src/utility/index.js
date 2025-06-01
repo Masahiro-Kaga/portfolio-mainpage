@@ -22,6 +22,7 @@ export const portfolioProjects = [
     imageUrl: "img/work/gif/aiapp.gif",
     keyFeatures: "MERN, Redux, AWS, Typescript, MUI",
     imageAlt: "AI app with React MERN stack",
+    canAccess: false,
   },
   {
     isNew: false,
@@ -31,6 +32,7 @@ export const portfolioProjects = [
     imageUrl: "img/work/png/reunion.png",
     keyFeatures: "WordPress, PHP, Elementor",
     imageAlt: "Hokkaidojinkai website",
+    canAccess: false,
   },
   {
     isNew: false,
@@ -40,6 +42,7 @@ export const portfolioProjects = [
     imageUrl: "img/work/jpg/diaryapp.jpg",
     keyFeatures: "MERN, Redux, Axios, Cloudinary",
     imageAlt: "Diary app with React MERN stack",
+    canAccess: false,
   },
   {
     isNew: false,
@@ -49,6 +52,7 @@ export const portfolioProjects = [
     imageUrl: "img/work/gif/shootinggame.gif",
     keyFeatures: "VanilaJS, Canvas",
     imageAlt: "javascript shooting game",
+    canAccess: true,
   },
   {
     isNew: false,
@@ -58,6 +62,7 @@ export const portfolioProjects = [
     imageUrl: "img/work/gif/blogapp.gif",
     keyFeatures: "NextJS ,EmotionCSS",
     imageAlt: "Blog App with Next.js",
+    canAccess: false,
   },
   {
     isNew: false,
@@ -67,6 +72,7 @@ export const portfolioProjects = [
     imageUrl: "img/work/gif/ecommerce.gif",
     keyFeatures: "MERN, FetchAPI, MUI, CI/CD,",
     imageAlt: "Ecommerce website with MERN stack",
+    canAccess: false,
   },
   // {
   //   isNew: false,

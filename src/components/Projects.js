@@ -1,7 +1,6 @@
 import React from "react";
 import { portfolioProjects } from "../utility";
-import Button from "./UI/Button";
-import { SectionTitle, ArrowRightIcon, externalLinkProps } from "../utils/commonUtils";
+import { SectionTitle } from "../utils/commonUtils";
 
 const Projects = () => {
   return (
@@ -89,21 +88,25 @@ const Projects = () => {
                 className="relative flex flex-col items-center justify-between col-span-4 space-y-4 my-10 overflow-hidden rounded-xl"
               >
                 <div className="max-w-sm rounded-lg border border-gray-200 shadow-md flex-grow">
-                  <a
-                    href={content.pageUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="relative group block"
-                  >
-                    <img
-                      className="rounded-t-lg group-hover:opacity-20"
-                      src={content.imageUrl}
-                      alt={content.imageAlt}
-                    />
-                    <span className="absolute opacity-0 group-hover:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black text-lg font-bold">
-                      Go to Page
-                    </span>
-                  </a>
+                  {content.canAccess ? (
+                    <a
+                      href={content.pageUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="relative group block"
+                    >
+                      <img
+                        className="rounded-t-lg group-hover:opacity-20"
+                        src={content.imageUrl}
+                        alt={content.imageAlt}
+                      />
+                      <span className="absolute opacity-0 group-hover:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black text-lg font-bold">
+                        Go to Page
+                      </span>
+                    </a>
+                  ) : (
+                    <img className="rounded-t-lg" src={content.imageUrl} alt={content.imageAlt} />
+                  )}
                   <div className="p-5 bg-gray-800 rounded-b-xl">
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
                       {content.isNew && <span className="blink text-red-500"> NEW! </span>}

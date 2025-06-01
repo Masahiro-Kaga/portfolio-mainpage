@@ -87,18 +87,20 @@ const Contact = () => {
   const [instagramUrl, setInstagramUrl] = useState("https://www.instagram.com/masahirokaga/");
   const [twitterUrl, setTwitterUrl] = useState("https://twitter.com/MK9703620381397");
 
-  useEffect(() => {
-    const getIpCountry = async() => {
-      const url = "https://ipapi.co/json/";
-      const ipInfo = await axios.get(url);
-      if(ipInfo.data.country_code === "JP"){
-        setFacebookUrl("https://www.facebook.com/profile.php?id=100005520977852");
-        setInstagramUrl("https://www.instagram.com/macchohiro_gram/?hl=ja");
-        setTwitterUrl("https://twitter.com/kaga_masahiro");
-      }
-    }
-    getIpCountry();
-  }, []);
+  // 日本からのアクセス時にSNSリンクを変更するためのコード
+
+  // useEffect(() => {
+  //   const getIpCountry = async() => {
+  //     const url = "https://ipapi.co/json/";
+  //     const ipInfo = await axios.get(url);
+  //     if(ipInfo.data.country_code === "JP"){
+  //       setFacebookUrl("https://www.facebook.com/profile.php?id=100005520977852");
+  //       setInstagramUrl("https://www.instagram.com/macchohiro_gram/?hl=ja");
+  //       setTwitterUrl("https://twitter.com/kaga_masahiro");
+  //     }
+  //   }
+  //   getIpCountry();
+  // }, []);
 
   const getSnsUrl = (linkKey) => {
     switch (linkKey) {

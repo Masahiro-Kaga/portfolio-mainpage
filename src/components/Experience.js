@@ -1,14 +1,17 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useRef } from "react";
 import Slick from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "./UI/Modal";
 import { wordExperienceContents } from "../utility";
-import { getSliderSettings, SectionTitle } from "../utils/commonUtils";
+
 
 const Experience = () => {
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const sliderRef1 = useRef(null);
+  const sliderRef2 = useRef(null);
+  const sliderRef3 = useRef(null);
 
   const openModal = (imgSrc) => {
     setSelectedImage(imgSrc);
@@ -17,6 +20,31 @@ const Experience = () => {
   const closeModal = () => {
     setSelectedImage(null);
   };
+
+  // マウスホイール機能
+  const handleWheel = useCallback((e, sliderRef) => {
+    if (sliderRef.current) {
+      // 横方向のスクロールまたは縦方向のスクロールを検出
+      if (Math.abs(e.deltaX) > 30 || Math.abs(e.deltaY) > 30) {
+        e.preventDefault();
+        
+        // スロットリング機能
+        const now = Date.now();
+        if (!sliderRef.current.lastWheelTime || now - sliderRef.current.lastWheelTime > 300) {
+          sliderRef.current.lastWheelTime = now;
+          
+          // 右または下方向
+          if (e.deltaX > 0 || e.deltaY > 0) {
+            sliderRef.current.slickNext();
+          } 
+          // 左または上方向
+          else {
+            sliderRef.current.slickPrev();
+          }
+        }
+      }
+    }
+  }, []);
 
   useEffect(() => {
     if (selectedImage) {
@@ -47,13 +75,25 @@ const Experience = () => {
     return () => window.removeEventListener("resize", resizeEvent);
   }, [resizeEvent]);
 
-  const sliderSettings = getSliderSettings(open);
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: open ? 1 : 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    centerMode: false,
+    arrows: true,
+    initialSlide: 0,
+  };
 
   return (
     <section className="py-32 bg-gray-200" id="experiences">
-      <SectionTitle className="bg">
+      <h2 className="text-4xl py-20 font-bold text-center font-dosis bg">
         Work Experience
-      </SectionTitle>
+      </h2>
       <div className="flex justify-around m-auto max-w-sm sm:max-w-md lg:max-w-lg gap-2 wrap mt-5">
         {wordExperienceContents.map((doc, index) => (
           <div key={index} className="text-center mb-3">
@@ -132,44 +172,46 @@ const Experience = () => {
           </div>
         </div>
         <div className="mt-16">
-          <Slick {...sliderSettings}>
-            <li className="mx-auto px-3">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/experience/bittreo/login.png`}
-                alt=""
-              />
-              <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
-                1. Bittreo Login
-              </div>
-            </li>
-            <li className="mx-auto px-3">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/experience/bittreo/customer-management.png`}
-                alt=""
-              />
-              <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
-                2. Bittreo Customer Management
-              </div>
-            </li>
-            <li className="mx-auto px-3">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/experience/bittreo/customer-profile.png`}
-                alt=""
-              />
-              <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
-                3. Bittreo Customer Profile
-              </div>
-            </li>
-            <li className="mx-auto px-3">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/experience/bittreo/cash-management.png`}
-                alt=""
-              />
-              <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
-                4. Bittreo Cash Management
-              </div>
-            </li>
-          </Slick>
+          <div onWheel={(e) => handleWheel(e, sliderRef1)}>
+            <Slick ref={sliderRef1} {...sliderSettings}>
+              <li className="mx-auto px-3">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/experience/bittreo/login.png`}
+                  alt=""
+                />
+                <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
+                  1. Bittreo Login
+                </div>
+              </li>
+              <li className="mx-auto px-3">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/experience/bittreo/customer-management.png`}
+                  alt=""
+                />
+                <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
+                  2. Bittreo Customer Management
+                </div>
+              </li>
+              <li className="mx-auto px-3">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/experience/bittreo/customer-profile.png`}
+                  alt=""
+                />
+                <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
+                  3. Bittreo Customer Profile
+                </div>
+              </li>
+              <li className="mx-auto px-3">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/experience/bittreo/cash-management.png`}
+                  alt=""
+                />
+                <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
+                  4. Bittreo Cash Management
+                </div>
+              </li>
+            </Slick>
+          </div>
         </div>
       </div>
 
@@ -202,44 +244,46 @@ const Experience = () => {
           </div>
         </div>
         <div className="mt-16">
-          <Slick {...sliderSettings}>
-            <li className="mx-auto px-3">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/experience/vb/vb-home.png`}
-                alt=""
-              />
-              <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
-                1. Vancouver Bitcoin Homepage
-              </div>
-            </li>
-            <li className="mx-auto px-3">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/experience/vb/vb-blog.png`}
-                alt=""
-              />
-              <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
-                2. Vancouver Bitcoin Blog
-              </div>
-            </li>
-            <li className="mx-auto px-3">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/experience/vb/vb-secondary-page.png`}
-                alt=""
-              />
-              <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
-                3. Vancouver Bitcoin OTC
-              </div>
-            </li>
-            <li className="mx-auto px-3">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/experience/vb/vb-ledger-template.png`}
-                alt=""
-              />
-              <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
-                4. Vancouver Bitcoin Ledger
-              </div>
-            </li>
-          </Slick>
+          <div onWheel={(e) => handleWheel(e, sliderRef2)}>
+            <Slick ref={sliderRef2} {...sliderSettings}>
+              <li className="mx-auto px-3">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/experience/vb/vb-home.png`}
+                  alt=""
+                />
+                <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
+                  1. Vancouver Bitcoin Homepage
+                </div>
+              </li>
+              <li className="mx-auto px-3">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/experience/vb/vb-blog.png`}
+                  alt=""
+                />
+                <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
+                  2. Vancouver Bitcoin Blog
+                </div>
+              </li>
+              <li className="mx-auto px-3">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/experience/vb/vb-secondary-page.png`}
+                  alt=""
+                />
+                <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
+                  3. Vancouver Bitcoin OTC
+                </div>
+              </li>
+              <li className="mx-auto px-3">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/experience/vb/vb-ledger-template.png`}
+                  alt=""
+                />
+                <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
+                  4. Vancouver Bitcoin Ledger
+                </div>
+              </li>
+            </Slick>
+          </div>
         </div>
       </div>
 
@@ -299,44 +343,46 @@ const Experience = () => {
           </div>
         </div>
         <div className="mt-16">
-          <Slick {...sliderSettings}>
-            <li className="mx-auto px-3">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/experience/massive_sapporo/ninja-home.png`}
-                alt=""
-              />
-              <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
-                1. NinjaDo Home
-              </div>
-            </li>
-            <li className="mx-auto px-3">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/experience/massive_sapporo/ninja-application.png`}
-                alt=""
-              />
-              <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
-                2. NinjaDo Application Form
-              </div>
-            </li>
-            <li className="mx-auto px-3">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/experience/massive_sapporo/ninja-location.png`}
-                alt=""
-              />
-              <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
-                3. NinjaDo Location
-              </div>
-            </li>
-            <li className="mx-auto px-3">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/experience/massive_sapporo/ninja-photogallery.png`}
-                alt=""
-              />
-              <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
-                4. NinjaDo Photo Gallery
-              </div>
-            </li>
-          </Slick>
+          <div onWheel={(e) => handleWheel(e, sliderRef3)}>
+            <Slick ref={sliderRef3} {...sliderSettings}>
+              <li className="mx-auto px-3">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/experience/massive_sapporo/ninja-home.png`}
+                  alt=""
+                />
+                <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
+                  1. NinjaDo Home
+                </div>
+              </li>
+              <li className="mx-auto px-3">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/experience/massive_sapporo/ninja-application.png`}
+                  alt=""
+                />
+                <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
+                  2. NinjaDo Application Form
+                </div>
+              </li>
+              <li className="mx-auto px-3">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/experience/massive_sapporo/ninja-location.png`}
+                  alt=""
+                />
+                <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
+                  3. NinjaDo Location
+                </div>
+              </li>
+              <li className="mx-auto px-3">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/experience/massive_sapporo/ninja-photogallery.png`}
+                  alt=""
+                />
+                <div className="font-light text-lg border-t border-white 'inline-block' mt-2 pt-3">
+                  4. NinjaDo Photo Gallery
+                </div>
+              </li>
+            </Slick>
+          </div>
         </div>
       </div>
       <div className="my-40"></div>

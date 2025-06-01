@@ -78,13 +78,13 @@ const AboutMe = ({ pageType = "job", styleType = "casual" }) => {
                   {/* Timeline Container */}
                   <div className="relative w-full">
                     {/* Vertical Line */}
-                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-yellow-400"></div>
+                    <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-yellow-400"></div>
 
                     {/* Timeline Items */}
                     <div className="space-y-8 w-full">
                       {/* Government Career */}
                       <div className="relative flex items-start w-full">
-                        <div className="absolute left-6 w-4 h-4 bg-yellow-400 rounded-full shadow-md"></div>
+                        <div className="absolute left-4 w-4 h-4 bg-yellow-400 rounded-full shadow-md"></div>
                         <div className="ml-16 w-full pr-4">
                           <div className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm font-semibold inline-block mb-2">
                             2002 - 2014
@@ -104,7 +104,7 @@ const AboutMe = ({ pageType = "job", styleType = "casual" }) => {
 
                       {/* Language Study & Philippines */}
                       <div className="relative flex items-start w-full">
-                        <div className="absolute left-6 w-4 h-4 bg-yellow-400 rounded-full shadow-md"></div>
+                        <div className="absolute left-4 w-4 h-4 bg-yellow-400 rounded-full shadow-md"></div>
                         <div className="ml-16 w-full pr-4">
                           <div className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm font-semibold inline-block mb-2">
                             2015 - 2018
@@ -123,7 +123,7 @@ const AboutMe = ({ pageType = "job", styleType = "casual" }) => {
 
                       {/* Education */}
                       <div className="relative flex items-start w-full">
-                        <div className="absolute left-6 w-4 h-4 bg-yellow-400 rounded-full shadow-md"></div>
+                        <div className="absolute left-4 w-4 h-4 bg-yellow-400 rounded-full shadow-md"></div>
                         <div className="ml-16 w-full pr-4">
                           <div className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm font-semibold inline-block mb-2">
                             2019 - 2021
@@ -140,7 +140,7 @@ const AboutMe = ({ pageType = "job", styleType = "casual" }) => {
 
                       {/* Corporate & Freelance Development */}
                       <div className="relative flex items-start w-full">
-                        <div className="absolute left-6 w-4 h-4 bg-yellow-400 rounded-full shadow-md"></div>
+                        <div className="absolute left-4 w-4 h-4 bg-yellow-400 rounded-full shadow-md"></div>
                         <div className="ml-16 w-full pr-4">
                           <div className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm font-semibold inline-block mb-2">
                             2021 - Present

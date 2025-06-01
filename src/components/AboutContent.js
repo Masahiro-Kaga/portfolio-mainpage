@@ -5,25 +5,24 @@ const AboutContent = ({ pageType = "job" }) => {
   return (
     <div>
       <div className="min-h-screen w-full flex flex-col justify-center items-center bg-gray-200">
-        <p className="font-dosis font-bold text-4xl">What Drives Me</p>
+        <p className="font-dosis font-bold text-4xl">Riding the NEW TECH Wave</p>
         <br />
         <div className="sm:w-[50vw] mx-3 tracking-tight text-xl text-center text-gray-700">
-          I specialize in modern Web Development & Cloud Engineering, and take pride in crafting
-          responsive and scalable solutions.
+          I deliver cutting-edge Web Development & Cloud Engineering solutions that drive real business results. 
+          Transforming complex requirements into efficient, scalable applications.
         </div>
         <br />
         <div className="sm:w-[50vw] mx-3 tracking-tight text-xl text-center text-gray-700">
-          I'm currently exploring{" "}
-          <span className="font-semibold">AI-powered development workflows</span> and building
-          cross-platform applications using{" "}
-          <span className="font-semibold">Model Context Protocol (MCP)</span>. My work focuses on
-          optimizing <span className="font-semibold">development efficiency</span> and reinforcing{" "}
-          <span className="font-semibold">security best practices</span>.
+          Specializing in{" "}
+          <span className="font-semibold">AI integration</span>{" "}
+          and{" "}
+          <span className="font-semibold">intelligent automation</span> to build 
+          next-generation applications that give your business a competitive edge.
         </div>
         <br />
         <div className="sm:w-[50vw] mx-3 tracking-tight text-xl text-center text-gray-700">
-          I'm always excited to discuss new opportunities and explore how we can work together. Feel
-          free to reach out - I'd love to hear about your projects and ideas.
+          Ready to accelerate your project with proven AI expertise? 
+          Let's discuss how we can exceed your expectations.
         </div>
 
         {/* スペースを増やしてボタンを配置 */}

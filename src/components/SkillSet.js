@@ -125,43 +125,43 @@ const SkillSet = ({ pageType = "job", styleType = "casual" }) => {
           </div>
         </div>
 
-        <div className="grid gap-8 mt-10 sm:grid-cols-8 sm:px-8 xl:px-0">
-          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
+        <div className="grid gap-8 mt-10 sm:grid-cols-8 px-2">
+          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 rounded-xl">
             <h4 className="text-[2rem] font-medium text-white font-dosis text-center">
               AI Tools
             </h4>
             <div className="flex flex-wrap justify-center items-center flex-1">{aiTechCasual}</div>
           </div>
 
-          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
+          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 rounded-xl">
             <h4 className="text-[2rem] font-medium text-white font-dosis text-center">
               Frontend
             </h4>
             <div className="flex flex-wrap justify-center items-center flex-1">{frontEndTechCasual}</div>
           </div>
 
-          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
+          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 rounded-xl">
             <h4 className="text-[2rem] font-medium text-white font-dosis text-center">
               Backend
             </h4>
             <div className="flex flex-wrap justify-center items-center flex-1">{backEndTechCasual}</div>
           </div>
 
-          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
+          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 rounded-xl">
             <h4 className="text-[2rem] font-medium text-white font-dosis text-center">
               Cloud Services
             </h4>
             <div className="flex flex-wrap justify-center items-center flex-1">{cloudTechCasual}</div>
           </div>
 
-          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
+          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 rounded-xl">
             <h4 className="text-[2rem] font-medium text-white font-dosis text-center">
               Dev tools
             </h4>
             <div className="flex flex-wrap justify-center items-center flex-1">{devToolCasual}</div>
           </div>
 
-          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 sm:rounded-xl">
+          <div className="flex flex-col col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-800 rounded-xl">
             <h4 className="text-[2rem] font-medium text-white font-dosis text-center">
               Media & Design
             </h4>
@@ -175,7 +175,7 @@ const SkillSet = ({ pageType = "job", styleType = "casual" }) => {
   // フォーマルなデザインのレンダリング
   const renderFormalDesign = () => (
     <>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-2">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* AI Tools */}
           <div className="bg-white rounded-lg shadow-lg p-8">
@@ -232,10 +232,10 @@ const SkillSet = ({ pageType = "job", styleType = "casual" }) => {
   );
 
   return (
-    <section className="py-32 bg-white" id="skills">
+    <section className="py-32 bg-gray-100" id="skills">
       <div className="container max-w-6xl mx-auto">
-        <h2 className="text-4xl py-20 font-bold text-center font-dosis bg">
-          My Skillset [As a Jr.Dev]
+        <h2 className="text-4xl py-20 font-bold text-center font-dosis">
+          Tech Stack
         </h2>
         {styleType === "formal" ? renderFormalDesign() : renderCasualDesign()}
       </div>

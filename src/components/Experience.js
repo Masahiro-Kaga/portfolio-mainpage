@@ -141,7 +141,7 @@ const Experience = ({ pageType = "job" }) => {
         <div className="flex justify-between items-center text-lg mt-20">
           <div className="ml-10 mr-10">
             <h1 className="text-7xl mt-2">Freelance Projects</h1>
-            <div className="font-light my-2">2020 - Present : Various Roles</div>
+            <div className="font-light my-2">2024 - Present : Various Roles</div>
             <p className="my-12 text-xl max-w-4xl w-full text-gray-600">
               A diverse portfolio of freelance development projects spanning various industries and
               technologies. From e-commerce solutions to AI-powered applications, each project

@@ -42,7 +42,7 @@ const Layout = () => {
 
   // ページタイプとスタイルの状態管理
   const [pageType, setPageType] = useState("freelance"); // 'job' or 'freelance'
-  const [styleType, setStyleType] = useState("casual"); // 'formal' or 'casual'
+  const [styleType, setStyleType] = useState("formal"); // 'formal' or 'casual'
 
   // デバッグスイッチの状態管理
   const [debugVisible, setDebugVisible] = useState(false);
@@ -239,7 +239,7 @@ const Layout = () => {
           <Navigation />
           <Header onNameClick={handleNameClick} />
           <AboutContent pageType={pageType} />
-          <AboutMe />
+          <AboutMe pageType={pageType} styleType={styleType} />
           <Experience pageType={pageType} />
           <SkillSet />
           <Projects />

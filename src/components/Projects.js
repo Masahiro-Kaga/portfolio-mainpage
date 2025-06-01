@@ -2,7 +2,12 @@ import React from "react";
 import { portfolioProjects } from "../utility";
 import { SectionTitle } from "../utils/commonUtils";
 
-const Projects = () => {
+const Projects = ({ pageType = "job" }) => {
+  // jobモードの場合のみProjectsを表示
+  if (pageType !== "job") {
+    return null;
+  }
+
   return (
     <section className="py-32 bg-gray-200" id="project">
       <div className="container max-w-6xl mx-auto">

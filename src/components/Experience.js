@@ -3,7 +3,7 @@ import Slick from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "./UI/Modal";
-import { wordExperienceContents } from "../utility";
+import { resumeDocuments } from "../utility";
 
 const Experience = ({ pageType = "job" }) => {
   const [open, setOpen] = useState(false);
@@ -15,22 +15,22 @@ const Experience = ({ pageType = "job" }) => {
   // Freelanceモードでは"Cover Letter"と"Resume"を非表示にする
   const getFilteredDocuments = () => {
     if (pageType === "freelance") {
-      const filtered = wordExperienceContents.filter(
+      const filtered = resumeDocuments.filter(
         (doc) => !["Cover Letter", "Resume"].includes(doc.title)
       );
       console.log("🔧 Freelance mode: Hiding Cover Letter and Resume", {
-        original: wordExperienceContents.length,
+        original: resumeDocuments.length,
         filtered: filtered.length,
-        hiddenItems: wordExperienceContents
+        hiddenItems: resumeDocuments
           .filter((doc) => ["Cover Letter", "Resume"].includes(doc.title))
           .map((doc) => doc.title),
       });
       return filtered;
     }
     console.log("🔧 Job mode: Showing all documents", {
-      total: wordExperienceContents.length,
+      total: resumeDocuments.length,
     });
-    return wordExperienceContents;
+    return resumeDocuments;
   };
 
   const filteredDocuments = getFilteredDocuments();

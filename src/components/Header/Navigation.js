@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { animateScroll, Link } from "react-scroll";
-import content from "../../utility";
+import portfolioData from "../../utility";
 import "./Navigation.css";
 
 const Navigation = () => {
@@ -60,7 +60,7 @@ const Navigation = () => {
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <button onClick={animateScroll.scrollToTop} className="flex">
             <span className="self-center text-xl font-semibold whitespace-nowrap text-white font-dosis">
-              {content.nav.logo}
+              {portfolioData.nav.logo}
             </span>
             <span className="h-2 w-2 bg-sky-500 inline-block rounded-full self-end"></span>
           </button>

@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "./UI/Slider";
 // import { Document, Page } from "react-pdf";
 // import Modal from "./UI/Modal";
-// import { wordExperienceContents } from "../utility";
+// import { resumeDocuments } from "../utility";
 
 // const pdfFile =
 //   process.env.PUBLIC_URL + "/contents/resume_MasahiroKaga(20221228).pdf";
@@ -282,7 +282,7 @@ const AboutMe = ({ pageType = "job", styleType = "casual" }) => {
               )}
             </div>
             {/* <div className="flex justify-around m-auto max-w-sm sm:max-w-md lg:max-w-lg gap-2 wrap mt-5">
-              {wordExperienceContents.map((doc, index) => (
+              {resumeDocuments.map((doc, index) => (
                 <div key={index} className="text-center mb-3 relative">
                   <div
                     onClick={() => openModal(doc.src)}

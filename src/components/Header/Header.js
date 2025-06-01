@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Typical from "react-typical";
-import content from "../../utility";
+import portfolioData from "../../utility";
 
 const Header = ({ onNameClick }) => {
   const pressTimerRef = useRef(null);
@@ -49,13 +49,13 @@ const Header = ({ onNameClick }) => {
     >
       <div className="flex flex-col min-h-screen w-full justify-center items-center">
         <Typical
-          steps={content.header.typical}
+          steps={portfolioData.header.typical}
           loop={Infinity}
           className="text-white"
           wrapper="div"
         />
         <br />
-        <h1 className="text-white text-2xl">{content.header.type}</h1>
+        <h1 className="text-white text-2xl">{portfolioData.header.type}</h1>
         <h1
           className="text-white text-5xl select-none"
           onClick={handleClick}
@@ -63,7 +63,7 @@ const Header = ({ onNameClick }) => {
           onTouchEnd={handleTouchEnd}
           style={{ userSelect: "none" }}
         >
-          {content.header.name}
+          {portfolioData.header.name}
         </h1>
       </div>
     </div>

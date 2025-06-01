@@ -1,5 +1,5 @@
 import React from "react";
-import content from "../utility";
+import portfolioData from "../utility";
 import { SkillIcon, SectionTitle } from "../utils/commonUtils";
 
 const SkillSet = ({ pageType = "job", styleType = "casual" }) => {
@@ -15,10 +15,10 @@ const SkillSet = ({ pageType = "job", styleType = "casual" }) => {
     ));
   };
 
-  const frontEndTech = createSkillList(content.stack.tech_frontend);
-  const backEndTech = createSkillList(content.stack.tech_backend);
-  const devTool = createSkillList(content.stack.tech_devtool);
-  const media = createSkillList(content.stack.tech_media);
+  const frontEndTech = createSkillList(portfolioData.stack.tech_frontend);
+  const backEndTech = createSkillList(portfolioData.stack.tech_backend);
+  const devTool = createSkillList(portfolioData.stack.tech_devtool);
+  const media = createSkillList(portfolioData.stack.tech_media);
 
   // レベルインジケーター用の共通コンポーネント（カジュアル用）
   const LevelIndicator = ({ level, levelName, levelRange }) => {

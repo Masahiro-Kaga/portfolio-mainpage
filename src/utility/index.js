@@ -120,23 +120,7 @@ const portfolioData = {
       alt: "backgroundFire",
     },
     tech_frontend: [
-      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/vue.svg", alt: "Vue" },
-      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/nuxt-icon.svg", alt: "Nuxt" },
-      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/react.svg", alt: "React" },
-      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/nextjs.svg", alt: "Nextjs" },
-      {
-        level: 0,
-        img: process.env.PUBLIC_URL + "/img/stackicons/angular-icon.svg",
-        alt: "Angular",
-      },
-      {
-        level: 50,
-        img: process.env.PUBLIC_URL + "/img/stackicons/tailwindcss-icon.svg",
-        alt: "Tailwindcss",
-      },
-      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/sass.svg", alt: "SASS" },
-      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/html-5.svg", alt: "HTML" },
-      { level: 25, img: process.env.PUBLIC_URL + "/img/stackicons/css-3.svg", alt: "CSS" },
+      // Core Languages
       {
         level: 75,
         img: process.env.PUBLIC_URL + "/img/stackicons/javascript.svg",
@@ -147,58 +131,97 @@ const portfolioData = {
         img: process.env.PUBLIC_URL + "/img/stackicons/typescript-icon.svg",
         alt: "Typescript",
       },
-      { level: 25, img: process.env.PUBLIC_URL + "/img/stackicons/jquery.svg", alt: "Jquery" },
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/html-5.svg", alt: "HTML" },
+      { level: 25, img: process.env.PUBLIC_URL + "/img/stackicons/css-3.svg", alt: "CSS" },
+
+      // JS Frameworks
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/vue.svg", alt: "Vue" },
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/nuxt-icon.svg", alt: "Nuxt" },
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/react.svg", alt: "React" },
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/nextjs.svg", alt: "Next" },
       {
-        level: 25,
-        img: process.env.PUBLIC_URL + "/img/stackicons/bootstrap.svg",
-        alt: "Bootstrap",
+        level: 0,
+        img: process.env.PUBLIC_URL + "/img/stackicons/angular-icon.svg",
+        alt: "Angular",
       },
+      { level: 25, img: process.env.PUBLIC_URL + "/img/stackicons/jquery.svg", alt: "Jquery" },
+
+      // CSS Frameworks & Preprocessors
+      {
+        level: 50,
+        img: process.env.PUBLIC_URL + "/img/stackicons/tailwindcss-icon.svg",
+        alt: "Tailwindcss",
+      },
+
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/sass.svg", alt: "SASS" },
     ],
     tech_backend: [
+      // Runtime & Platforms
       { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/nodejs.svg", alt: "Nodejs" },
-      { level: 25, img: process.env.PUBLIC_URL + "/img/stackicons/java.svg", alt: "Java" },
-      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/linux-tux.svg", alt: "Linux" },
-      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/mongodb.svg", alt: "Mongodb" },
-      { level: 25, img: process.env.PUBLIC_URL + "/img/stackicons/mysql.svg", alt: "Mysql" },
       { level: 25, img: process.env.PUBLIC_URL + "/img/stackicons/express.svg", alt: "Express" },
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/linux-tux.svg", alt: "Linux" },
+
+      // Programming Languages
+      { level: 25, img: process.env.PUBLIC_URL + "/img/stackicons/java.svg", alt: "Java" },
       { level: 25, img: process.env.PUBLIC_URL + "/img/stackicons/php.svg", alt: "PHP" },
       { level: 0, img: process.env.PUBLIC_URL + "/img/stackicons/python.svg", alt: "Python" },
+
+      // Databases & ORM
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/mongodb.svg", alt: "Mongodb" },
+      { level: 25, img: process.env.PUBLIC_URL + "/img/stackicons/mysql.svg", alt: "Mysql" },
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/sequelize.svg", alt: "Sequelize" },
     ],
     tech_devtool: [
-      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/aws.svg", alt: "AWS" },
+      // Version Control
       { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/git-icon.svg", alt: "Git" },
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/github-icon.svg", alt: "Github" },
       {
         level: 75,
         img: process.env.PUBLIC_URL + "/img/stackicons/bitbucket.svg",
         alt: "Bitbucket",
       },
-      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/jira.svg", alt: "Jira" },
-      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/github-icon.svg", alt: "Github" },
       { level: 25, img: process.env.PUBLIC_URL + "/img/stackicons/gitlab.svg", alt: "Gitlab" },
-      { level: 0, img: process.env.PUBLIC_URL + "/img/stackicons/firebase.svg", alt: "Firebase" },
-      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/docker-icon.svg", alt: "Docker" },
+
+      // Development Environments
       {
-        level: 50,
-        img: process.env.PUBLIC_URL + "/img/stackicons/postman-icon.svg",
-        alt: "Postman",
+        level: 75,
+        img: process.env.PUBLIC_URL + "/img/stackicons/visual-studio-code.svg",
+        alt: "VScode",
       },
       {
         level: 25,
         img: process.env.PUBLIC_URL + "/img/stackicons/sublimetext-icon.svg",
         alt: "Sublimetext",
       },
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/cursor.svg", alt: "Cursor" },
+
+      // API & Documentation Tools
       {
-        level: 75,
-        img: process.env.PUBLIC_URL + "/img/stackicons/visual-studio-code.svg",
-        alt: "VScode",
+        level: 50,
+        img: process.env.PUBLIC_URL + "/img/stackicons/postman-icon.svg",
+        alt: "Postman",
       },
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/swagger.svg", alt: "Swagger" },
+
+      // Project Management & Communication
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/jira.svg", alt: "Jira" },
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/redmine.svg", alt: "Redmine" },
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/slack-icon.svg", alt: "Slack" },
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/microsoft-teams.svg", alt: "MSTeams" },
+
+      // DevOps & Containerization
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/docker-icon.svg", alt: "Docker" },
+      { level: 0, img: process.env.PUBLIC_URL + "/img/stackicons/firebase.svg", alt: "Firebase" },
     ],
     tech_media: [
+      // Web Content Management
       {
         level: 75,
         img: process.env.PUBLIC_URL + "/img/stackicons/wordpress-icon.svg",
         alt: "Wordpress",
       },
+
+      // Adobe Creative Suite
       {
         level: 50,
         img: process.env.PUBLIC_URL + "/img/stackicons/Adobe_Photoshop_CC.svg",
@@ -214,7 +237,26 @@ const portfolioData = {
         img: process.env.PUBLIC_URL + "/img/stackicons/Adobe_Audition_CC.svg",
         alt: "Audition",
       },
+
+      // Design & Prototyping
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/figma.svg", alt: "Figma" },
+
+      // 3D & Animation
       { level: 0, img: process.env.PUBLIC_URL + "/img/stackicons/blender.svg", alt: "Blender" },
+    ],
+    tech_cloud: [
+      // Cloud Platforms
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/aws.svg", alt: "AWS" },
+      { level: 25, img: process.env.PUBLIC_URL + "/img/stackicons/google-cloud.svg", alt: "GCP" },
+    ],
+    tech_ai: [
+      // AI Development Tools
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/mcp.svg", alt: "MCP" },
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/chatgpt-6.svg", alt: "ChatGPT" },
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/claude-icon.svg", alt: "Claude" },
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/github-copilot.svg", alt: "Copilot" },
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/perplexity-icon.svg", alt: "Perplexity" },
+      { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/google-gemini.svg", alt: "Gemini" },
     ],
   },
 };

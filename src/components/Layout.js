@@ -241,7 +241,7 @@ const Layout = () => {
           <AboutContent pageType={pageType} />
           <AboutMe pageType={pageType} styleType={styleType} />
           <SkillSet pageType={pageType} styleType={styleType} />
-          <Experience pageType={pageType} />
+          <Experience pageType={pageType} styleType={styleType} />
           <Projects pageType={pageType} />
           <Contact pageType={pageType} styleType={styleType} />
         </PageComponent>

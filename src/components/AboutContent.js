@@ -1,7 +1,7 @@
-import React from "react";
 import Button from "./UI/Button";
+import { externalLinkProps } from "../utils/commonUtils";
 
-const AboutContent = () => {
+const AboutContent = ({ pageType = "job" }) => {
   return (
     <div>
       <div className="min-h-screen w-full flex flex-col justify-center items-center bg-gray-200">
@@ -24,27 +24,45 @@ const AboutContent = () => {
         <div className="sm:w-[50vw] mx-3 tracking-tight text-xl text-center text-gray-700">
           I'm always excited to discuss new opportunities and explore how we can work together. Feel
           free to reach out - I'd love to hear about your projects and ideas.
-        </div>{" "}
-        <br></br>
-        <div className="flex gap-2">
-          <Button
-            onClick={() => {
-              const element = document.getElementById("contact");
-              element?.scrollIntoView({ behavior: "smooth" });
-            }}
-            variant="primary"
-          >
-            Contact Info
-          </Button>
-          {/* <Button 
-            onClick={() => {
-              const element = document.getElementById('project');
-              element?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            variant="primary"
-          >
-            My Projects
-          </Button> */}
+        </div>
+
+        {/* スペースを増やしてボタンを配置 */}
+        <div className="mt-12">
+          <div className="flex gap-2">
+            {/* Freelanceモードの場合はContact Infoボタンのみ表示 */}
+            {pageType === "freelance" && (
+              <Button
+                onClick={() => {
+                  const element = document.getElementById("contact");
+                  element?.scrollIntoView({ behavior: "smooth" });
+                }}
+                variant="primary"
+              >
+                Contact Info
+              </Button>
+            )}
+
+            {/* Jobモードの場合はVisit LinkedInボタンのみ表示 */}
+            {pageType === "job" && (
+              <Button
+                href="https://www.linkedin.com/in/masahiro-kaga-ab8604192/"
+                variant="primary"
+                {...externalLinkProps}
+              >
+                Visit LinkedIn
+              </Button>
+            )}
+
+            {/* <Button 
+              onClick={() => {
+                const element = document.getElementById('project');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              variant="primary"
+            >
+              My Projects
+            </Button> */}
+          </div>
         </div>
       </div>
     </div>

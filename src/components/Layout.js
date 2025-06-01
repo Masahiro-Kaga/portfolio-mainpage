@@ -238,7 +238,7 @@ const Layout = () => {
           {sentComment && <SuccessModal onClose={closeModalHandler} />}
           <Navigation />
           <Header onNameClick={handleNameClick} />
-          <AboutContent />
+          <AboutContent pageType={pageType} />
           <AboutMe />
           <Experience pageType={pageType} />
           <SkillSet />

@@ -41,7 +41,7 @@ const AboutMe = ({ pageType = "job", styleType = "casual" }) => {
                 Name : Masahiro Kaga
               </p>
               <p className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Hometown : Hokkaido, Japan
+                Hometown : Hokkaido, JPN
               </p>
               <p className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Education : Langara College
@@ -129,7 +129,7 @@ const AboutMe = ({ pageType = "job", styleType = "casual" }) => {
                             2019 - 2021
                           </div>
                           <div className="bg-transparent rounded-lg p-4 shadow-md">
-                            <h3 className="font-bold text-gray-900 mb-1">Langara College</h3>
+                            <h3 className="font-bold text-gray-900 mb-1">Langara College in CAN</h3>
                             <p className="text-gray-600 text-sm">
                               Enrolled in Computer Science Program focusing on software development,
                               data structures, algorithms, and web technologies.
@@ -155,9 +155,9 @@ const AboutMe = ({ pageType = "job", styleType = "casual" }) => {
                           <div className="bg-transparent rounded-lg p-4 shadow-md">
                             <h3 className="font-bold text-gray-900 mb-2">Freelance Developer</h3>
                             <div className="space-y-1 text-sm text-gray-600">
-                              <div>• Amazon-related Vendor Marketing System</div>
-                              <div>• Corporate Promotional Website & Application</div>
-                              <div>• Real Estate Management Application PM</div>
+                              <div>• Amazon-related Vendor Marketing System with LangGraph AI tool</div>
+                              <div>• Corporate Promotional Website & Application as Project Manager</div>
+                              <div>• Real Estate Management Application as Deputy Leader</div>
                               <div>• Construction Industry 3D System</div>
                               <div>• ChatGPT API Bot & Image Generation System</div>
                               <div>• Community Website for Hokkaido Residents in Canada</div>
@@ -231,7 +231,7 @@ const AboutMe = ({ pageType = "job", styleType = "casual" }) => {
                       <div className="flex items-start space-x-3 p-3 bg-white bg-opacity-60 rounded-lg hover:bg-opacity-80 transition-all duration-200">
                         <div>
                           <h4 className="font-medium text-gray-800">
-                            Amazon Vendor Marketing System
+                            Amazon Vendor Marketing System with LangGraph AI tool
                           </h4>
                           <p className="text-sm text-gray-600">E-commerce automation platform</p>
                         </div>

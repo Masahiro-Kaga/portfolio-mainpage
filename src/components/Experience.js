@@ -141,7 +141,7 @@ const Experience = ({ pageType = "job", styleType = "casual" }) => {
         <div className="flex justify-between items-center text-lg mt-20">
           <div className="ml-10 mr-10">
             <h1 className="text-7xl mt-2">Freelance Projects</h1>
-            <div className="font-light my-2">2024 - Present : Various Roles</div>
+            <div className="font-light my-2">2024 - Present</div>
             <p className="my-12 text-xl max-w-4xl w-full text-gray-600">
               A diverse portfolio of freelance development projects spanning various industries and
               technologies. From e-commerce solutions to AI-powered applications, each project
@@ -155,117 +155,130 @@ const Experience = ({ pageType = "job", styleType = "casual" }) => {
       {/* Freelance Projects List */}
       <div className="bg-gray-600 py-20 md:mx-10 text-white border-8 border-gray-300 rounded-lg">
         <div className="flex flex-wrap justify-between gap-6 mx-5">
-          <h1 className="text-4xl">Key Freelance Projects</h1>
-          <div className="max-w-5xl flex flex-col gap-6 text-xl">
+          <h1 className="text-4xl text-center lg:text-left w-full lg:w-auto">Key Freelance Projects</h1>
+          <div className="max-w-5xl flex flex-col gap-6 text-xl mx-auto">
             {styleType === "formal" ? (
-              // フォーマル版: シンプルなリスト形式
+              // フォーマル版: 左右に分けたシンプルなリスト形式
               <div className="bg-white text-gray-800 rounded-lg p-6">
-                <ul className="space-y-3 text-sm">
-                  <li className="border-b border-gray-200 pb-2">
-                    <strong>Vendor Marketing System for Amazon-related Services</strong>
-                    <br />
-                    <span className="text-gray-600">
-                      Full-stack marketing automation platform with analytics
-                    </span>
-                  </li>
-                  <li className="border-b border-gray-200 pb-2">
-                    <strong>Corporate Promotional Website and Application</strong>
-                    <br />
-                    <span className="text-gray-600">
-                      End-to-end development with integrated web application
-                    </span>
-                  </li>
-                  <li className="border-b border-gray-200 pb-2">
-                    <strong>Project Management for Major Real Estate Management Application</strong>
-                    <br />
-                    <span className="text-gray-600">
-                      Led development coordination for comprehensive platform
-                    </span>
-                  </li>
-                  <li className="border-b border-gray-200 pb-2">
-                    <strong>3D System in the Construction Industry</strong>
-                    <br />
-                    <span className="text-gray-600">
-                      Frontend development of 3D visualization system
-                    </span>
-                  </li>
-                  <li className="border-b border-gray-200 pb-2">
-                    <strong>Bot and Image Generation Test System Using ChatGPT API</strong>
-                    <br />
-                    <span className="text-gray-600">
-                      AI integration with automated bot interactions
-                    </span>
-                  </li>
-                  <li>
-                    <strong>Community Website for Hokkaido Residents Living in Canada</strong>
-                    <br />
-                    <span className="text-gray-600">
-                      WordPress-based community platform with custom features
-                    </span>
-                  </li>
-                </ul>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  {/* 左側のプロジェクト */}
+                  <div className="space-y-3 text-sm lg:pr-4 text-center lg:text-left">
+                    <div className="border-b border-gray-200 pb-2">
+                      <strong>Vendor Marketing System for Amazon-related Services</strong>
+                      <br />
+                      <span className="text-gray-600">
+                        Full-stack marketing automation platform with analytics with LangGraph AI and Google ADK
+                      </span>
+                    </div>
+                    <div className="border-b border-gray-200 pb-2">
+                      <strong>Corporate Promotional Website and Application</strong>
+                      <br />
+                      <span className="text-gray-600">
+                        End-to-end development with integrated web application
+                      </span>
+                    </div>
+                    <div className="border-b border-gray-200 pb-2">
+                      <strong>Project Management for Major Real Estate Management Application</strong>
+                      <br />
+                      <span className="text-gray-600">
+                        Led development coordination for comprehensive platform
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* 右側のプロジェクト */}
+                  <div className="space-y-3 text-sm lg:pl-4 text-center lg:text-left">
+                    <div className="border-b border-gray-200 pb-2">
+                      <strong>3D System in the Construction Industry</strong>
+                      <br />
+                      <span className="text-gray-600">
+                        Frontend development of 3D visualization system
+                      </span>
+                    </div>
+                    <div className="border-b border-gray-200 pb-2">
+                      <strong>Bot and Image Generation Test System Using ChatGPT API</strong>
+                      <br />
+                      <span className="text-gray-600">
+                        AI integration with automated bot interactions
+                      </span>
+                    </div>
+                    <div>
+                      <strong>Community Website for Hokkaido Residents Living in Canada</strong>
+                      <br />
+                      <span className="text-gray-600">
+                        WordPress-based community platform with custom features
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             ) : (
-              // カジュアル版: 既存のカラフルなカード形式
-              <div className="space-y-4">
-                <div className="border-l-4 border-blue-400 pl-4">
-                  <h3 className="text-2xl font-semibold text-white mb-2">
-                    Vendor Marketing System for Amazon-related Services
-                  </h3>
-                  <p className="text-lg">
-                    Full-stack development of marketing automation platform for Amazon vendors with
-                    data analytics and reporting capabilities.
-                  </p>
+              // カジュアル版: 左右に分けたカード形式
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* 左側のプロジェクト */}
+                <div className="space-y-4 lg:pr-6 text-center lg:text-left">
+                  <div className="border-l-4 border-blue-400 pl-4">
+                    <h3 className="text-2xl font-semibold text-white mb-2">
+                      Vendor Marketing System for Amazon-related Services
+                    </h3>
+                    <p className="text-lg">
+                      Full-stack development of marketing automation platform for Amazon vendors with
+                      data analytics and reporting capabilities.
+                    </p>
+                  </div>
+
+                  <div className="border-l-4 border-green-400 pl-4">
+                    <h3 className="text-2xl font-semibold text-white mb-2">
+                      Corporate Promotional Website and Application
+                    </h3>
+                    <p className="text-lg">
+                      End-to-end development of corporate website with integrated web application for
+                      client engagement and business operations.
+                    </p>
+                  </div>
+
+                  <div className="border-l-4 border-yellow-400 pl-4">
+                    <h3 className="text-2xl font-semibold text-white mb-2">
+                      Project Management for Major Real Estate Management Application
+                    </h3>
+                    <p className="text-lg">
+                      Led project management and development coordination for comprehensive real
+                      estate management platform with multi-user functionality.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="border-l-4 border-green-400 pl-4">
-                  <h3 className="text-2xl font-semibold text-white mb-2">
-                    Corporate Promotional Website and Application
-                  </h3>
-                  <p className="text-lg">
-                    End-to-end development of corporate website with integrated web application for
-                    client engagement and business operations.
-                  </p>
-                </div>
+                {/* 右側のプロジェクト */}
+                <div className="space-y-4 lg:pl-6 text-center lg:text-left">
+                  <div className="border-l-4 border-purple-400 pl-4">
+                    <h3 className="text-2xl font-semibold text-white mb-2">
+                      3D System in the Construction Industry
+                    </h3>
+                    <p className="text-lg">
+                      Frontend development of 3D visualization system for construction project
+                      planning and management with real-time rendering capabilities.
+                    </p>
+                  </div>
 
-                <div className="border-l-4 border-yellow-400 pl-4">
-                  <h3 className="text-2xl font-semibold text-white mb-2">
-                    Project Management for Major Real Estate Management Application
-                  </h3>
-                  <p className="text-lg">
-                    Led project management and development coordination for comprehensive real
-                    estate management platform with multi-user functionality.
-                  </p>
-                </div>
+                  <div className="border-l-4 border-red-400 pl-4">
+                    <h3 className="text-2xl font-semibold text-white mb-2">
+                      Bot and Image Generation Test System Using ChatGPT API
+                    </h3>
+                    <p className="text-lg">
+                      AI integration development featuring automated bot interactions and image
+                      generation using OpenAI's ChatGPT API with custom workflows.
+                    </p>
+                  </div>
 
-                <div className="border-l-4 border-purple-400 pl-4">
-                  <h3 className="text-2xl font-semibold text-white mb-2">
-                    3D System in the Construction Industry
-                  </h3>
-                  <p className="text-lg">
-                    Frontend development of 3D visualization system for construction project
-                    planning and management with real-time rendering capabilities.
-                  </p>
-                </div>
-
-                <div className="border-l-4 border-red-400 pl-4">
-                  <h3 className="text-2xl font-semibold text-white mb-2">
-                    Bot and Image Generation Test System Using ChatGPT API
-                  </h3>
-                  <p className="text-lg">
-                    AI integration development featuring automated bot interactions and image
-                    generation using OpenAI's ChatGPT API with custom workflows.
-                  </p>
-                </div>
-
-                <div className="border-l-4 border-indigo-400 pl-4">
-                  <h3 className="text-2xl font-semibold text-white mb-2">
-                    Community Website for Hokkaido Residents Living in Canada
-                  </h3>
-                  <p className="text-lg">
-                    WordPress-based community platform development with custom features for Japanese
-                    expatriate community engagement and event management.
-                  </p>
+                  <div className="border-l-4 border-indigo-400 pl-4">
+                    <h3 className="text-2xl font-semibold text-white mb-2">
+                      Community Website for Hokkaido Residents Living in Canada
+                    </h3>
+                    <p className="text-lg">
+                      WordPress-based community platform development with custom features for Japanese
+                      expatriate community engagement and event management.
+                    </p>
+                  </div>
                 </div>
               </div>
             )}

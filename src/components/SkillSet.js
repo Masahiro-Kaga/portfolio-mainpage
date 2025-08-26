@@ -4,21 +4,79 @@ import portfolioData from "../utility";
 const SkillSet = ({ pageType = "job", styleType = "casual" }) => {
   // フォーマル用のスキルマッピング関数（2列レイアウト用）
   const createSkillGrid = (techArray, isDark = true) => {
+    // クラウドサービスの詳細情報
+    const cloudServiceDetails = {
+      AWS: [
+        "EC2",
+        "S3",
+        "RDS", 
+        "Lambda",
+        "CloudFront",
+        "Route 53",
+        "IAM",
+        "VPC",
+        "ALB",
+        "ECS/EKS",
+        "CloudWatch"
+      ],
+      GCP: [
+        "Vertex AI",
+        "Google ADK",
+        "Compute Engine",
+        "Cloud Storage",
+        "Cloud SQL",
+        "Cloud Run",
+        "App Engine",
+        "Cloud CDN",
+        "Cloud DNS"
+      ]
+    };
+
     return (
-      <div className="grid grid-cols-2 gap-4 w-full">
-        {techArray.map((skill, index) => (
-          <div
-            key={`${skill.alt}-${index}`}
-            className="flex items-center space-x-3 p-2 rounded-lg hover:bg-opacity-80 transition-colors"
-          >
-            <img src={skill.img} alt={skill.alt} className="w-8 h-8 object-contain flex-shrink-0" />
-            <span
-              className={`text-sm font-medium ${isDark ? "text-white" : "text-gray-700"} truncate`}
+      <div className="w-full">
+        <div className="grid grid-cols-2 gap-4 w-full">
+          {techArray.map((skill, index) => (
+            <div
+              key={`${skill.alt}-${index}`}
+              className="flex items-center space-x-3 p-2 rounded-lg hover:bg-opacity-80 transition-colors"
             >
-              {skill.alt}
-            </span>
+              <img src={skill.img} alt={skill.alt} className="w-8 h-8 object-contain flex-shrink-0" />
+              <span
+                className={`text-sm font-medium ${isDark ? "text-white" : "text-gray-700"} truncate`}
+              >
+                {skill.alt}
+              </span>
+            </div>
+          ))}
+        </div>
+        
+        {/* クラウドサービスの場合は詳細情報を表示 */}
+        {techArray === portfolioData.stack.tech_cloud && (
+          <div className="mt-6">
+            <div className="grid grid-cols-2 gap-6">
+              {techArray.map((skill, index) => {
+                const details = cloudServiceDetails[skill.alt];
+                if (!details) return null;
+                
+                return (
+                  <div key={`details-${skill.alt}-${index}`} className="border-t border-gray-200 pt-4">
+                    <ul className="space-y-1 text-xs">
+                      {details.map((service, serviceIndex) => (
+                        <li 
+                          key={serviceIndex} 
+                          className={`${isDark ? "text-gray-300" : "text-gray-600"} flex items-center`}
+                        >
+                          <span className="mr-2">•</span>
+                          <span>{service}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        ))}
+        )}
       </div>
     );
   };

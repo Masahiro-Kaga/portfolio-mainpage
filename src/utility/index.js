@@ -107,7 +107,7 @@ const portfolioData = {
     img: "img/background_image.jpg",
     type: "Full Stack Developer",
     name: "Masahiro Kaga",
-    typical: ["No Code , No Life 💻", 3000, " No Code , No Vibe 🎸", 3000],
+    typical: ["No Tech , No Life 💻", 3000, " No Pain , No Gain💪", 3000],
   },
   stack: {
     title: "Stack",
@@ -251,9 +251,11 @@ const portfolioData = {
     ],
     tech_ai: [
       // AI Development Tools
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/langgraph.svg", alt: "LangGraph" },
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/langchain.svg", alt: "LangChain" },
       { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/mcp.svg", alt: "MCP" },
       { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/chatgpt-6.svg", alt: "ChatGPT" },
-      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/claude-icon.svg", alt: "Claude" },
+      { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/claude-icon.svg", alt: "ClaudeCode" },
       { level: 75, img: process.env.PUBLIC_URL + "/img/stackicons/github-copilot.svg", alt: "Copilot" },
       { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/perplexity-icon.svg", alt: "Perplexity" },
       { level: 50, img: process.env.PUBLIC_URL + "/img/stackicons/google-gemini.svg", alt: "Gemini" },
